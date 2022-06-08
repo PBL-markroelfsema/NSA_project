@@ -89,13 +89,13 @@ delete_companies_account_ID= c(829595, 829599, 829603, 829640, 830933, 846242, 8
 
 # 1 orginal data
 options(scipen = 999)
-# Read in CDP data from Excel
+# (X) Read in CDP data from Excel
 absolute_2020_data_excel <- read_excel('data/CDP/input/2020_CDP_Country_Specific_Dataset_for_NSA_Report_v2_adjusted.xlsx', sheet = "Absolute ER")
 absolute_2020_data_excel <- as.data.frame(absolute_2020_data_excel)
 absolute_2020_data_excel$`Target year` <- as.integer(absolute_2020_data_excel$`Target year`)
 absolute_2020_data_excel$`Target status in reporting year` <- str_trim(absolute_2020_data_excel$`Target status in reporting year`)
 
-# "private response' has already been removed from the original Excel file (and name now ends with 'adjusted') --> R reads them as text
+# (X) "private response' has already been removed from the original Excel file (and name now ends with 'adjusted') --> R reads them as text
 absolute_2020_data_excel$`Country S1` <- as.numeric(absolute_2020_data_excel$`Country S1`)
 absolute_2020_data_excel$`Country S2L` <- as.numeric(absolute_2020_data_excel$`Country S2L`)
 absolute_2020_data_excel$`Country S2M` <- as.numeric(absolute_2020_data_excel$`Country S2M`)
@@ -108,7 +108,7 @@ absolute_2020_data_excel$`MRY emissions (100% of scope)` <- as.numeric(absolute_
 absolute_2020_data_excel$`MRY emissions (100% of scope, excl. scope 3)` <- as.numeric(absolute_2020_data_excel$`MRY emissions (100% of scope, excl. scope 3)`)
 
 
-# TEMP: for two companies emissions are extremely high, these are deleted
+# (X) TEMP: for two companies emissions are extremely high, these are deleted
 absolute_2020_data_excel <- filter(absolute_2020_data_excel, !company_name%in%delete_companies_names)
 absolute_2020_data_excel <- filter(absolute_2020_data_excel, !account_id%in%delete_companies_account_ID)
 
@@ -116,15 +116,15 @@ nrow(absolute_2020_data_excel)
 
 StatCDP(absolute_2020_data_excel, "original_2020")
 
-# 2. clean data
+# 2. (X) clean data
 Scopes <- c("Scope 1", "Scope 1+3", "Scope 1+2", "Scope 1+2+3", "Scope 2", "Scope 2+3")
 Scopes_short      = c("S1", "S12L", "S12M", "S12L3",  "S12M3", "SX", "S12X", "S12X3", "S2L", "S2M", "S2X", "S2X3", "S3", "S13", "S2M3")
 
 
-# 2a. Some `Country/Region` values are empty. CHECK. But in 2020 dataset, this can be made equal to incorporation country
+# (X) 2a. Some `Country/Region` values are empty. CHECK. But in 2020 dataset, this can be made equal to incorporation country
 absolute_2020_data<- mutate(absolute_2020_data_excel, `Country/Region`=ifelse(is.na(`Country/Region`), incorporation_country, `Country/Region`))
 
-# 2b-e: remove data with target year < 2020 and target_status is 'expired' or 'retired'
+# (X) 2b-e: remove data with target year < 2020 and target_status is 'expired' or 'retired'
 # and % emissions in Scope, % reduction from base year, Base year, Target year, percent_alloc is NA
 absolute_2020_data <- filter(absolute_2020_data, !`Target year`%in%c(0,NA)) %>% 
                       filter(`Target year`>=2020) %>% 
@@ -146,27 +146,17 @@ StatCDP(absolute_2020_data, "after_process_2020")
 
 nrow(absolute_2020_data)
 
-
-# 2c. (percent_alloc) for companies that have only one record the percent_alloc is often NA --> set to 1
+# (X) 2c. (percent_alloc) for companies that have only one record the percent_alloc is often NA --> set to 1
 # first add scope_short based on T_ID and delete scope 3
 absolute_2020_data <- mutate(absolute_2020_data, Scope_short = str_split(T_ID, "-") %>% map_chr(., 3)) %>%
                       filter(!(Scope_short=="S3"))
 # set percent_alloc to 1 for company/target year/scope combination with only one Region/Country
 absolute_2020_data1 <- group_by(absolute_2020_data, company_name, `Target year`, Scope_short) %>% filter(n()==1) %>% 
                        mutate(percent_alloc=1) #), 
-                       #        `Country S1`=ifelse(`Country S1`%in%c(0, NA), `Global S1`,`Country S1`),
-                       #        `Country S2L`=ifelse(`Country S2L`%in%c(0, NA), `Global S2L`,`Country S2L`),
-                       #        `Country S2M`=ifelse(`Country S2M`%in%c(0, NA), `Global S2M`,`Country S2M`))
 absolute_2020_data2 <- group_by(absolute_2020_data, company_name, `Target year`, Scope_short) %>% filter(n()>1)
 absolute_2020_data <- rbind(absolute_2020_data1, absolute_2020_data2)
-nrow(absolute_2020_data1)
-nrow(absolute_2020_data)
-# try to calculate percent_alloc for NAs, but Country S1, Global S1 etc data is available
 
-#absolute_2020_data <- mutate(absolute_2020_data, Scope_short_tmp=ifelse(scope_short )
-#absolute_2020_data <- mutate(absolute_2020_data, percent_alloc_tmp=ifelse(is.na(percent_alloc), )
-
-                           
+# (X) calculate percent_alloc for those that are missing (X in scope name)                           
 absolute_2020_data <- mutate(absolute_2020_data, Scope_short_tmp=Scope_short)
 absolute_2020_data$Scope_short_tmp <- factor(absolute_2020_data$Scope_short_tmp, levels=Scopes_short)
 levels(absolute_2020_data$Scope_short_tmp) <- list(
@@ -191,7 +181,7 @@ absolute_2020_data <- mutate(absolute_2020_data, percent_alloc_tmp = case_when(
 
 absolute_2020_data <- mutate(absolute_2020_data, percent_alloc=ifelse(is.na(percent_alloc), percent_alloc_tmp, percent_alloc))
                              
-# delete remaining percent_alloc that is zero or NA
+# (X) delete remaining percent_alloc that is zero or NA
 tmp<-filter(absolute_2020_data, is.na(percent_alloc))
 nrow(tmp)
 tmp<-filter(absolute_2020_data, percent_alloc==0)
@@ -201,15 +191,10 @@ nrow(tmp)
 absolute_2020_data <- filter(absolute_2020_data, !(is.na(percent_alloc) | percent_alloc==0))
 nrow(absolute_2020_data)
 # remove ; because this is inconvenient for csv files. TEMP --> does not work, so remove columsn
-#absolute_2020_data <- mutate(absolute_2020_data, `Country/Region`=str_replace(`Country/Region`, "\\;", "\\-"))
-#absolute_2020_data <- mutate(absolute_2020_data, `Please explain (including target coverage)`=str_replace(`Please explain (including target coverage)`, "\\;", "\\-"))
-#absolute_2020_data <- mutate(absolute_2020_data, `Is this a science-based target?`=str_replace(`Is this a science-based target?`, "\\;", "\\-"))
-#absolute_2020_data <- select(absolute_2020_data, -`Please explain (including target coverage)`, -`Is this a science-based target?`)
 absolute_2020_data <- select(absolute_2020_data, -`Please explain (including target coverage)`)
-                             
-#absolute_2020_data <- sapply(absolute_2020_data,function(x) {x <- gsub(";","-",x)})
-#absolute_2020_data <- as.data.frame(absolute_2020_data)
 write.table(absolute_2020_data, "data/CDP/output/absolute_2020_data.csv", sep=";", col.names = TRUE, row.names=FALSE)
+
+#--------------------------------------------
 
 # PROCESS DATA
 absolute_2020_targets <- rename(absolute_2020_data, `% emissions in Scope`=`Covered emissions in base year as % of total base year emissions in selected Scope(s) (or Scope 3 category)`,
@@ -225,7 +210,8 @@ cols_absolute_2020 <- #c("company_name", "incorporation_country", "Country/Regio
                    "Country impact (excl. scope 3)", 
                    "percent_alloc", "% emissions in Scope", "Scope",
                    "Country S1", "Country S2L", "Country S2M", "Global S1", "Global S2L", "Global S2M", "T_ID", "Target coverage", "Year target was set", "Is this a science-based target?", "% of target achieved [auto-calculated]")
-# select and calculate necassary variables
+
+# (???) select and calculate necessary variables
 absolute_2020_targets <- select(absolute_2020_targets, cols_absolute_2020) %>% rename(Scope_long=Scope)
 tc1 <- unique(absolute_2020_targets$`Target coverage`)
 tc2 <- c("Company-wide", "Business activity", "Business division", "Site/facility","Country/region")
@@ -236,16 +222,15 @@ absolute_2020_targets$`Target coverage` <- factor(absolute_2020_targets$`Target 
 # 3a. scope information
 # Based on scope info in T_ID determine if there is a scope 1, 2 and/or 3, and which scope 2 (Market/local)
 scope_info <- data.frame (
-              Scope_short      = c("S12M",      "S12X3",       "S1",      "S12M3",       "S12L",      "S2M",     "S12L3",       "S3",      "S2L",     "S12X",      "SX", "S2X3",       "S13",      "S2X"),
-              Scope             = c("Scope 1+2", "Scope 1+2+3", "Scope 1", "Scope 1+2+3", "Scope 1+2", "Scope 2", "Scope 1+2+3", "Scope 3", "Scope 2", "Scope 1+2",  "",  "Scope 2+3", "Scope 1+3", "Scope 2"),
-              Scope_3           = c(FALSE,       FALSE,         FALSE,     FALSE,        FALSE,       FALSE,     FALSE,         TRUE,      FALSE,     FALSE,        TRUE, FALSE,       FALSE,       FALSE),
-              Scope1 = c("S1",        "S1",           "S1",      "S1",         "S1",        "",        "S1",          "",        "",       "S1",          "",   "",          "S1",        ""),
-              Scope2 = c("S2M",        "max",         "",        "S2M",        "S2L",       "S2M",     "S2L",         "",        "S2L",    "max",         "",   "max",       "",          "max"))
+              Scope_short     = c("S12M",      "S12X3",       "S1",      "S12M3",       "S12L",      "S2M",     "S12L3",       "S3",      "S2L",     "S12X",      "SX", "S2X3",       "S13",      "S2X"),
+              Scope           = c("Scope 1+2", "Scope 1+2+3", "Scope 1", "Scope 1+2+3", "Scope 1+2", "Scope 2", "Scope 1+2+3", "Scope 3", "Scope 2", "Scope 1+2",  "",  "Scope 2+3", "Scope 1+3", "Scope 2"),
+              Scope_3         = c(FALSE,       FALSE,         FALSE,     FALSE,        FALSE,       FALSE,     FALSE,         TRUE,      FALSE,     FALSE,        TRUE, FALSE,       FALSE,       FALSE),
+              Scope1          = c("S1",        "S1",           "S1",      "S1",         "S1",        "",        "S1",          "",        "",       "S1",          "",   "",          "S1",        ""),
+              Scope2          = c("S2M",        "max",         "",        "S2M",        "S2L",       "S2M",     "S2L",         "",        "S2L",    "max",         "",   "max",       "",          "max"))
 
 # Determine scope for companies with X in Scope
 absolute_2020_targets <- mutate(absolute_2020_targets, Scope_short = str_split(T_ID, "-") %>% map_chr(., 3))
 tmp <- filter(absolute_2020_targets, str_detect(Scope_short, "X"))
-nrow(tmp)
 absolute_2020_targets <- mutate(absolute_2020_targets, Scope_short=ifelse(!(Scope_short=="SX"), Scope_short, ifelse(Scope_short=="SX" & !(`Country S1`==0), "S1", ifelse(Scope_short=="SX" & !(`Country S2L`==0), "S2", ifelse(!(`Country S2M`==0), "S2M", Scope_short)))))
 absolute_2020_targets <- mutate(absolute_2020_targets, Scope_short=ifelse(Scope_short=="S2X", "S2", Scope_short))
 absolute_2020_targets <- mutate(absolute_2020_targets, Scope_short=ifelse(Scope_short%in%c("S12X", "S123X"), ifelse(!(`Country S2L`==0), "S2L", ifelse(!(`Country S2M`==0), "S2M", Scope_short)), Scope_short))
@@ -277,15 +262,15 @@ nrow(absolute_2020_targets)
 #                         select(-N1, -N2, -D1, -D2, -percent_alloc_tmp)
 #write.table(absolute_2020_targets, "data/CDP/output/absolute_2020_check_percent_alloc.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
-# 4. CALCUlATE EXCL_SCOPE3
+# 4. Calculate EXCL_SCOPE3
 # 4a. Scope 3 emissions are excluded, so change "Scope 1+2+3" to "Scope 1+2" and  "Scope 1+3" to  "Scope 1" --> TO DO
-# Delete occoruences where Scope is Scope 1 and Country S1=0 or Scope 2 and Country S2L+S2M=0
+# Delete occurrences where Scope is Scope 1 and Country S1=0 or Scope 2 and Country S2L+S2M=0
 nrow(absolute_2020_targets)
 absolute_2020_targets <- filter(absolute_2020_targets, !(Scope=="Scope 1" & `Country S1`==0 & percent_alloc%in%c(0, NA)))
 absolute_2020_targets <- filter(absolute_2020_targets, !(Scope=="Scope 2" & `Country S2L`+`Country S2M`==0 & percent_alloc%in%c(0, NA)))
 nrow(absolute_2020_targets)
 
-# 4b. Calculate help variables (including renaming a few variables due to long names)
+# (X) 4b. Calculate help variables (including renaming a few variables due to long names)
 # Target only applies to "% emissions in Scope" for BY and MRY emissions and covered by country branch percentage allocation (percent_alloc). 
 # Note that "Base year emissions covered by target" already applies to full target and does not need to be multiplied with `% emissions in Scope`
 absolute_2020_targets <- rename(absolute_2020_targets, BY_EM_target=`Base year emissions covered by target (metric tons CO2e)`,
@@ -300,12 +285,11 @@ absolute_2020_targets <- mutate(absolute_2020_targets, BY_EM_target=BY_EM_target
                                                        MRY_EM_100_excl_scope3=MRY_EM_100_excl_scope3*(1/100)*`% emissions in Scope`*percent_alloc)
 absolute_2020_targets <- mutate(absolute_2020_targets, target_type="absolute",
                                 BY_tmp = ifelse(!BY_EM_target%in%c(0,NA), BY_EM_target, 
-                                               ifelse(!BY_EM_100_excl_scope3%in%c(0,NA), BY_EM_100_excl_scope3*(1/100),
-                                                       BY_EM_100*(1/100))),
-                                `BaseYearEmissions_excl_scope3`=ifelse(`Country impact (excl. scope 3)`%in%c(0,NA), BY_tmp, 100*`Country impact (excl. scope 3)`/`% reduction from base year`), 
-                                S1=ifelse(Scope1=="S1", `Country S1`, 0),
-                                S2=ifelse(Scope2=="S2M", `Country S2M`, ifelse(Scope2=="S2L", `Country S2L`, 
-                                                                              ifelse(Scope2=="max",ifelse(`Country S2M`>`Country S2L`,`Country S2M`,`Country S2L`),0))),
+                                               ifelse(!BY_EM_100_excl_scope3%in%c(0,NA), BY_EM_100_excl_scope3*(1/100), BY_EM_100*(1/100))),
+                                                      `BaseYearEmissions_excl_scope3`=ifelse(`Country impact (excl. scope 3)`%in%c(0,NA), BY_tmp, 100*`Country impact (excl. scope 3)`/`% reduction from base year`), 
+                                                       S1=ifelse(Scope1=="S1", `Country S1`, 0),
+                                                       S2=ifelse(Scope2=="S2M", `Country S2M`, ifelse(Scope2=="S2L", `Country S2L`, 
+                                                          ifelse(Scope2=="max",ifelse(`Country S2M`>`Country S2L`,`Country S2M`,`Country S2L`),0))),
                                 perc_scope1 = ifelse(S1==0 & S2==0,0,S1/(S1+S2)),
                                 ratio_EM_excl_incl_scope3=ifelse(!(BY_EM_100%in%c(0,NA) | BY_EM_100_excl_scope3%in%c(0,NA)),BY_EM_100_excl_scope3/BY_EM_100,
                                                                 ifelse(!(MRY_EM_100%in%c(0,NA) | MRY_EM_100_excl_scope3%in%c(0,NA)),MRY_EM_100_excl_scope3/MRY_EM_100, 1)),
