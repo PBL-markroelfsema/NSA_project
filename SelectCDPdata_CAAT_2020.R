@@ -16,7 +16,7 @@ countries_EU = c("Austria", "Baltic States", "Belgium", "Bulgaria", "Croatia", "
                  "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", 
                  "Sint Maarten (Dutch part)", "Greenland", "Slovakia", "Slovenia", "Spain",  "Sweden", 
                  "United Kingdom", "United Kingdom of Great Britain and Northern Ireland", "Benelux",
-                 "EU12", "EU28", "EU25", "EU15")
+                 "EU12", "EU28", "EU25", "EU15", "Europe")
 #countries_include = c(countries_EU, 
 #                      "Argentina", "China", "China, Hong Kong Special Administrative Region", "China, Macao Special Administrative Region", "Macau", "Hong Kong", 
 #                      "Brazil", "Canada", "India", "Indonesia", "Ireland", "Japan", "Mexico", "South Africa", "United States of America")
@@ -41,6 +41,8 @@ data_select <- mutate(data_select, `Country/Region`=ifelse(`Country/Region`=="Ch
 data_select <- mutate(data_select, `Country/Region`=ifelse(`Country/Region`=="China, Macao Special Administrative Region", "China", `Country/Region`))
 data_select <- mutate(data_select, `Country/Region`=ifelse(`Country/Region`=="Macau", "China", `Country/Region`))
 data_select <- mutate(data_select, `Country/Region`=ifelse(`Country/Region`=="Hong Kong", "China", `Country/Region`))
+#data_select <- mutate(data_select, `Country/Region`=ifelse(`Country/Region`=="Côte d'Ivoire", "Cote d'Ivoire", `Country/Region`))
+
 
 # 3. SELECT Targets
 # 3.1 select target closes to T_select, if the result is two, smallest is chosen
@@ -212,7 +214,7 @@ data_CAAT <- data_select6 %>% ungroup() %>%
                       primary_sector=primary_sector)
 data_CAAT$TwoTargets <- as.character(data_CAAT$TwoTargets)
 data_CAAT_select <- select(data_CAAT,cols_CAAT)
-write.table(data_CAAT_select, "data/CDP/output/data_2020_CAAT.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(data_CAAT_select, "data/CDP/output/data_2020_CAAT.csv", sep=";", col.names = TRUE, row.names=FALSE, fileEncoding="UTF-16LE")
 
 
 

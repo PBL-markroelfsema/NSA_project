@@ -112,7 +112,13 @@ absolute_2020_data_excel$`MRY emissions (100% of scope, excl. scope 3)` <- as.nu
 absolute_2020_data_excel <- filter(absolute_2020_data_excel, !company_name%in%delete_companies_names)
 absolute_2020_data_excel <- filter(absolute_2020_data_excel, !account_id%in%delete_companies_account_ID)
 
+# TEMPORARILY DELETE
+# SAP SE reduction = 100
+absolute_2020_data_excel <- filter(absolute_2020_data_excel, !(account_id==16339 & `Is this a science-based target?`=="No, but we are reporting another target that is science-based"))
+
+cat("absolute_2020_data_excel:\n")
 nrow(absolute_2020_data_excel)
+length(unique(absolute_2020_data_excel$account_id))
 
 StatCDP(absolute_2020_data_excel, "original_2020")
 
@@ -133,18 +139,18 @@ absolute_2020_data <- filter(absolute_2020_data, !`Target year`%in%c(0,NA)) %>%
                       #filter(!is.na(`% emissions in Scope`)) %>% 
                       filter(!is.na(`Targeted reduction from base year (%)`)) %>% 
                       filter(!is.na(`Base year`)) %>%
-                      filter(!(`Covered emissions in base year (metric tons CO2e)`%in%c(0, NA) &&
-                              `Base year emissions (100% of scope)`%in%c(0, NA) &&
+                      filter(!(`Covered emissions in base year (metric tons CO2e)`%in%c(0, NA) &
+                              `Base year emissions (100% of scope)`%in%c(0, NA) &
                               `Base year emissions (100% of scope, excl. scope 3)`%in%c(0, NA))) %>%
                       filter(!(`Most recent accounting year`==`Target year`))
                       #filter(!percent_alloc%in%c(0,NA))
                       #filter(!is.na(`Target year`))
 
-nrow(absolute_2020_data)
-
 StatCDP(absolute_2020_data, "after_process_2020")
 
+cat("absolute_2020_data:\n")
 nrow(absolute_2020_data)
+length(unique(absolute_2020_data$account_id))
 
 # (X) 2c. (percent_alloc) for companies that have only one record the percent_alloc is often NA --> set to 1
 # first add scope_short based on T_ID and delete scope 3
@@ -167,20 +173,37 @@ levels(absolute_2020_data$Scope_short_tmp) <- list(
   S12M = c("S12M", "S12M3")
                                                
 )
-  
-absolute_2020_data <- mutate(absolute_2020_data, percent_alloc_tmp = case_when(
-                                                       Scope_short=="S1" ~ (`Country S1`)/(`Global S1`),
-                                                       Scope_short=="S2L" ~ ifelse(!is.na(`Country S2L`), (`Country S2L`)/(`Global S2L`),(`Country S2M`)/(`Global S2M`)),
-                                                       Scope_short=="S2M" ~ ifelse(!is.na(`Country S2M`), (`Country S2M`)/(`Global S2M`), (`Country S2L`)/(`Global S2L`)),
-                                                       Scope_short=="S12L" ~ ifelse(!is.na(`Country S2L`), (`Country S1`+`Country S2L`)/(`Global S1`+`Global S2L`), (`Country S1`+`Country S2M`)/(`Global S1`+`Global S2M`)),
-                                                       Scope_short=="S12M" ~ ifelse(!is.na(`Country S2M`),(`Country S1`+`Country S2M`)/(`Global S1`+`Global S2M`), (`Country S1`+`Country S2L`)/(`Global S1`+`Global S2L`)),
-                                                       TRUE ~ 0
-                                                       )
-)
-#write.table(absolute_2020_data, "data/CDP/output/tmp.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(absolute_2020_data, "data/CDP/output/absolute_2020_data_tmp1.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
-absolute_2020_data <- mutate(absolute_2020_data, percent_alloc=ifelse(is.na(percent_alloc), percent_alloc_tmp, percent_alloc))
-                             
+check_percent_alloc_v1 <- group_by(absolute_2020_data, account_id, `Target reference number`, `Country/Region`) %>%
+                          summarise(check_percent_alloc_S1=sum(`Country S1`, na.rm=T)/mean(`Global S1`, na.rm=T),
+                                    check_percent_alloc_S2L=sum(`Country S2L`, na.rm=T)/mean(`Global S2L`, na.rm=T),
+                                    check_percent_alloc_S2M=sum(`Country S2M`, na.rm=T)/mean(`Global S2M`, na.rm=T))
+check_percent_alloc_v2 <- group_by(check_percent_alloc_v1, account_id, `Target reference number`) %>%
+                          summarise(check_percent_alloc_S1=sum(check_percent_alloc_S1),
+                                    check_percent_alloc_S2L=sum(check_percent_alloc_S2L),
+                                    check_percent_alloc_S2M=sum(check_percent_alloc_S2M))
+check_percent_alloc_v3 <- filter(check_percent_alloc_v2, (check_percent_alloc_S1!=0 & (check_percent_alloc_S1<0.9|check_percent_alloc_S1>1.1)) |
+                                                         (check_percent_alloc_S2L!=0 & (check_percent_alloc_S2L<0.9|check_percent_alloc_S2L>1.1)) |
+                                                         (check_percent_alloc_S2M!=0 & (check_percent_alloc_S2M<0.9|check_percent_alloc_S2M>1.1))) #%>%
+                       #pivot_wider(names_from=`Country/Region`, 
+                      #           values_from=c(check_percent_alloc_S1, check_percent_alloc_S2L, check_percent_alloc_S2M))
+write.table(check_percent_alloc_v3, "data/CDP/output/check_percent_alloc.csv", sep=";", col.names = TRUE, row.names=FALSE)
+
+absolute_2020_data <- mutate(absolute_2020_data, percent_alloc_tmp = case_when(
+  Scope_short_tmp=="S1" ~ (`Country S1`)/(`Global S1`),
+  Scope_short_tmp=="S2L" ~ ifelse(!is.na(`Country S2L`), (`Country S2L`)/(`Global S2L`),(`Country S2M`)/(`Global S2M`)),
+  Scope_short_tmp=="S2M" ~ ifelse(!is.na(`Country S2M`), (`Country S2M`)/(`Global S2M`), (`Country S2L`)/(`Global S2L`)),
+  Scope_short_tmp=="S12L" ~ ifelse(!is.na(`Country S2L`), (`Country S1`+`Country S2L`)/(`Global S1`+`Global S2L`), (`Country S1`+`Country S2M`)/(`Global S1`+`Global S2M`)),
+  Scope_short_tmp=="S12M" ~ ifelse(!is.na(`Country S2M`),(`Country S1`+`Country S2M`)/(`Global S1`+`Global S2M`), (`Country S1`+`Country S2L`)/(`Global S1`+`Global S2L`)),
+  TRUE ~ 0
+  )
+)
+#write.table(absolute_2020_data, "data/CDP/output/tmp1.csv", sep=";", col.names = TRUE, row.names=FALSE)
+
+absolute_2020_data <- mutate(absolute_2020_data, percent_alloc=ifelse(percent_alloc %in% c(0, NA), percent_alloc_tmp, percent_alloc))
+write.table(absolute_2020_data, "data/CDP/output/absolute_2020_data_tmp2.csv", sep=";", col.names = TRUE, row.names=FALSE)
+
 # (X) delete remaining percent_alloc that is zero or NA
 tmp<-filter(absolute_2020_data, is.na(percent_alloc))
 nrow(tmp)
@@ -302,13 +325,16 @@ absolute_2020_targets <- mutate(absolute_2020_targets, `BaseYearEmissions_excl_s
 absolute_2020_targets <- mutate(absolute_2020_targets, `MRY_EM_excl_scope3`=ifelse(is.na(`MRY_EM_excl_scope3`), 0, `MRY_EM_excl_scope3`))
 
 # If perc_scope1 is NA change to 40% for Scope1+2, 100% for Scope 1 and 0% for Scope 2
-absolute_2020_targets <- mutate(absolute_2020_targets, perc_scope1 = ifelse(!is.na(perc_scope1), perc_scope1, ifelse(Scope%in%c("Scope 1+2", "Scope 1+2+3"), 0.4, ifelse(Scope%in%c("Scope 1","Scope 1+3"), 1, 0))))
+avg_scope=0.4
+absolute_2020_targets <- mutate(absolute_2020_targets, perc_scope1 = ifelse(!is.na(perc_scope1), perc_scope1, ifelse(Scope%in%c("Scope 1+2", "Scope 1+2+3"), avg_scope, ifelse(Scope%in%c("Scope 1","Scope 1+3"), 1, 0))))
 
 absolute_2020_targets$BaseYearEmissions_excl_scope3 <- as.numeric(absolute_2020_targets$BaseYearEmissions_excl_scope3)
 absolute_2020_targets$TargetYearEmissions_excl_scope3 <- as.numeric(absolute_2020_targets$TargetYearEmissions_excl_scope3)
 write.table(absolute_2020_targets, "data/CDP/output/absolute_2020_targets.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
+cat("absolute_2020_targets:\n")
 nrow(absolute_2020_targets)
+length(unique(absolute_2020_targets$account_id))
 
 # REMOVE DUPCLIATES
 # CHECK NAs in `Most recent accounting year`, `% reduction from base year`, `% emissions in Scope`, Scope_long, `Country impact (excl. scope 3)`
@@ -339,8 +365,15 @@ test_duplicates <- group_by_at(absolute_2020_targets_remove_duplicates, all_of(c
 cat(paste0("maximum duplicates is ", max(test_duplicates$c), "\n"))
 count_duplicates <- group_by(test_duplicates, c) %>% summarise(count_count=n())
 
+Science_based <- c("Yes, this target has been approved as science-based by the Science-Based Targets initiative",
+                   "Yes, we consider this a science-based target, but this target has not been approved as science-based by the Science-Based Targets initiative", 
+                   "No, but we anticipate setting one in the next 2 years" , 
+                   "No, and we do not anticipate setting one in the next 2 years",
+                   "No, but we are reporting another target that is science-based")
+absolute_2020_targets_remove_duplicates$`Is this a science-based target?` <- factor(absolute_2020_targets_remove_duplicates$`Is this a science-based target?`, levels=Science_based)
 absolute_2020_targets_remove_duplicates <- select(absolute_2020_targets_remove_duplicates, all_of(cols_id), everything()) %>%
                                            group_by_at(cols_id) %>% 
+                                           #top_n(n=1, wt=`Is this a science-based target?`) %>% 
                                            top_n(n=1, wt=`Target coverage`) %>% 
                                            top_n(n=1, wt=`Year target was set`) %>% 
                                            top_n(n=1, wt=`Most recent accounting year`) %>% # year to which MRY emissions apply
@@ -349,12 +382,16 @@ absolute_2020_targets_remove_duplicates <- select(absolute_2020_targets_remove_d
                                            top_n(n=1, wt=Scope_short) %>%
                                            top_n(n=1, wt=S1) %>%
                                            top_n(n=1, wt=`Country impact (excl. scope 3)`) #%>% if still duplicate exists, take the one with highest impact
+
+cat("absolute_2020_targets_remove_duplicates:\n")
 nrow(absolute_2020_targets_remove_duplicates)
+length(unique(absolute_2020_targets_remove_duplicates$account_id))
 
 write.table(absolute_2020_targets_remove_duplicates, "data/CDP/output/absolute_2020_targets_remove_duplicates.csv", sep=";", col.names = TRUE, row.names=FALSE)
 absolute_2020_duplicates <- anti_join(absolute_2020_targets, absolute_2020_targets_remove_duplicates, by=cols_id)
 write.table(absolute_2020_duplicates, "data/CDP/output/absolute_2020_duplicates.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
+cat("absolute_2020_duplicates:\n")
 nrow(absolute_2020_duplicates)
-
+length(unique(absolute_2020_duplicates$account_id))
 
