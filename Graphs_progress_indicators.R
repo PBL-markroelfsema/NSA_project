@@ -13,14 +13,14 @@ data_response_original <- NA
 data_response <- NA
 if (choice_data_source_year == 2021)
 { data_response_original <- read_excel('data/CDP/input/CDP_CCTD_2021_abs_ER_public.xlsx', sheet = "Absolute ER")
-data_response <- select(data_response_original, account_id, 
+data_response <- select(data_response_original, account_id, `Target reference number`,
                         `Base year emissions (100% of scope)`, `Base year emissions (100% of scope, excl. scope 3)`, `Base year`,
                         `MRY emissions (100% of scope)`, `MRY emissions (100% of scope, excl. scope 3)`, accounting_year,
                         `Targeted reduction from base year (%)`, `Target year`) %>%
   mutate(source_year = choice_data_source_year)
 } else if (choice_data_source_year == 2020) 
 {      data_response_original <- read_excel('data/CDP/input/CDP_CCTD_2020_abs_ER_public.xlsx', sheet = "Absolute ER")
-data_response <- select(data_response_original, account_id, 
+data_response <- select(data_response_original, account_id, `Target reference number`,
                         `Base year emissions (100% of scope)`, `Base year emissions (100% of scope, excl. scope 3)`, `Base year`,
                         `MRY emissions (100% of scope)`, `MRY emissions (100% of scope, excl. scope 3)`, `Most recent accounting year`,
                         `Targeted reduction from base year (%)`, `Target year`) %>%
@@ -28,7 +28,7 @@ data_response <- select(data_response_original, account_id,
   rename(accounting_year=`Most recent accounting year`)
 } else if (choice_data_source_year == 2018) 
 {      data_response_original <- read_excel('data/CDP/input/CDP_CCTD_2018_abs_ER_public.xlsx', sheet = "absolute")
-data_response <- select(data_response_original, account_id, 
+data_response <- select(data_response_original, account_id, `Target reference number`,
                         `Base year emissions (100% of scope)`, `Base year emissions (100% of scope, excl. scope 3)`, `Base year`,
                         `MRY emissions (100% of scope)`, `MRY emissions (100% of scope, excl. scope 3)`, `Most recent accounting year`,
                         `% reduction from base year`, `Target year`) %>%
@@ -58,7 +58,7 @@ data_processed <- mutate(data_processed, account_id=`Actor.name`,
 nrow(data_processed)
 
 
-if (choice_data_source=="response") {data=data_response} else {data=data_processed}
+if (choice_data_source=="response") {data=data_response} else {data=data_response}
 
    
 data_progress <-  mutate(data,
@@ -93,19 +93,23 @@ data_progress <- mutate(data_progress, TY_EM=(1-TR/100)*BY_EM,
                                        progress_rate=100*(reduction_achieved/reduction_required),
                                        maturity=ifelse(TY-BY>=0, TY-BY, NA),
                                        maturity_remaining=ifelse(TY-MRY>=0, TY-MRY, NA),
-                                       annual_ambition=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((TY_EM/BY_EM)^(1/(TY-BY))-1), NA),
+                                       annual_ambition=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((TY_EM/MRY_EM)^(1/(MRY-BY))-1), NA),
                                        annual_progress=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((MRY_EM/BY_EM)^(1/(MRY-BY))-1), NA),
-                                       annual_remainig=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((TY_EM/MRY_EM)^(1/(TY-MRY))-1), NA),
-                                       annual_ambition_a=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((1/BY_EM)*(TY_EM-BY_EM)/(TY-BY)), NA),
-                                       annual_progress_a=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((1/BY_EM)*(MRY_EM-BY_EM)/(MRY-BY)), NA)
+                                       annual_ambition_a=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((1/(TY-MRY))*((TY_EM-MRY_EM)/MRY_EM)), NA),
+                                       annual_progress_a=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((1/(MRY-BY))*((MRY_EM-BY_EM)/BY_EM)), NA)
                         )
 data_progress$target_year_group <- factor(data_progress$target_year_group, levels=c('0', '1', '2', '3'))
 nrow(data_progress)
+write.table(data_progress, paste0('data/data_progress_', choice_data_source_year, '.csv'), sep=";")
 
-TwoC_annual = 50/(2040-2019)
-OneAndAHalfC_annual = 50/(2030-2019)
+TwoC_annual = 27/(2030-2019)
+OneAndAHalfC_annual = 43/(2030-2019)
+Potential_annual = 50/(2030-2019)
 
-stats_ambition_progress <- summarise(data_progress, data_source_year=choice_data_source_year,
+stats_ambition_progress <- ungroup(data_progress) %>%
+                                                    summarise(number_of_targets = n(),
+                                                    number_of_companies = n_distinct(account_id),
+                                                    data_source_year=choice_data_source_year,
                                                     ambition_2C=100*sum(annual_ambition_a>TwoC_annual, na.rm=TRUE)/n(),
                                                     ambition_1_5C=100*sum(annual_ambition_a>OneAndAHalfC_annual, na.rm=TRUE)/n(),
                                                     on_track=100*sum(on_track==TRUE, na.rm=TRUE)/n())
@@ -122,7 +126,10 @@ g_maturity_progress <- ggplot(data=filter(d_ambition_progress, maturity_remainin
                               aes(x=maturity_remaining, y=annual_progress_a)) +
   geom_point(aes(size=on_track), colour="grey20") +
   geom_point(aes(colour=target_year_group)) +
-  geom_smooth(aes(x=maturity_remaining, y=annual_progress_a)) +
+  geom_hline(yintercept=TwoC_annual, colour="black", linetype="dashed", size=1) +
+  geom_hline(yintercept=OneAndAHalfC_annual, colour="black", linetype="dashed", size=1) +
+  geom_hline(yintercept=Potential_annual, colour="black", linetype="dashed", size=1) +
+  #geom_smooth(aes(x=maturity_remaining, y=annual_progress_a)) +
   scale_colour_discrete(name="Target year", labels=progress_TY_labels) +
   scale_size_manual(name="On track", values=c("TRUE"=5, "FALSE"=0.0)) +
   xlab("remaining maturity (years)") +
@@ -137,7 +144,10 @@ g_maturity_ambition <- ggplot(data=filter(d_ambition_progress, maturity_remainin
                               aes(x=maturity_remaining, y=annual_ambition_a)) +
   geom_point(aes(size=on_track), colour="grey20") +
   geom_point(aes(colour=target_year_group)) +
-  geom_smooth() +
+  geom_hline(yintercept=TwoC_annual, colour="black", linetype="dashed", size=1) +
+  geom_hline(yintercept=OneAndAHalfC_annual, colour="black", linetype="dashed", size=1) +
+  geom_hline(yintercept=Potential_annual, colour="black", linetype="dashed", size=1) +
+  #geom_smooth() +
   scale_colour_discrete(name="Target year", labels=progress_TY_labels) +
   scale_size_manual(name="On track", values=c("TRUE"=5, "FALSE"=0.0)) +
   xlab("remaining maturity (years)") +
@@ -156,9 +166,10 @@ g_ambition_progress <- ggplot(data=filter(d_ambition_progress, annual_ambition_a
   geom_point(aes(colour=target_year_group)) +
   geom_point(data=TwoC_progress, aes(x=annual_ambition_a, y=annual_progress_a, shape=temperature), colour="yellow", size=4) +
   geom_point(data=OneAndAHalfC_progress, aes(x=annual_ambition_a, y=annual_progress_a, shape=temperature), colour="yellow", size=4) +
-  geom_vline(xintercept=TwoC_annual, colour="grey", linetype="solid", size=1) +
-  geom_vline(xintercept=OneAndAHalfC_annual, colour="grey", linetype="solid", size=1) +
-  geom_smooth(aes()) +
+  geom_vline(xintercept=TwoC_annual, colour="black", linetype="dashed", size=1) +
+  geom_vline(xintercept=OneAndAHalfC_annual, colour="black", linetype="dashed", size=1) +
+  geom_vline(xintercept=Potential_annual, colour="black", linetype="dashed", size=1) +
+  #geom_smooth(aes()) +
   scale_colour_discrete(name="Target year", labels=progress_TY_labels) +
   scale_size_manual(name="On track", values=c("TRUE"=5, "FALSE"=0.0)) +
   scale_shape_manual(name="Paris goals (2019-2030)", values=c(15, 17)) +
@@ -169,10 +180,23 @@ g_ambition_progress <- ggplot(data=filter(d_ambition_progress, annual_ambition_a
   theme_bw()
 plot(g_ambition_progress)
 
-g_total <- ((g_maturity_ambition + theme(legend.position = "none") + ylim(-100, 100) + ggtitle("Ambition")) + 
-           (g_maturity_progress + theme(legend.position = "none") + ylim(-100, 100)+ ggtitle("Progress"))) /
-           ((g_ambition_progress + ylim(-100, 100)+ ggtitle("Compare ambition and progress"))) +
-           plot_annotation(paste0("Ambition and progress for source data year ", choice_data_source_year))
+layout <- "
+AABB
+CCC#
+"
+
+
+layout <- c(
+  area(1,1,2,4),
+  area(1,3,2,4),
+  area(3,1,4,3)
+)
+g_total <- ((g_maturity_ambition + theme(legend.position = "none") + ggtitle("Ambition")) + 
+           (g_maturity_progress + theme(legend.position = "none") +  ggtitle("Progress"))) /
+           ((g_ambition_progress + ggtitle("Compare ambition and progress")))  +
+           #plot_layout(design=layout) #+
+           plot_annotation(paste0("Ambition and progress for source data year ", choice_data_source_year)) &
+           ylim(-100, 100)
 plot(g_total)
 #jpeg(paste0("graphs/ambition_progress_", choice_data_source_year, ".jpg"))
 #print(g_total)
@@ -181,6 +205,26 @@ ggsave(paste0("graphs/ambition_progress_", choice_data_source_year, ".jpg"), g_t
 
 #---------------------------------
 #TRY ALTERNATIVE PROGRESS AND AMBITION
+
+# plot histogram annual ambitions
+d_annual_ambition=filter(data_progress, annual_ambition_a>-100, annual_ambition_a<100)
+g_annual_ambition <- ggplot(data=d_annual_ambition) +
+  geom_histogram(aes(x=annual_ambition_a)) +
+  theme_bw() +
+  ggtitle("Ambition")
+plot(g_annual_ambition)
+
+# plot histogram annual progress
+d_annual_progress=filter(data_progress, annual_progress_a>-100, annual_progress_a<100)
+g_annual_progress <- ggplot(data=d_annual_progress) +
+  geom_histogram(aes(x=annual_progress_a)) +
+  theme_bw() +
+  ggtitle("Progress")
+plot(g_annual_progress)
+
+g_ambition_progress = g_annual_ambition + g_annual_progress
+plot(g_ambition_progress)
+ggsave(paste0("graphs/hist_ambition_progress_", choice_data_source_year, ".jpg"), g_ambition_progress)
 
 # plot histogram progress rate
 g_progress_rate <- ggplot(data=data_progress) +

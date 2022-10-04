@@ -90,7 +90,12 @@ delete_companies_account_ID= c(829595, 829599, 829603, 829640, 830933, 846242, 8
 # 1 orginal data
 options(scipen = 999)
 # (X) Read in CDP data from Excel
-absolute_2020_data_excel <- read_excel('data/CDP/input/2020_CDP_Country_Specific_Dataset_for_NSA_Report_v2_adjusted.xlsx', sheet = "Absolute ER")
+
+#absolute_2020_data_excel <- read_excel('data/CDP/input/2020_CDP_Country_Specific_Dataset_for_NSA_Report_v2_adjusted.xlsx', sheet = "Absolute ER")
+# In version v3 changes have been made for Global S1, S2M, S2L where the sum of the countries was higher than global 
+# Based on check_percent_alloc which is calculated in this Scipt
+absolute_2020_data_excel <- read_excel('data/CDP/input/2020_CDP_Country_Specific_Dataset_for_NSA_Report_v3_adjusted.xlsx', sheet = "Absolute ER_v3")
+
 absolute_2020_data_excel <- as.data.frame(absolute_2020_data_excel)
 absolute_2020_data_excel$`Target year` <- as.integer(absolute_2020_data_excel$`Target year`)
 absolute_2020_data_excel$`Target status in reporting year` <- str_trim(absolute_2020_data_excel$`Target status in reporting year`)
@@ -120,7 +125,7 @@ cat("absolute_2020_data_excel:\n")
 nrow(absolute_2020_data_excel)
 length(unique(absolute_2020_data_excel$account_id))
 
-StatCDP(absolute_2020_data_excel, "original_2020")
+#StatCDP(absolute_2020_data_excel, "original_2020")
 
 # 2. (X) clean data
 Scopes <- c("Scope 1", "Scope 1+3", "Scope 1+2", "Scope 1+2+3", "Scope 2", "Scope 2+3")
@@ -175,20 +180,27 @@ levels(absolute_2020_data$Scope_short_tmp) <- list(
 )
 write.table(absolute_2020_data, "data/CDP/output/absolute_2020_data_tmp1.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
-check_percent_alloc_v1 <- group_by(absolute_2020_data, account_id, `Target reference number`, `Country/Region`) %>%
+# There are many duplicates (one with Country/Global S1/S2M/S2L information, and one row without) --> they are removed further down the script
+# But to do this in a more controlled way, this could be changed --> TO DO
+cols_id_tmp <- c("account_id", "Country/Region", "Target reference number") # only one target should exist for this ID
+absolute_2020_data_tmp <- group_by_at(absolute_2020_data, cols_id_tmp) %>% 
+                          top_n(n=1, wt=`Global S1`) %>%
+                          top_n(n=1, wt=`Global S2L`) %>%
+                          top_n(n=1, wt=`Global S2M`)
+write.table(absolute_2020_data_tmp, "data/CDP/output/absolute_2020_data_tmp.csv", sep=";", col.names = TRUE, row.names=FALSE) 
+write.table(absolute_2020_data, "data/CDP/output/absolute_2020_data.csv", sep=";", col.names = TRUE, row.names=FALSE) 
+check_percent_alloc <- group_by(absolute_2020_data, account_id, `Target reference number`, `Country/Region`) %>%
                           summarise(check_percent_alloc_S1=sum(`Country S1`, na.rm=T)/mean(`Global S1`, na.rm=T),
                                     check_percent_alloc_S2L=sum(`Country S2L`, na.rm=T)/mean(`Global S2L`, na.rm=T),
                                     check_percent_alloc_S2M=sum(`Country S2M`, na.rm=T)/mean(`Global S2M`, na.rm=T))
-check_percent_alloc_v2 <- group_by(check_percent_alloc_v1, account_id, `Target reference number`) %>%
+check_percent_alloc <- group_by(check_percent_alloc, account_id, `Target reference number`) %>%
                           summarise(check_percent_alloc_S1=sum(check_percent_alloc_S1),
                                     check_percent_alloc_S2L=sum(check_percent_alloc_S2L),
                                     check_percent_alloc_S2M=sum(check_percent_alloc_S2M))
-check_percent_alloc_v3 <- filter(check_percent_alloc_v2, (check_percent_alloc_S1!=0 & (check_percent_alloc_S1<0.9|check_percent_alloc_S1>1.1)) |
+check_percent_alloc <- filter(check_percent_alloc, (check_percent_alloc_S1!=0 & (check_percent_alloc_S1<0.9|check_percent_alloc_S1>1.1)) |
                                                          (check_percent_alloc_S2L!=0 & (check_percent_alloc_S2L<0.9|check_percent_alloc_S2L>1.1)) |
                                                          (check_percent_alloc_S2M!=0 & (check_percent_alloc_S2M<0.9|check_percent_alloc_S2M>1.1))) #%>%
-                       #pivot_wider(names_from=`Country/Region`, 
-                      #           values_from=c(check_percent_alloc_S1, check_percent_alloc_S2L, check_percent_alloc_S2M))
-write.table(check_percent_alloc_v3, "data/CDP/output/check_percent_alloc.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(check_percent_alloc, "data/CDP/output/check_percent_alloc.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 absolute_2020_data <- mutate(absolute_2020_data, percent_alloc_tmp = case_when(
   Scope_short_tmp=="S1" ~ (`Country S1`)/(`Global S1`),
@@ -209,9 +221,9 @@ tmp<-filter(absolute_2020_data, is.na(percent_alloc))
 nrow(tmp)
 tmp<-filter(absolute_2020_data, percent_alloc==0)
 nrow(tmp)
-tmp<-filter(absolute_2020_data, is.na(percent_alloc) | percent_alloc==0)
+tmp<-filter(absolute_2020_data, is.na(percent_alloc) | percent_alloc==0 | percent_alloc==Inf)
 nrow(tmp)
-absolute_2020_data <- filter(absolute_2020_data, !(is.na(percent_alloc) | percent_alloc==0))
+absolute_2020_data <- filter(absolute_2020_data, !(is.na(percent_alloc) | percent_alloc==0 | percent_alloc==Inf))
 nrow(absolute_2020_data)
 # remove ; because this is inconvenient for csv files. TEMP --> does not work, so remove columsn
 absolute_2020_data <- select(absolute_2020_data, -`Please explain (including target coverage)`)
