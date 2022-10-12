@@ -21,6 +21,7 @@ library(openxlsx)
 library(stringdist)
 library(fuzzyjoin)
 library(openxlsx)
+library("stringr")
  
 # 3. Functions and variables =============================================================
 
@@ -35,12 +36,12 @@ abs_er_2018 <- read.xlsx("data/CDP/input/CDP_2018_Global_Aggregation_raw_respons
 abs_er_2021 <- read.xlsx("data/CDP/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C4.1a")
 #int_er_2018 <- read.xlsx("input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C4.1b")
 #int_er_2021 <- read.xlsx("input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C4.1b")
-base_year_em_2018 <- read.xlsx("data/CDP/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C5.1")
-base_year_em_2021 <- read.xlsx("data/CDP/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C5.1")
-mry_s1_em_2018 <- read.xlsx("data/CDP/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C6.1")
-mry_s1_em_2021 <- read.xlsx("data/CDP/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C6.1")
-mry_s2_em_2018 <- read.xlsx("data/CDP/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C6.3")
-mry_s2_em_2021 <- read.xlsx("data/CDP/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C6.3")
+
+
+
+
+
+
 
 
 
@@ -236,6 +237,7 @@ rm("add_back", "final", "last_score", "score_df", "test2")
 
 
 ##2018 Base year emissions data
+base_year_em_2018 <- read.xlsx("data/CDP/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C5.1")
 base_year_em_2018_form <- base_year_em_2018 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
@@ -257,6 +259,7 @@ if(output)  {write.xlsx(base_year_em_2018_form, "data/CDP/output/IKEA_NSA_BY_EM_
 
 
 ##2021 Base year emissions data
+base_year_em_2021 <- read.xlsx("data/CDP/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C5.1")
 base_year_em_2021_form <- base_year_em_2021 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
@@ -278,6 +281,7 @@ if(output)  {write.xlsx(base_year_em_2021_form, "data/CDP/output/IKEA_NSA_BY_EM_
 
 
 ##2018 most recent year scope 1 emissions data
+mry_s1_em_2018 <- read.xlsx("data/CDP/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C6.1")
 mry_s1_em_2018_form <- mry_s1_em_2018 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
@@ -305,6 +309,7 @@ if(output)  {write.xlsx(mry_s1_em_2018_form, "data/CDP/output/IKEA_NSA_MRY_S1_EM
 
          
 ##2021 most recent year scope 1 emissions data
+mry_s1_em_2021 <- read.xlsx("data/CDP/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C6.1")
 mry_s1_em_2021_form <- mry_s1_em_2021 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
@@ -330,6 +335,7 @@ if(output)  {write.xlsx(mry_s1_em_2021_form, "data/CDP/output/IKEA_NSA_MRY_S1_EM
 
 
 ##2018 most recent year scope 2 emissions data
+mry_s2_em_2018 <- read.xlsx("data/CDP/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C6.3")
 mry_s2_em_2018_form <- mry_s2_em_2018 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
@@ -358,6 +364,7 @@ if(output)  {write.xlsx(mry_s2_em_2018_form, "data/CDP/output/IKEA_NSA_MRY_S2_EM
 }
 
 ##2021 most recent year scope 2 emissions data
+mry_s2_em_2021 <- read.xlsx("data/CDP/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C6.3")
 mry_s2_em_2021_form <- mry_s2_em_2021 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
