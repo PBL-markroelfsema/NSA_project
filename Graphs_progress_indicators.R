@@ -1,11 +1,17 @@
 library(stringr)
 library(readxl)
+library(dplyr)
 library(tidyverse)
 library(data.table)
 library(patchwork)
 
+options(scipen = 100)
+
+#SETTNGS
 choice_data_source = "response" # response or processed
 choice_data_source_year = 2021
+choice_ambition = "MRY" # from "BY" or "MRY"
+choice_progress = "TYset" # relative to "BY" or "TYset"
 
 # read in data (response or processed)
 # RESPONSE DATA
@@ -13,28 +19,28 @@ data_response_original <- NA
 data_response <- NA
 if (choice_data_source_year == 2021)
 { data_response_original <- read_excel('data/CDP/input/CDP_CCTD_2021_abs_ER_public.xlsx', sheet = "Absolute ER")
-data_response <- select(data_response_original, account_id, `Target reference number`,
+data_response <- select(data_response_original, account_id, incorporation_country, `Target reference number`,
                         `Base year emissions (100% of scope)`, `Base year emissions (100% of scope, excl. scope 3)`, `Base year`,
                         `MRY emissions (100% of scope)`, `MRY emissions (100% of scope, excl. scope 3)`, accounting_year,
-                        `Targeted reduction from base year (%)`, `Target year`) %>%
+                        `Targeted reduction from base year (%)`, `Target year`, `Year target was set`) %>%
   mutate(source_year = choice_data_source_year)
 } else if (choice_data_source_year == 2020) 
 {      data_response_original <- read_excel('data/CDP/input/CDP_CCTD_2020_abs_ER_public.xlsx', sheet = "Absolute ER")
-data_response <- select(data_response_original, account_id, `Target reference number`,
+data_response <- select(data_response_original, account_id, incorporation_country, `Target reference number`,
                         `Base year emissions (100% of scope)`, `Base year emissions (100% of scope, excl. scope 3)`, `Base year`,
                         `MRY emissions (100% of scope)`, `MRY emissions (100% of scope, excl. scope 3)`, `Most recent accounting year`,
-                        `Targeted reduction from base year (%)`, `Target year`) %>%
+                        `Targeted reduction from base year (%)`, `Target year`, `Year target was set`) %>%
   mutate(source_year = choice_data_source_year) %>%
   rename(accounting_year=`Most recent accounting year`)
 } else if (choice_data_source_year == 2018) 
 {      data_response_original <- read_excel('data/CDP/input/CDP_CCTD_2018_abs_ER_public.xlsx', sheet = "absolute")
-data_response <- select(data_response_original, account_id, `Target reference number`,
+data_response <- select(data_response_original, account_id, incorporation_country, `Target reference number`,
                         `Base year emissions (100% of scope)`, `Base year emissions (100% of scope, excl. scope 3)`, `Base year`,
                         `MRY emissions (100% of scope)`, `MRY emissions (100% of scope, excl. scope 3)`, `Most recent accounting year`,
                         `% reduction from base year`, `Target year`) %>%
                  mutate(source_year = choice_data_source_year) %>%
                  rename(accounting_year=`Most recent accounting year`, 
-                        `Targeted reduction from base year (%)`=`% reduction from base year`)
+                        `Targeted reduction from base year (%)`=`% reduction from base year`, `Year target was set`)
 }
 nrow(data_response)
 
@@ -61,12 +67,15 @@ nrow(data_processed)
 if (choice_data_source=="response") {data=data_response} else {data=data_response}
 
    
-data_progress <-  mutate(data,
-                         BY_EM=ifelse(is.na(`Base year emissions (100% of scope, excl. scope 3)`), `Base year emissions (100% of scope)`, `Base year emissions (100% of scope, excl. scope 3)`),
-                         MRY_EM=ifelse(is.na(`MRY emissions (100% of scope, excl. scope 3)`), `MRY emissions (100% of scope)`, `MRY emissions (100% of scope, excl. scope 3)`)) %>%
+data_progress <-  group_by(data, account_id, `Target reference number`) %>%
                   rename(BY=`Base year`,
                          MRY=`accounting_year`,
-                         TR=`Targeted reduction from base year (%)`, TY=`Target year`) %>%
+                         TR=`Targeted reduction from base year (%)`, TY=`Target year`,
+                         TYset=`Year target was set`) %>%
+                  mutate(BY_EM=ifelse(is.na(`Base year emissions (100% of scope, excl. scope 3)`), `Base year emissions (100% of scope)`, `Base year emissions (100% of scope, excl. scope 3)`),
+                         MRY_EM=ifelse(is.na(`MRY emissions (100% of scope, excl. scope 3)`), `MRY emissions (100% of scope)`, `MRY emissions (100% of scope, excl. scope 3)`),
+                         TYSet=max(TYset, BY), 
+                         TYset_EM=ifelse(TYset==BY, BY_EM, ifelse(TYset>MRY, MRY_EM, ifelse(BY_EM>0 & MRY_EM>0, BY_EM+((TYset-BY)/(MRY-BY))*(MRY_EM-BY_EM), NA)))) %>%
                   filter(!is.na(BY_EM), !(BY_EM=="private_response"), 
                          !is.na(MRY_EM), MRY_EM>0, !(MRY_EM=="private_response"), 
                          !is.na(TR), 
@@ -76,35 +85,51 @@ data_progress <-  mutate(data,
 nrow(data_progress)
 data_progress$BY_EM <- as.numeric(data_progress$BY_EM)
 data_progress$MRY_EM <- as.numeric(data_progress$MRY_EM)
+data_progress$TYset_EM <- as.numeric(data_progress$TYset_EM)
 
 min(data_progress$TY, na.rm=TRUE)
 max(data_progress$TY, na.rm=TRUE)
 tst <- filter(data_progress, TY>2030)
 
 # calculate progress rate and target completed
-data_progress <- mutate(data_progress, TY_EM=(1-TR/100)*BY_EM,
-                                       reduction_achieved=BY_EM-MRY_EM,
-                                       Timelapsed=(MRY-BY)/(TY-BY),
-                                       reduction_required=BY_EM*(TR/100)*Timelapsed,
-                                       reduction_achieved=BY_EM-MRY_EM,
-                                       on_track=ifelse(reduction_achieved>=reduction_required, TRUE, FALSE),
-                                       target_year_group=ifelse(TY<=2020, 0, ifelse(TY<=2025, 1, ifelse(TY<2035, 2, 3))),
-                                       target_completed=100*(TY_EM/MRY_EM-1),
-                                       progress_rate=100*(reduction_achieved/reduction_required),
-                                       maturity=ifelse(TY-BY>=0, TY-BY, NA),
-                                       maturity_remaining=ifelse(TY-MRY>=0, TY-MRY, NA),
-                                       annual_ambition=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((TY_EM/MRY_EM)^(1/(MRY-BY))-1), NA),
-                                       annual_progress=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((MRY_EM/BY_EM)^(1/(MRY-BY))-1), NA),
-                                       annual_ambition_a=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((1/(TY-MRY))*((TY_EM-MRY_EM)/MRY_EM)), NA),
-                                       annual_progress_a=ifelse(maturity_remaining>=0 & BY_EM>0 & MRY_EM>0,-100*((1/(MRY-BY))*((MRY_EM-BY_EM)/BY_EM)), NA)
+data_progress <- group_by(data_progress, account_id, `Target reference number`) %>%
+                  mutate(TY_EM=(1-TR/100)*BY_EM,
+                  reduction_achieved=BY_EM-MRY_EM,
+                  Timelapsed=(MRY-BY)/(TY-BY),
+                  reduction_required=BY_EM*(TR/100)*Timelapsed,
+                  reduction_achieved=BY_EM-MRY_EM,
+                  on_track=ifelse(reduction_achieved>=reduction_required, TRUE, FALSE),
+                  target_year_group=ifelse(TY<=2020, 0, ifelse(TY<=2025, 1, ifelse(TY<2035, 2, 3))),
+                  target_completed=100*(TY_EM/MRY_EM-1),
+                  progress_rate=100*(reduction_achieved/reduction_required),
+                  maturity=ifelse(TY-BY>=0, TY-BY, NA),
+                  maturity_passed=ifelse(MRY-BY>=0, MRY-BY, 0),
+                  maturity_remaining=ifelse(TY-MRY>=0, TY-MRY, 0),
+                        
+                  annual_ambition_MRY=ifelse(maturity_remaining>0 & MRY_EM>0 & TY_EM>0,-100*((TY_EM/MRY_EM)^(1/(TY-MRY))-1), NA),
+                  annual_ambition_BY=ifelse(maturity_remaining>=0 & BY_EM>0 & TY_EM>0,-100*((TY_EM/BY_EM)^(1/(TY-BY))-1), NA),
+                  annual_ambition=ifelse(choice_ambition=="BY", annual_ambition_BY, annual_ambition_MRY), 
+                                       
+                  annual_progress=ifelse(maturity_passed>0 & BY_EM>0 & MRY_EM>0,-100*((MRY_EM/BY_EM)^(1/(MRY-BY))-1), NA),
+                        
+                  annual_ambition_MRY_a=ifelse(maturity_remaining>=0 & MRY_EM>0 & TY_EM>0,-100*((1/(TY-MRY))*((TY_EM-MRY_EM)/MRY_EM)), NA),
+                  annual_ambition_BY_a=ifelse(maturity_remaining>=0 & BY_EM>0 & TY_EM>0,-100*((1/(TY-BY))*((TY_EM-BY_EM)/BY_EM)), NA),
+                  annual_ambition_a=ifelse(choice_ambition=="BY", annual_ambition_BY_a, annual_ambition_MRY_a),
+                                       
+                  annual_progress_BY_a=ifelse(maturity_passed>0 & BY_EM>0 & MRY_EM>0,-100*((1/(MRY-BY))*((MRY_EM-BY_EM)/BY_EM)), NA),
+                  annual_progress_TYset_a=ifelse(maturity_passed>0 & BY_EM>0 & MRY_EM>0, -100*((1/(MRY-TYset))*((MRY_EM-TYset_EM)/TYset_EM)), NA),
+                  annual_progress_a=ifelse(choice_progress=="BY", annual_progress_BY_a, annual_progress_TYset_a)
                         )
 data_progress$target_year_group <- factor(data_progress$target_year_group, levels=c('0', '1', '2', '3'))
 nrow(data_progress)
-write.table(data_progress, paste0('data/data_progress_', choice_data_source_year, '.csv'), sep=";")
+write.table(data_progress, paste0('data/data_progress_', choice_data_source_year, '.csv'), sep=";", row.names = F)
 
 TwoC_annual = 27/(2030-2019)
 OneAndAHalfC_annual = 43/(2030-2019)
 Potential_annual = 50/(2030-2019)
+
+TwoC_annual_path <- data.frame(year=c(2030-2019, 2040-2019, 2050-2019), annual_reduction=c(27/(2030-2019), 47/(2040-2019), 63/(2050-2019)))
+OneAndAHalfC_annual_path <- data.frame(year=c(2030-2019, 2040-2019, 2050-2019), annual_reduction=c(43/(2030-2019), 69/(2040-2019), 84/(2050-2019)))
 
 stats_ambition_progress <- ungroup(data_progress) %>%
                                                     summarise(number_of_targets = n(),
@@ -126,10 +151,11 @@ g_maturity_progress <- ggplot(data=filter(d_ambition_progress, maturity_remainin
                               aes(x=maturity_remaining, y=annual_progress_a)) +
   geom_point(aes(size=on_track), colour="grey20") +
   geom_point(aes(colour=target_year_group)) +
-  geom_hline(yintercept=TwoC_annual, colour="black", linetype="dashed", size=1) +
-  geom_hline(yintercept=OneAndAHalfC_annual, colour="black", linetype="dashed", size=1) +
-  geom_hline(yintercept=Potential_annual, colour="black", linetype="dashed", size=1) +
-  #geom_smooth(aes(x=maturity_remaining, y=annual_progress_a)) +
+  #geom_hline(yintercept=TwoC_annual, colour="black", linetype="dashed", size=1) +
+  #geom_hline(yintercept=OneAndAHalfC_annual, colour="black", linetype="dashed", size=1) +
+  #geom_hline(yintercept=Potential_annual, colour="black", linetype="dashed", size=1) +
+  geom_line(data=TwoC_annual_path, aes(x=year, y=annual_reduction), linetype="dashed") +
+  geom_line(data=OneAndAHalfC_annual_path, aes(x=year, y=annual_reduction), linetype="dashed") +
   scale_colour_discrete(name="Target year", labels=progress_TY_labels) +
   scale_size_manual(name="On track", values=c("TRUE"=5, "FALSE"=0.0)) +
   xlab("remaining maturity (years)") +
@@ -144,10 +170,11 @@ g_maturity_ambition <- ggplot(data=filter(d_ambition_progress, maturity_remainin
                               aes(x=maturity_remaining, y=annual_ambition_a)) +
   geom_point(aes(size=on_track), colour="grey20") +
   geom_point(aes(colour=target_year_group)) +
-  geom_hline(yintercept=TwoC_annual, colour="black", linetype="dashed", size=1) +
-  geom_hline(yintercept=OneAndAHalfC_annual, colour="black", linetype="dashed", size=1) +
-  geom_hline(yintercept=Potential_annual, colour="black", linetype="dashed", size=1) +
-  #geom_smooth() +
+  #geom_hline(yintercept=TwoC_annual, colour="black", linetype="dashed", size=1) +
+  #geom_hline(yintercept=OneAndAHalfC_annual, colour="black", linetype="dashed", size=1) +
+  #geom_hline(yintercept=Potential_annual, colour="black", linetype="dashed", size=1) +
+  geom_line(data=TwoC_annual_path, aes(x=year, y=annual_reduction), linetype="dashed") +
+  geom_line(data=OneAndAHalfC_annual_path, aes(x=year, y=annual_reduction), linetype="dashed") +
   scale_colour_discrete(name="Target year", labels=progress_TY_labels) +
   scale_size_manual(name="On track", values=c("TRUE"=5, "FALSE"=0.0)) +
   xlab("remaining maturity (years)") +
@@ -164,12 +191,11 @@ g_ambition_progress <- ggplot(data=filter(d_ambition_progress, annual_ambition_a
                               aes(x=annual_ambition_a, y=annual_progress_a)) +
   geom_point(aes(size=on_track), colour="grey20") +
   geom_point(aes(colour=target_year_group)) +
-  geom_point(data=TwoC_progress, aes(x=annual_ambition_a, y=annual_progress_a, shape=temperature), colour="yellow", size=4) +
-  geom_point(data=OneAndAHalfC_progress, aes(x=annual_ambition_a, y=annual_progress_a, shape=temperature), colour="yellow", size=4) +
-  geom_vline(xintercept=TwoC_annual, colour="black", linetype="dashed", size=1) +
-  geom_vline(xintercept=OneAndAHalfC_annual, colour="black", linetype="dashed", size=1) +
-  geom_vline(xintercept=Potential_annual, colour="black", linetype="dashed", size=1) +
-  #geom_smooth(aes()) +
+  #geom_point(data=TwoC_progress, aes(x=annual_ambition_a, y=annual_progress_a, shape=temperature), colour="yellow", size=4) +
+  #geom_point(data=OneAndAHalfC_progress, aes(x=annual_ambition_a, y=annual_progress_a, shape=temperature), colour="yellow", size=4) +
+  #geom_vline(xintercept=TwoC_annual, colour="black", linetype="dashed", size=1) +
+  #geom_vline(xintercept=OneAndAHalfC_annual, colour="black", linetype="dashed", size=1) +
+  #geom_vline(xintercept=Potential_annual, colour="black", linetype="dashed", size=1) +
   scale_colour_discrete(name="Target year", labels=progress_TY_labels) +
   scale_size_manual(name="On track", values=c("TRUE"=5, "FALSE"=0.0)) +
   scale_shape_manual(name="Paris goals (2019-2030)", values=c(15, 17)) +
@@ -195,13 +221,14 @@ g_total <- ((g_maturity_ambition + theme(legend.position = "none") + ggtitle("Am
            (g_maturity_progress + theme(legend.position = "none") +  ggtitle("Progress"))) /
            ((g_ambition_progress + ggtitle("Compare ambition and progress")))  +
            #plot_layout(design=layout) #+
-           plot_annotation(paste0("Ambition and progress for source data year ", choice_data_source_year)) &
+           plot_annotation(paste0("Ambition from ", choice_ambition, " and progress from ", choice_progress, " for source data year ", choice_data_source_year)) &
            ylim(-100, 100)
 plot(g_total)
 #jpeg(paste0("graphs/ambition_progress_", choice_data_source_year, ".jpg"))
 #print(g_total)
 #dev.off()
-ggsave(paste0("graphs/ambition_progress_", choice_data_source_year, ".jpg"), g_total)
+ggsave(paste0("graphs/ambition_from_", choice_ambition, "_progress_from_", choice_progress, "_", choice_data_source_year, ".jpg"), 
+              g_total, scale=2)
 
 #---------------------------------
 #TRY ALTERNATIVE PROGRESS AND AMBITION

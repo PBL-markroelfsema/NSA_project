@@ -321,7 +321,7 @@ absolute_2020_targets <- mutate(absolute_2020_targets, BY_EM_target=BY_EM_target
 absolute_2020_targets <- mutate(absolute_2020_targets, target_type="absolute",
                                 BY_tmp = ifelse(!BY_EM_target%in%c(0,NA), BY_EM_target, 
                                                ifelse(!BY_EM_100_excl_scope3%in%c(0,NA), BY_EM_100_excl_scope3*(1/100), BY_EM_100*(1/100))),
-                                                      `BaseYearEmissions_excl_scope3`=ifelse(`Country impact (excl. scope 3)`%in%c(0,NA), BY_tmp, 100*`Country impact (excl. scope 3)`/`% reduction from base year`), 
+                                BaseYearEmissions_excl_scope3=ifelse(`Country impact (excl. scope 3)`%in%c(0,NA), BY_tmp, 100*`Country impact (excl. scope 3)`/`% reduction from base year`), 
                                                        S1=ifelse(Scope1=="S1", `Country S1`, 0),
                                                        S2=ifelse(Scope2=="S2M", `Country S2M`, ifelse(Scope2=="S2L", `Country S2L`, 
                                                           ifelse(Scope2=="max",ifelse(`Country S2M`>`Country S2L`,`Country S2M`,`Country S2L`),0))),
