@@ -421,26 +421,46 @@ print(paste0("Total scope1+2 targets: ", nrow(tmp3)))
 print(paste0("Total included targets: ", nrow(tmp4)))
 
 # take maximum emissions per company
-CDP_data_cleanded_target_2021_MRY_included_max <- filter(CDP_data_cleanded_target_2021, Include==TRUE) %>%
-  group_by(account_id) %>%
-  summarise(MRY_inventory=max(MRY_inventory, na.rm=TRUE),
-            MRY_target=max(MRY_target, na.rm=TRUE))
+CDP_data_cleanded_target_2021_MRY_included_selection <- filter(CDP_data_cleanded_target_2021, Include==TRUE)
+CDP_data_cleanded_target_2021_MRY_included_max <- group_by(CDP_data_cleanded_target_2021_MRY_included_selection, account_id) %>%
+                                                  summarise(MRY_inventory=max(MRY_inventory, na.rm=TRUE),
+                                                  MRY_target=max(MRY_target, na.rm=TRUE))
 # calculated total emissions in dataset with quantifiable, scope 1+2 and active targets
-CDP_data_cleanded_target_2021_MRY_included_total <- summarise(CDP_data_cleanded_target_2021_MRY_included_max, 
-                                                              MRY_inventory=sum(MRY_inventory),
-                                                              MRY_target=sum(MRY_target)) %>%
-                                                              mutate(primary_industry="Total",
-                                                              source_year=2021)
+# Calculate total
+CDP_data_cleanded_target_2021_MRY_included_total1 <- select(CDP_data_cleanded_target_2021_MRY_included_selection, account_id) %>%
+                                                     summarise(Nr_targets=n()) %>%
+                                                     mutate(primary_industry="Total")
+CDP_data_cleanded_target_2021_MRY_included_total2 <- summarise(CDP_data_cleanded_target_2021_MRY_included_max, 
+                                                               Nr_companies = n(),
+                                                               MRY_inventory=sum(MRY_inventory),
+                                                               MRY_target=sum(MRY_target)) %>%
+                                                               mutate(primary_industry="Total",
+                                                               source_year=2021)
+CDP_data_cleanded_target_2021_MRY_included_total <- left_join(CDP_data_cleanded_target_2021_MRY_included_total2, CDP_data_cleanded_target_2021_MRY_included_total1, by=c('primary_industry')) %>%
+                                                     select(Nr_companies, Nr_targets, everything())
+# Calculate per sector
 account_sector <- select(CDP_data_raw_2021_summary, `Account number`, `Primary industry`) %>% 
                   rename(account_id=`Account number`,
                          primary_industry=`Primary industry`) %>%
                   distinct()
-tmp = left_join(CDP_data_cleanded_target_2021_MRY_included_max, account_sector, by=c('account_id')) %>%
-      mutate(primary_industry=ifelse(is.na(primary_industry), "Other", primary_industry))
-CDP_data_cleanded_target_2021_MRY_included_sector <- group_by(tmp, primary_industry) %>%
-                                                     summarise(MRY_inventory=sum(MRY_inventory, na.rm=TRUE),
-                                                               MRY_target=sum(MRY_target, na.rm=TRUE)) %>%
-                                                               mutate(source_year=2021)
+tmp1 = CDP_data_cleanded_target_2021_MRY_included_selection %>%
+       mutate(primary_industry=ifelse(is.na(primary_industry), "Other", primary_industry))
+tmp2 = left_join(CDP_data_cleanded_target_2021_MRY_included_max, account_sector, by=c('account_id')) %>%
+       mutate(primary_industry=ifelse(is.na(primary_industry), "Other", primary_industry))
+
+CDP_data_cleanded_target_2021_MRY_included_sector1 <- select(tmp1, account_id, primary_industry) %>%
+                                                      group_by(primary_industry) %>%
+                                                      summarise(Nr_targets=n())
+
+CDP_data_cleanded_target_2021_MRY_included_sector2 <- group_by(tmp2, primary_industry) %>%
+                                                      summarise(Nr_companies =n_distinct(account_id),
+                                                                MRY_inventory=sum(MRY_inventory, na.rm=TRUE),
+                                                                MRY_target=sum(MRY_target, na.rm=TRUE)) %>%
+                                                                mutate(source_year=2021)
+CDP_data_cleanded_target_2021_MRY_included_sector <- left_join(CDP_data_cleanded_target_2021_MRY_included_sector2, CDP_data_cleanded_target_2021_MRY_included_sector1, by=c('primary_industry')) %>%
+                                                     select(Nr_companies, Nr_targets, everything())
+
+# Combine
 CDP_data_cleanded_target_2021_MRY_included <- rbind(CDP_data_cleanded_target_2021_MRY_included_total, CDP_data_cleanded_target_2021_MRY_included_sector) %>%
                                               mutate(MRY_inventory=10^-6*MRY_inventory,
                                                      MRY_target=10^-6*MRY_target,
