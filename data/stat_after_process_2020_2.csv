@@ -36,7 +36,7 @@
 "A.P. Moller - Maersk";"Colombia";"Scope 1";1
 "A.P. Moller - Maersk";"Congo";"Scope 1";1
 "A.P. Moller - Maersk";"Costa Rica";"Scope 1";1
-"A.P. Moller - Maersk";"CÙte d'Ivoire";"Scope 1";1
+"A.P. Moller - Maersk";"C√¥te d'Ivoire";"Scope 1";1
 "A.P. Moller - Maersk";"Croatia";"Scope 1";1
 "A.P. Moller - Maersk";"Cyprus";"Scope 1";1
 "A.P. Moller - Maersk";"Czechia";"Scope 1";1
@@ -611,8 +611,8 @@
 "Aker BP ASA";"Norway";"Scope 1";1
 "Aker BP ASA";"Norway";"Scope 2 (location-based)";1
 "AL KARAM TOWEL INDUSTRIES";"Pakistan";"Scope 1";1
-"ALBARAKA T‹RK KATILIM BANKASI A.S.";"Turkey";"Scope 1+2 (location-based)";2
-"ALBARAKA T‹RK KATILIM BANKASI A.S.";"Turkey";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
+"ALBARAKA T√úRK KATILIM BANKASI A.≈û.";"Turkey";"Scope 1+2 (location-based)";2
+"ALBARAKA T√úRK KATILIM BANKASI A.≈û.";"Turkey";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
 "Alfa Laval Corporate AB";"China";"Scope 1+2 (market-based) +3 (downstream)";1
 "Alfa Laval Corporate AB";"Denmark";"Scope 1+2 (market-based) +3 (downstream)";1
 "Alfa Laval Corporate AB";"Finland";"Scope 1+2 (market-based) +3 (downstream)";1
@@ -779,7 +779,6 @@
 "American Express";"United States of America";"Other, please specify: Scope 1+2 (market-based)+Scope 3 (business travel)";2
 "American International Group, Inc. (AIG)";"United Kingdom";"Scope 1+2 (location-based)";1
 "American International Group, Inc. (AIG)";"United States of America";"Scope 1+2 (location-based)";1
-"American Sugar Refining, Inc.";"United States of America";"Scope 1+2 (location-based)";1
 "American Tower Corp.";"Argentina";"Scope 1";1
 "American Tower Corp.";"Brazil";"Scope 1";1
 "American Tower Corp.";"Chile";"Scope 1";1
@@ -912,11 +911,11 @@
 "Anheuser Busch InBev";"Uruguay";"Scope 1+2 (market-based)";1
 "Anheuser Busch InBev";"Vietnam";"Scope 1+2 (market-based)";1
 "Ankyo Development Ltd";"China";"Scope 1";1
-"Anritsu Corporation";"Japan";"Other, please specify: Scope3:<U+8CFC><U+5165><U+3057><U+305F><U+88FD><U+54C1>∑<U+30B5><U+30FC><U+30D3><U+30B9>(Category 1)+<U+8CA9><U+58F2><U+3057><U+305F><U+88FD><U+54C1><U+306E><U+4F7F><U+7528>(Category 11)";1
+"Anritsu Corporation";"Japan";"Other, please specify: Scope3ÔºöË≥ºÂÖ•„Åó„ÅüË£ΩÂìÅ„Éª„Çµ„Éº„Éì„Çπ(Category 1)ÔºãË≤©Â£≤„Åó„ÅüË£ΩÂìÅ„ÅÆ‰ΩøÁî®(Category 11)";1
 "Anritsu Corporation";"Japan";"Scope 1+2 (market-based)";2
-"Anritsu Corporation";"United Kingdom of Great Britain and Northern Ireland";"Other, please specify: Scope3:<U+8CFC><U+5165><U+3057><U+305F><U+88FD><U+54C1>∑<U+30B5><U+30FC><U+30D3><U+30B9>(Category 1)+<U+8CA9><U+58F2><U+3057><U+305F><U+88FD><U+54C1><U+306E><U+4F7F><U+7528>(Category 11)";1
+"Anritsu Corporation";"United Kingdom of Great Britain and Northern Ireland";"Other, please specify: Scope3ÔºöË≥ºÂÖ•„Åó„ÅüË£ΩÂìÅ„Éª„Çµ„Éº„Éì„Çπ(Category 1)ÔºãË≤©Â£≤„Åó„ÅüË£ΩÂìÅ„ÅÆ‰ΩøÁî®(Category 11)";1
 "Anritsu Corporation";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";2
-"Anritsu Corporation";"United States of America";"Other, please specify: Scope3:<U+8CFC><U+5165><U+3057><U+305F><U+88FD><U+54C1>∑<U+30B5><U+30FC><U+30D3><U+30B9>(Category 1)+<U+8CA9><U+58F2><U+3057><U+305F><U+88FD><U+54C1><U+306E><U+4F7F><U+7528>(Category 11)";1
+"Anritsu Corporation";"United States of America";"Other, please specify: Scope3ÔºöË≥ºÂÖ•„Åó„ÅüË£ΩÂìÅ„Éª„Çµ„Éº„Éì„Çπ(Category 1)ÔºãË≤©Â£≤„Åó„ÅüË£ΩÂìÅ„ÅÆ‰ΩøÁî®(Category 11)";1
 "Anritsu Corporation";"United States of America";"Scope 1+2 (market-based)";2
 "Antofagasta";"Chile";"Scope 1+2 (location-based)";1
 "Antofagasta";"United Kingdom";"Scope 1+2 (location-based)";1
@@ -1017,10 +1016,10 @@
 "Arcadis";"United Kingdom";"Scope 1+2 (market-based)";1
 "Arcadis";"United States of America";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
 "Arcadis";"United States of America";"Scope 1+2 (market-based)";1
-"Arce AvÌcola";"Panama";"Scope 1+2 (market-based)";1
-"AR«ELIK A.S.";"Other: China";"Scope 1+2 (location-based)";3
-"AR«ELIK A.S.";"Other: Romania";"Scope 1+2 (location-based)";3
-"AR«ELIK A.S.";"Other: Russia";"Scope 1+2 (location-based)";3
+"Arce Av√≠cola";"Panama";"Scope 1+2 (market-based)";1
+"AR√áELƒ∞K A.≈û.";"Other: China";"Scope 1+2 (location-based)";3
+"AR√áELƒ∞K A.≈û.";"Other: Romania";"Scope 1+2 (location-based)";3
+"AR√áELƒ∞K A.≈û.";"Other: Russia";"Scope 1+2 (location-based)";3
 "Archer Daniels Midland";"Argentina";"Scope 1+2 (location-based)";1
 "Archer Daniels Midland";"Barbados";"Scope 1+2 (location-based)";1
 "Archer Daniels Midland";"Belgium";"Scope 1+2 (location-based)";1
@@ -1128,7 +1127,7 @@
 "Asics Corporation";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";2
 "Asics Corporation";"United States of America";"Scope 1+2 (market-based)";2
 "Asics Corporation";"Viet Nam";"Scope 1+2 (market-based)";2
-"Askul";"Japan";"Other, please specify: Scope3<U+306E><U+3046><U+3061><U+3001><U+30AB><U+30C6><U+30B4><U+30EA><U+30FC>1+<U+30AB><U+30C6><U+30B4><U+30EA><U+30FC>4";1
+"Askul";"Japan";"Other, please specify: Scope3„ÅÆ„ÅÜ„Å°„ÄÅ„Ç´„ÉÜ„Ç¥„É™„ÉºÔºëÔºã„Ç´„ÉÜ„Ç¥„É™„ÉºÔºî";1
 "Askul";"Japan";"Scope 1";1
 "Askul";"Japan";"Scope 2 (market-based)";1
 "ASML Holding";"Netherlands";"Scope 1+2 (market-based)";1
@@ -1887,9 +1886,9 @@
 "Banco BPM SpA";"Italy";"Scope 1";1
 "Banco BPM SpA";"Italy";"Scope 2 (market-based)";1
 "Banco BPM SpA";"Italy";"Scope 3: Purchased goods & services";1
-"Banco Comercial PortuguÍs SA";"Poland";"Other, please specify: Scope 1 + Scope 2 + Scope 3";1
-"Banco Comercial PortuguÍs SA";"Portugal";"Other, please specify: Scope 1 + Scope 2 + Scope 3";1
-"Banco Comercial PortuguÍs SA";"Switzerland";"Other, please specify: Scope 1 + Scope 2 + Scope 3";1
+"Banco Comercial Portugu√™s SA";"Poland";"Other, please specify: Scope 1 + Scope 2 + Scope 3";1
+"Banco Comercial Portugu√™s SA";"Portugal";"Other, please specify: Scope 1 + Scope 2 + Scope 3";1
+"Banco Comercial Portugu√™s SA";"Switzerland";"Other, please specify: Scope 1 + Scope 2 + Scope 3";1
 "Banco Davivienda SA";"Costa Rica";"Scope 1";1
 "Banco Davivienda SA";"Costa Rica";"Scope 2 (location-based)";1
 "Banco Davivienda SA";"Costa Rica";"Scope 3: Business travel";1
@@ -2040,7 +2039,7 @@
 "Barratt Developments plc";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";2
 "Barrick Gold Corporation";"Argentina";"Scope 1+2 (market-based)";1
 "Barrick Gold Corporation";"Canada";"Scope 1+2 (market-based)";1
-"Barrick Gold Corporation";"CÙte d'Ivoire";"Scope 1+2 (market-based)";1
+"Barrick Gold Corporation";"C√¥te d'Ivoire";"Scope 1+2 (market-based)";1
 "Barrick Gold Corporation";"Democratic Republic of the Congo";"Scope 1+2 (market-based)";1
 "Barrick Gold Corporation";"Dominican Republic";"Scope 1+2 (market-based)";1
 "Barrick Gold Corporation";"Mali";"Scope 1+2 (market-based)";1
@@ -2056,7 +2055,7 @@
 "Barry Callebaut AG";"Canada";"Scope 1+2 (market-based) +3 (upstream)";1
 "Barry Callebaut AG";"Chile";"Scope 1+2 (market-based) +3 (upstream)";1
 "Barry Callebaut AG";"China";"Scope 1+2 (market-based) +3 (upstream)";1
-"Barry Callebaut AG";"CÙte d'Ivoire";"Scope 1+2 (market-based) +3 (upstream)";1
+"Barry Callebaut AG";"C√¥te d'Ivoire";"Scope 1+2 (market-based) +3 (upstream)";1
 "Barry Callebaut AG";"France";"Scope 1+2 (market-based) +3 (upstream)";1
 "Barry Callebaut AG";"Germany";"Scope 1+2 (market-based) +3 (upstream)";1
 "Barry Callebaut AG";"Ghana";"Scope 1+2 (market-based) +3 (upstream)";1
@@ -2295,12 +2294,12 @@
 "BHP";"South America";"Scope 1+2 (market-based)";3
 "Big Yellow Group";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (location-based)";1
 "Big Yellow Group";"United Kingdom of Great Britain and Northern Ireland";NA;1
-"BillerudKorsn‰s";"Finland";"Scope 1+2 (market-based)";1
-"BillerudKorsn‰s";"Finland";"Scope 3 (upstream & downstream)";1
-"BillerudKorsn‰s";"Sweden";"Scope 1+2 (market-based)";1
-"BillerudKorsn‰s";"Sweden";"Scope 3 (upstream & downstream)";1
-"BillerudKorsn‰s";"United Kingdom";"Scope 1+2 (market-based)";1
-"BillerudKorsn‰s";"United Kingdom";"Scope 3 (upstream & downstream)";1
+"BillerudKorsn√§s";"Finland";"Scope 1+2 (market-based)";1
+"BillerudKorsn√§s";"Finland";"Scope 3 (upstream & downstream)";1
+"BillerudKorsn√§s";"Sweden";"Scope 1+2 (market-based)";1
+"BillerudKorsn√§s";"Sweden";"Scope 3 (upstream & downstream)";1
+"BillerudKorsn√§s";"United Kingdom";"Scope 1+2 (market-based)";1
+"BillerudKorsn√§s";"United Kingdom";"Scope 3 (upstream & downstream)";1
 "Biogen Inc.";"Argentina";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "Biogen Inc.";"Australia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "Biogen Inc.";"Austria";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
@@ -2410,81 +2409,81 @@
 "Boeing Company";"Singapore";"Scope 1+2 (market-based)";1
 "Boeing Company";"United Kingdom";"Scope 1+2 (market-based)";1
 "Boeing Company";"United States of America";"Scope 1+2 (market-based)";1
-"BollorÈ SA";"Africa";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Americas";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Angola";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Argentina";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Asia Pacific (or JAPA)";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Australia";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Bangladesh";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Belgium";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Benin";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Brazil";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Burkina Faso";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Cameroon";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Canada";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Chad";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Chile";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"China";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Congo";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Djibouti";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Europe";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"France";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Gabon";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Germany";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Ghana";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Guinea";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"India";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Indonesia";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Italy";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Japan";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Kenya";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Lebanon";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Liberia";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Madagascar";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Malaysia";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Mali";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Mexico";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Morocco";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Mozambique";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Netherlands";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Nigeria";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Oceania";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Carribean";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Central African Republic";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: East Timor";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Guinea Conakry";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Guyana";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Hong Kong";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Ivoiry Coast";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Katanga";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Kinshasa";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Martinique";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: New Caledonia";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Polynesia";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Republic of Congo";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Reunion Island";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Tanzania";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Other, please specify: Union of the Comoros";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Philippines";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Poland";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Portugal";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Republic of Korea";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Senegal";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Sierra Leone";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Singapore";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"South Africa";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Spain";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Sudan";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Switzerland";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Taiwan, Greater China";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Thailand";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Togo";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Uganda";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"United States of America";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Viet Nam";"Scope 1+2 (location-based)";1
-"BollorÈ SA";"Zambia";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Africa";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Americas";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Angola";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Argentina";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Asia Pacific (or JAPA)";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Australia";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Bangladesh";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Belgium";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Benin";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Brazil";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Burkina Faso";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Cameroon";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Canada";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Chad";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Chile";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"China";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Congo";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Djibouti";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Europe";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"France";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Gabon";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Germany";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Ghana";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Guinea";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"India";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Indonesia";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Italy";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Japan";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Kenya";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Lebanon";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Liberia";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Madagascar";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Malaysia";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Mali";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Mexico";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Morocco";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Mozambique";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Netherlands";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Nigeria";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Oceania";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Carribean";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Central African Republic";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: East Timor";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Guinea Conakry";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Guyana";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Hong Kong";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Ivoiry Coast";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Katanga";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Kinshasa";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Martinique";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: New Caledonia";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Polynesia";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Republic of Congo";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Reunion Island";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Tanzania";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Other, please specify: Union of the Comoros";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Philippines";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Poland";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Portugal";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Republic of Korea";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Senegal";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Sierra Leone";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Singapore";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"South Africa";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Spain";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Sudan";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Switzerland";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Taiwan, Greater China";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Thailand";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Togo";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Uganda";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"United States of America";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Viet Nam";"Scope 1+2 (location-based)";1
+"Bollor√© SA";"Zambia";"Scope 1+2 (location-based)";1
 "Bonava";"Denmark";"Scope 1+2 (market-based)";1
 "Bonava";"Estonia";"Scope 1+2 (market-based)";1
 "Bonava";"Finland";"Scope 1+2 (market-based)";1
@@ -2560,7 +2559,7 @@
 "Bright International Corp.";"United States of America";"Scope 2 (location-based)";1
 "Bright International Corp.";"United States of America";"Scope 3 (upstream & downstream)";1
 "Bright International Corp.";"United States of America";"Scope 3: Waste generated in operations";1
-"BRISA BRIDGESTONE SABANCI LASTIK SAN. VE TIC. A.S";"Turkey";"Scope 1+2 (location-based)";2
+"BRƒ∞SA BRIDGESTONE SABANCI LASTƒ∞K SAN. VE Tƒ∞C. A.≈û";"Turkey";"Scope 1+2 (location-based)";2
 "Bristol-Myers Squibb";"Belgium";"Scope 1+2 (market-based)";1
 "Bristol-Myers Squibb";"Canada";"Scope 1+2 (market-based)";1
 "Bristol-Myers Squibb";"China";"Scope 1+2 (market-based)";1
@@ -2859,11 +2858,11 @@
 "Caesars Entertainment";"United Arab Emirates";"Scope 1+2 (market-based)";2
 "Caesars Entertainment";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";2
 "Caesars Entertainment";"United States of America";"Scope 1+2 (market-based)";2
-"Caixa Geral de DepÛsitos";"Cabo Verde";"Scope 1+2 (market-based)";1
-"Caixa Geral de DepÛsitos";"China, Macao Special Administrative Region";"Scope 1+2 (market-based)";1
-"Caixa Geral de DepÛsitos";"Mozambique";"Scope 1+2 (market-based)";1
-"Caixa Geral de DepÛsitos";"Portugal";"Scope 1+2 (market-based)";1
-"Caixa Geral de DepÛsitos";"Timor-Leste";"Scope 1+2 (market-based)";1
+"Caixa Geral de Dep√≥sitos";"Cabo Verde";"Scope 1+2 (market-based)";1
+"Caixa Geral de Dep√≥sitos";"China, Macao Special Administrative Region";"Scope 1+2 (market-based)";1
+"Caixa Geral de Dep√≥sitos";"Mozambique";"Scope 1+2 (market-based)";1
+"Caixa Geral de Dep√≥sitos";"Portugal";"Scope 1+2 (market-based)";1
+"Caixa Geral de Dep√≥sitos";"Timor-Leste";"Scope 1+2 (market-based)";1
 "CaixaBank";"Spain";"Scope 1+2 (market-based)";2
 "CaixaBank";"Spain";"Scope 3: Purchased goods & services";1
 "Calbee, Inc.";"Japan";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
@@ -3160,7 +3159,7 @@
 "Cataler Corporation";"Thailand";"Scope 1";1
 "Cataler Corporation";"United States of America";"Scope 1";1
 "CAVALETTI S/A - CADEIRAS PROFISSIONAIS";"Brazil";"Scope 2 (location-based)";1
-"CBB IND⁄STRIA E COM…RCIO DE ASFALTO";"Brazil";"Scope 1";1
+"CBB IND√öSTRIA E COM√âRCIO DE ASFALTO";"Brazil";"Scope 1";1
 "CBRE Group, Inc.";"Argentina";"Scope 1";1
 "CBRE Group, Inc.";"Argentina";"Scope 2 (location-based)";2
 "CBRE Group, Inc.";"Australia";"Scope 1";1
@@ -3537,7 +3536,6 @@
 "CHENG YU METALS MANUFACTORY, INC.";"Taiwan, Greater China";"Scope 2 (location-based)";1
 "CHENG YU METALS MANUFACTORY, INC.";"Taiwan, Greater China";"Scope 3: Employee commuting";1
 "CHENG YU METALS MANUFACTORY, INC.";"Taiwan, Greater China";"Scope 3: Waste generated in operations";1
-"CHEQUERS ELECTRONIC";"China, Hong Kong Special Administrative Region";"Scope 2 (location-based)";1
 "China Mobile";"China";"Scope 1";1
 "China Mobile";"China";"Scope 1+2 (location-based)";3
 "China Mobile";"China";"Scope 2 (location-based)";1
@@ -3615,7 +3613,7 @@
 "Cigna";"United Arab Emirates";"Scope 1+2 (location-based)";1
 "Cigna";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (location-based)";1
 "Cigna";"United States of America";"Scope 1+2 (location-based)";1
-"«IMSA «IMENTO SANAYI VE TICARET A.S.";"Turkey";"Scope 1";1
+"√áƒ∞MSA √áƒ∞MENTO SANAYƒ∞ VE Tƒ∞CARET A.≈û.";"Turkey";"Scope 1";1
 "Cisco Systems, Inc.";"India";"Scope 1+2 (market-based)";1
 "Cisco Systems, Inc.";"Japan";"Scope 1+2 (market-based)";1
 "Cisco Systems, Inc.";"Other: United Kingdom and Ireland";"Scope 1+2 (market-based)";1
@@ -3845,8 +3843,8 @@
 "ConvaTec";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";1
 "ConvaTec";"United States of America";"Scope 1+2 (market-based)";1
 "COPAMEX CORRUGADOS SA DE CV";"Mexico";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"CÛras Iompair …ireann Group (CI…)";"Ireland";"Scope 1+2 (location-based)";1
-"CÛras Iompair …ireann Group (CI…)";"Ireland";"Scope 1+2 (market-based)";1
+"C√≥ras Iompair √âireann Group (CI√â)";"Ireland";"Scope 1+2 (location-based)";1
+"C√≥ras Iompair √âireann Group (CI√â)";"Ireland";"Scope 1+2 (market-based)";1
 "Core Laboratories N.V.";"Australia";"Scope 1";2
 "Core Laboratories N.V.";"Australia";"Scope 1+2 (location-based)";2
 "Core Laboratories N.V.";"Australia";"Scope 2 (location-based)";2
@@ -3886,8 +3884,8 @@
 "Core Laboratories N.V.";"United States of America";"Scope 1";2
 "Core Laboratories N.V.";"United States of America";"Scope 1+2 (location-based)";2
 "Core Laboratories N.V.";"United States of America";"Scope 2 (location-based)";2
-"CorporaciÛn Inmobiliaria Vesta S.A.B de C.V.";"Mexico";"Scope 1+2 (location-based) +3 (downstream)";1
-"Correos (Grupo Sepi)";"Spain";"Scope 1+2 (location-based) +3 (upstream & downstream)";2
+"Corporaci√≥n Inmobiliaria Vesta S.A.B de C.V.";"Mexico";"Scope 1+2 (location-based) +3 (downstream)";1
+"Correos (Grupo Sepi)";"Spain";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
 "Correos (Grupo Sepi)";"Spain";"Scope 1+2 (market-based)";1
 "COSBOND";"China, Hong Kong Special Administrative Region";"Scope 1+2 (location-based)";1
 "COSDA MANUFACTURING COMPANY";"Other, please specify: ??";"Scope 2 (location-based)";1
@@ -4000,8 +3998,8 @@
 "Coway Co., Ltd.";"Republic of Korea";"Scope 3: Purchased goods & services";1
 "CP ALL Pcl";"Thailand";"Scope 1+2 (location-based)";1
 "CPFL Energia SA";"Brazil";"Other, please specify: Scope 1 - Fugitives";1
-"CPFL Energia SA";"Brazil";"Other, please specify: Scope 1 ñ Land use";1
-"CPFL Energia SA";"Brazil";"Other, please specify: Scope 1 ñ mobile combustion";1
+"CPFL Energia SA";"Brazil";"Other, please specify: Scope 1 ‚Äì Land use";1
+"CPFL Energia SA";"Brazil";"Other, please specify: Scope 1 ‚Äì mobile combustion";1
 "Credit Suisse";"Other: Americas";"Scope 1+2 (market-based)";1
 "Credit Suisse";"Other: Asia-Pacific";"Scope 1+2 (market-based)";1
 "Credit Suisse";"Other: Asia Pacific";"Scope 1+2 (market-based)";1
@@ -4079,8 +4077,8 @@
 "Cummins Inc.";"Colombia";"Scope 3: Use of sold products";1
 "Cummins Inc.";"Costa Rica";"Scope 1+2 (market-based)";1
 "Cummins Inc.";"Costa Rica";"Scope 3: Use of sold products";1
-"Cummins Inc.";"CÙte d'Ivoire";"Scope 1+2 (market-based)";1
-"Cummins Inc.";"CÙte d'Ivoire";"Scope 3: Use of sold products";1
+"Cummins Inc.";"C√¥te d'Ivoire";"Scope 1+2 (market-based)";1
+"Cummins Inc.";"C√¥te d'Ivoire";"Scope 3: Use of sold products";1
 "Cummins Inc.";"Czechia";"Scope 1+2 (market-based)";1
 "Cummins Inc.";"Czechia";"Scope 3: Use of sold products";1
 "Cummins Inc.";"El Salvador";"Scope 1+2 (market-based)";1
@@ -4346,8 +4344,8 @@
 "Danske Bank A/S";"Norway";"Scope 1+2 (location-based) +3 (upstream)";1
 "Danske Bank A/S";"Sweden";"Scope 1+2 (location-based) +3 (upstream)";1
 "Danske Bank A/S";"United Kingdom";"Scope 1+2 (location-based) +3 (upstream)";1
-"Darfon†Electronics†Corp";"China";"Scope 1+2 (location-based)";1
-"Darfon†Electronics†Corp";"Taiwan";"Scope 1+2 (location-based)";1
+"Darfon¬†Electronics¬†Corp";"China";"Scope 1+2 (location-based)";1
+"Darfon¬†Electronics¬†Corp";"Taiwan";"Scope 1+2 (location-based)";1
 "DAVEY TREE EXPERT";"Canada";"Scope 1+2 (location-based)";1
 "DAVEY TREE EXPERT";"United States of America";"Scope 1+2 (location-based)";1
 "Davies Office Refurbishing, Inc.";"United States of America";"Scope 1+2 (location-based)";1
@@ -4529,7 +4527,6 @@
 "Deutsche Bahn AG";"Americas";"Scope 1+2 (market-based) +3 (upstream)";2
 "Deutsche Bahn AG";"Asia Pacific (or JAPA)";"Scope 1+2 (market-based) +3 (upstream)";2
 "Deutsche Bahn AG";"Europe";"Scope 1+2 (market-based) +3 (upstream)";2
-"Deutsche Bahn AG";"Germany";"Scope 1+2 (market-based) +3 (upstream)";2
 "Deutsche Bahn AG";"Rest of world";"Scope 1+2 (market-based) +3 (upstream)";2
 "Deutsche Lufthansa AG";"Germany";"Scope 1";2
 "Deutsche Lufthansa AG";"Germany";"Scope 1+2 (market-based)";1
@@ -4704,8 +4701,6 @@
 "DNO ASA";"Yemen";"Scope 1";2
 "Domtar Corporation";"Canada";"Scope 1+2 (market-based)";1
 "Domtar Corporation";"United States of America";"Scope 1+2 (market-based)";1
-"Dongguan Shin Din Metal & Plastic Products Ltd.";"China";"Scope 1";1
-"Dongguan Shin Din Metal & Plastic Products Ltd.";"China";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
 "Downer EDI";"Australia";"Scope 1+2 (location-based)";1
 "Downer EDI";"Australia";NA;1
 "Downer EDI";"Brazil";"Scope 1+2 (location-based)";1
@@ -4724,16 +4719,16 @@
 "Downer EDI";"South Africa";NA;1
 "Downer EDI";"Vanuatu";"Scope 1+2 (location-based)";1
 "Downer EDI";"Vanuatu";NA;1
-"Dr. Reddyís Laboratories";"India";"Scope 1+2 (location-based)";1
-"Dr. Reddyís Laboratories";"India";"Scope 3 (upstream & downstream)";1
-"Dr. Reddyís Laboratories";"Mexico";"Scope 1+2 (location-based)";1
-"Dr. Reddyís Laboratories";"Mexico";"Scope 3 (upstream & downstream)";1
-"Dr. Reddyís Laboratories";"Netherlands";"Scope 1+2 (location-based)";1
-"Dr. Reddyís Laboratories";"Netherlands";"Scope 3 (upstream & downstream)";1
-"Dr. Reddyís Laboratories";"United Kingdom";"Scope 1+2 (location-based)";1
-"Dr. Reddyís Laboratories";"United Kingdom";"Scope 3 (upstream & downstream)";1
-"Dr. Reddyís Laboratories";"United States of America";"Scope 1+2 (location-based)";1
-"Dr. Reddyís Laboratories";"United States of America";"Scope 3 (upstream & downstream)";1
+"Dr. Reddy‚Äôs Laboratories";"India";"Scope 1+2 (location-based)";1
+"Dr. Reddy‚Äôs Laboratories";"India";"Scope 3 (upstream & downstream)";1
+"Dr. Reddy‚Äôs Laboratories";"Mexico";"Scope 1+2 (location-based)";1
+"Dr. Reddy‚Äôs Laboratories";"Mexico";"Scope 3 (upstream & downstream)";1
+"Dr. Reddy‚Äôs Laboratories";"Netherlands";"Scope 1+2 (location-based)";1
+"Dr. Reddy‚Äôs Laboratories";"Netherlands";"Scope 3 (upstream & downstream)";1
+"Dr. Reddy‚Äôs Laboratories";"United Kingdom";"Scope 1+2 (location-based)";1
+"Dr. Reddy‚Äôs Laboratories";"United Kingdom";"Scope 3 (upstream & downstream)";1
+"Dr. Reddy‚Äôs Laboratories";"United States of America";"Scope 1+2 (location-based)";1
+"Dr. Reddy‚Äôs Laboratories";"United States of America";"Scope 3 (upstream & downstream)";1
 "Drax Group";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (location-based)";1
 "Drax Group";"United States of America";"Scope 1+2 (location-based)";1
 "DSC Logistics";"North America";"Scope 2 (location-based)";1
@@ -4877,7 +4872,7 @@
 "Ecolab Inc.";"Other, please specify: Other";"Scope 1+2 (market-based)";1
 "Ecopetrol S.A.";"Colombia";"Scope 1+2 (location-based)";1
 "Ecore International";"United States of America";"Scope 1+2 (market-based)";1
-"Ecorodovias Infraestrutura e LogÌstica S.A";"Brazil";"Scope 1+2 (location-based)";1
+"Ecorodovias Infraestrutura e Log√≠stica S.A";"Brazil";"Scope 1+2 (location-based)";1
 "EDF";"France";"Scope 1+2 (location-based)";2
 "EDF";"France";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "EDF";"Italy";"Scope 1+2 (location-based)";2
@@ -4904,7 +4899,7 @@
 "Eisai Co., Ltd.";"Japan";"Scope 1+2 (market-based) +3 (upstream)";1
 "Eisai Co., Ltd.";"United Kingdom";"Scope 1+2 (market-based) +3 (upstream)";1
 "Eisai Co., Ltd.";"United States of America";"Scope 1+2 (market-based) +3 (upstream)";1
-"EKOTEN TEKSTIL SANAYI VE TICARET A.S.";"Turkey";"Scope 1+2 (location-based)";1
+"EKOTEN TEKSTƒ∞L SANAYƒ∞ VE Tƒ∞CARET A.≈û.";"Turkey";"Scope 1+2 (location-based)";1
 "Elbit Systems Ltd";"Australia";"Scope 1+2 (market-based)";1
 "Elbit Systems Ltd";"Brazil";"Scope 1+2 (market-based)";1
 "Elbit Systems Ltd";"Israel";"Scope 1+2 (market-based)";1
@@ -5148,8 +5143,8 @@
 "Entegris Inc";"United States of America";"Scope 2 (location-based)";1
 "Entergy Corporation";"United States of America";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
 "Envases Universales";"Mexico";"Scope 2 (market-based)";1
-"Envases Universales";"Other, please specify: Planta 4001 Aluminio Jalisco MÈxico";"Scope 2 (market-based)";1
-"Envases Universales";"Other, please specify: Planta 8003 Aluminio Yucatan MÈxico";"Scope 2 (market-based)";1
+"Envases Universales";"Other, please specify: Planta 4001 Aluminio Jalisco M√©xico";"Scope 2 (market-based)";1
+"Envases Universales";"Other, please specify: Planta 8003 Aluminio Yucatan M√©xico";"Scope 2 (market-based)";1
 "EQUINIX, INC.";"Australia";"Scope 2 (market-based)";1
 "EQUINIX, INC.";"Brazil";"Scope 2 (market-based)";1
 "EQUINIX, INC.";"Bulgaria";"Scope 2 (market-based)";1
@@ -5425,7 +5420,7 @@
 "Estee Lauder Companies Inc.";"United States of America";"Scope 1+2 (market-based)";1
 "Estee Lauder Companies Inc.";"Venezuela (Bolivarian Republic of)";"Scope 1+2 (market-based)";1
 "Estee Lauder Companies Inc.";"Viet Nam";"Scope 1+2 (market-based)";1
-"ETI SODA A.S.";"Turkey";"Scope 1+2 (location-based)";2
+"ETƒ∞ SODA A.≈û.";"Turkey";"Scope 1+2 (location-based)";2
 "Etsy, Inc.";"Canada";"Other, please specify: Scope 2 (market-based) + Scope 3: Upstream leased assets + Scope 3: Remote workers";1
 "Etsy, Inc.";"France";"Other, please specify: Scope 2 (market-based) + Scope 3: Upstream leased assets + Scope 3: Remote workers";1
 "Etsy, Inc.";"Germany";"Other, please specify: Scope 2 (market-based) + Scope 3: Upstream leased assets + Scope 3: Remote workers";1
@@ -5714,8 +5709,8 @@
 "FLSmidth & Co. A/S";"Tunisia";"Scope 1+2 (location-based)";1
 "FLSmidth & Co. A/S";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (location-based)";1
 "FLSmidth & Co. A/S";"United States of America";"Scope 1+2 (location-based)";1
-"Flughafen M¸nchen GmbH";"Germany";"Other, please specify: Scope 1+2 + 3a (ACA, mainly downstream)";1
-"Flughafen M¸nchen GmbH";"Germany";"Scope 1+2 (location-based)";1
+"Flughafen M√ºnchen GmbH";"Germany";"Other, please specify: Scope 1+2 + 3a (ACA, mainly downstream)";1
+"Flughafen M√ºnchen GmbH";"Germany";"Scope 1+2 (location-based)";1
 "Fonterra Co-operative Group";"Australia";"Scope 1+2 (location-based)";1
 "Fonterra Co-operative Group";"Brazil";"Scope 1+2 (location-based)";1
 "Fonterra Co-operative Group";"Chile";"Scope 1+2 (location-based)";1
@@ -5733,7 +5728,7 @@
 "Ford Motor Company";"Europe, the Middle East, Africa and Russia (EMEAR)";"Scope 1+2 (location-based)";2
 "Ford Motor Company";"North America";"Scope 1+2 (location-based)";2
 "Ford Motor Company";"South America";"Scope 1+2 (location-based)";2
-"FORD OTOMOTIV SANAYI A.S.";"Turkey";"Scope 1+2 (location-based)";1
+"FORD OTOMOTƒ∞V SANAYƒ∞ A.≈û.";"Turkey";"Scope 1+2 (location-based)";1
 "Formosa Chemicals & Fibre Corporation";"Taiwan, Greater China";"Scope 1+2 (location-based)";2
 "Formosa Petrochemical";"Taiwan, Greater China";"Scope 1+2 (location-based)";3
 "Formosa Plastics Corp";"Taiwan, Greater China";"Scope 1+2 (location-based)";2
@@ -5766,71 +5761,54 @@
 "Fresh Del Monte Produce Inc";"United Kingdom of Great Britain and Northern Ireland";"Scope 1";1
 "Fresh Del Monte Produce Inc";"United States of America";"Scope 1";1
 "Freshfields Bruckhaus Deringer";"Austria";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"Austria";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"Austria";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"Austria";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"Bahrain";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"Bahrain";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"Bahrain";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"Bahrain";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"Belgium";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"Belgium";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"Belgium";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"Belgium";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"China";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"China";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"China";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"China";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"China, Hong Kong Special Administrative Region";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"China, Hong Kong Special Administrative Region";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"China, Hong Kong Special Administrative Region";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"China, Hong Kong Special Administrative Region";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"France";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"France";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"France";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"France";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"Germany";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"Germany";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"Germany";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"Germany";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"Italy";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"Italy";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"Italy";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"Italy";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"Japan";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"Japan";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"Japan";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"Japan";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"Netherlands";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"Netherlands";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"Netherlands";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"Netherlands";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"Russian Federation";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"Russian Federation";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"Russian Federation";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"Russian Federation";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"Singapore";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"Singapore";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"Singapore";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"Singapore";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"Spain";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"Spain";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"Spain";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"Spain";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"United Arab Emirates";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"United Arab Emirates";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"United Arab Emirates";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"United Arab Emirates";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"United Kingdom of Great Britain and Northern Ireland";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"United Kingdom of Great Britain and Northern Ireland";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"United Kingdom of Great Britain and Northern Ireland";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"United Kingdom of Great Britain and Northern Ireland";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"United States of America";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"United States of America";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"United States of America";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"United States of America";"Scope 3: Business travel";1
 "Freshfields Bruckhaus Deringer";"Viet Nam";"Other, please specify: Paper use";1
-"Freshfields Bruckhaus Deringer";"Viet Nam";"Other, please specify: Phase out single-use plastics";1
 "Freshfields Bruckhaus Deringer";"Viet Nam";"Scope 2 (market-based)";1
 "Freshfields Bruckhaus Deringer";"Viet Nam";"Scope 3: Business travel";1
 "FRITZ";"Germany";"Scope 1";1
@@ -5847,15 +5825,10 @@
 "Fubon Financial Holdings";"Taiwan, Greater China";"Scope 1+2 (location-based)";1
 "Fubon Financial Holdings";"Taiwan, Greater China";"Scope 2 (location-based)";1
 "Fuji Electric Co., Ltd.";"China";"Scope 1+2 (market-based)";2
-"Fuji Electric Co., Ltd.";"China";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "Fuji Electric Co., Ltd.";"Japan";"Scope 1+2 (market-based)";2
-"Fuji Electric Co., Ltd.";"Japan";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "Fuji Electric Co., Ltd.";"Malaysia";"Scope 1+2 (market-based)";2
-"Fuji Electric Co., Ltd.";"Malaysia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "Fuji Electric Co., Ltd.";"Philippines";"Scope 1+2 (market-based)";2
-"Fuji Electric Co., Ltd.";"Philippines";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "Fuji Electric Co., Ltd.";"Thailand";"Scope 1+2 (market-based)";2
-"Fuji Electric Co., Ltd.";"Thailand";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "FUJI OIL HOLDINGS INC.";"Belgium";"Scope 1+2 (location-based)";1
 "FUJI OIL HOLDINGS INC.";"Belgium";"Scope 3: Purchased goods & services";1
 "FUJI OIL HOLDINGS INC.";"Brazil";"Scope 1+2 (location-based)";1
@@ -5919,7 +5892,7 @@
 "FUJIFILM Holdings Corporation";"United States of America";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "FUJIFILM Holdings Corporation";"Vietnam";"Scope 1+2 (market-based)";1
 "FUJIFILM Holdings Corporation";"Vietnam";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"FUJIKIKO CO. LTD.";"Japan";"Other, please specify: <U+5F0A><U+793E><U+306E><U+5168><U+4E8B><U+696D><U+6240><U+3088><U+308A><U+6392><U+51FA><U+3055><U+308C><U+308B>CO2<U+6392><U+51FA><U+91CF>";1
+"FUJIKIKO CO. LTD.";"Japan";"Other, please specify: ÂºäÁ§æ„ÅÆÂÖ®‰∫ãÊ•≠ÊâÄ„Çà„ÇäÊéíÂá∫„Åï„Çå„ÇãCO2ÊéíÂá∫Èáè";1
 "Fujikura Ltd.";"China";"Scope 1+2 (market-based)";2
 "Fujikura Ltd.";"Malaysia";"Scope 1+2 (market-based)";2
 "Fujikura Ltd.";"Thailand";"Scope 1+2 (market-based)";2
@@ -6125,7 +6098,7 @@
 "General Electric Company";"Chile";"Scope 1+2 (market-based)";1
 "General Electric Company";"China";"Scope 1+2 (market-based)";1
 "General Electric Company";"Colombia";"Scope 1+2 (market-based)";1
-"General Electric Company";"CÙte d'Ivoire";"Scope 1+2 (market-based)";1
+"General Electric Company";"C√¥te d'Ivoire";"Scope 1+2 (market-based)";1
 "General Electric Company";"Croatia";"Scope 1+2 (market-based)";1
 "General Electric Company";"Czechia";"Scope 1+2 (market-based)";1
 "General Electric Company";"Denmark";"Scope 1+2 (market-based)";1
@@ -6552,8 +6525,8 @@
 "Grimaldi Group";"Canada";"Scope 2 (location-based)";1
 "Grimaldi Group";"Congo";"Scope 1";3
 "Grimaldi Group";"Congo";"Scope 2 (location-based)";1
-"Grimaldi Group";"CÙte d'Ivoire";"Scope 1";3
-"Grimaldi Group";"CÙte d'Ivoire";"Scope 2 (location-based)";1
+"Grimaldi Group";"C√¥te d'Ivoire";"Scope 1";3
+"Grimaldi Group";"C√¥te d'Ivoire";"Scope 2 (location-based)";1
 "Grimaldi Group";"Cyprus";"Scope 1";3
 "Grimaldi Group";"Cyprus";"Scope 2 (location-based)";1
 "Grimaldi Group";"Egypt";"Scope 1";3
@@ -6751,7 +6724,7 @@
 "Hankook Tire & Technology Co., Ltd.";"Republic of Korea";"Scope 1+2 (location-based)";2
 "Hankook Tire & Technology Co., Ltd.";"United States of America";"Scope 1+2 (location-based)";2
 "HANLONG INDUSTRIAL CO. LIMITED";"Taiwan, Greater China";"Scope 2 (location-based)";1
-"Hannover R¸ck SE";"Germany";"Scope 1+2 (market-based)";1
+"Hannover R√ºck SE";"Germany";"Scope 1+2 (market-based)";1
 "Harris Tea Company";"United States of America";"Scope 1+2 (location-based)";1
 "Harris Tea Company";"United States of America";"Scope 3: Waste generated in operations";1
 "Hasbro, Inc.";"Australia";"Scope 1+2 (location-based)";1
@@ -7339,9 +7312,9 @@
 "Imperial Brands";"Rest of world";"Scope 1+2 (location-based)";1
 "Imperial Brands";"Rest of world";"Scope 3 (upstream & downstream)";1
 "Imperial Brands";"Rest of world";"Scope 3: Purchased goods & services";1
-"Imperial Brands";"RÈunion";"Scope 1+2 (location-based)";1
-"Imperial Brands";"RÈunion";"Scope 3 (upstream & downstream)";1
-"Imperial Brands";"RÈunion";"Scope 3: Purchased goods & services";1
+"Imperial Brands";"R√©union";"Scope 1+2 (location-based)";1
+"Imperial Brands";"R√©union";"Scope 3 (upstream & downstream)";1
+"Imperial Brands";"R√©union";"Scope 3: Purchased goods & services";1
 "Imperial Brands";"Russia";"Scope 1+2 (location-based)";1
 "Imperial Brands";"Russia";"Scope 3 (upstream & downstream)";1
 "Imperial Brands";"Russia";"Scope 3: Purchased goods & services";1
@@ -7398,7 +7371,6 @@
 "INDRA";"Spain";"Scope 1+2 (market-based)";2
 "INDRA";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";2
 "INDRA";"United States of America";"Scope 1+2 (market-based)";2
-"INDUSTRIAS COR SA DE CV";"Mexico";"Scope 1+2 (location-based)";1
 "Informa plc";"Australia";"Scope 1+2 (market-based)";1
 "Informa plc";"Australia";"Scope 3 (upstream & downstream)";1
 "Informa plc";"Bahrain";"Scope 1+2 (market-based)";1
@@ -7805,22 +7777,22 @@
 "Isuzu Motors Limited";"Thailand";"Scope 1+2 (market-based)";1
 "Isuzu Motors Limited";"Thailand";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "Italgas";"Italy";"Scope 1";1
-"Ita˙ Unibanco Holding S.A.";"Argentina";"Scope 1";1
-"Ita˙ Unibanco Holding S.A.";"Argentina";"Scope 2 (location-based)";1
-"Ita˙ Unibanco Holding S.A.";"Brazil";"Scope 1";1
-"Ita˙ Unibanco Holding S.A.";"Brazil";"Scope 2 (location-based)";1
-"Ita˙ Unibanco Holding S.A.";"Paraguay";"Scope 1";1
-"Ita˙ Unibanco Holding S.A.";"Paraguay";"Scope 2 (location-based)";1
-"Ita˙ Unibanco Holding S.A.";"Uruguay";"Scope 1";1
-"Ita˙ Unibanco Holding S.A.";"Uruguay";"Scope 2 (location-based)";1
-"Ita˙sa S.A.";"Argentina";"Scope 1";2
-"Ita˙sa S.A.";"Argentina";"Scope 2 (location-based)";1
-"Ita˙sa S.A.";"Brazil";"Scope 1";2
-"Ita˙sa S.A.";"Brazil";"Scope 2 (location-based)";1
-"Ita˙sa S.A.";"Paraguay";"Scope 1";2
-"Ita˙sa S.A.";"Paraguay";"Scope 2 (location-based)";1
-"Ita˙sa S.A.";"Uruguay";"Scope 1";2
-"Ita˙sa S.A.";"Uruguay";"Scope 2 (location-based)";1
+"Ita√∫ Unibanco Holding S.A.";"Argentina";"Scope 1";1
+"Ita√∫ Unibanco Holding S.A.";"Argentina";"Scope 2 (location-based)";1
+"Ita√∫ Unibanco Holding S.A.";"Brazil";"Scope 1";1
+"Ita√∫ Unibanco Holding S.A.";"Brazil";"Scope 2 (location-based)";1
+"Ita√∫ Unibanco Holding S.A.";"Paraguay";"Scope 1";1
+"Ita√∫ Unibanco Holding S.A.";"Paraguay";"Scope 2 (location-based)";1
+"Ita√∫ Unibanco Holding S.A.";"Uruguay";"Scope 1";1
+"Ita√∫ Unibanco Holding S.A.";"Uruguay";"Scope 2 (location-based)";1
+"Ita√∫sa S.A.";"Argentina";"Scope 1";2
+"Ita√∫sa S.A.";"Argentina";"Scope 2 (location-based)";1
+"Ita√∫sa S.A.";"Brazil";"Scope 1";2
+"Ita√∫sa S.A.";"Brazil";"Scope 2 (location-based)";1
+"Ita√∫sa S.A.";"Paraguay";"Scope 1";2
+"Ita√∫sa S.A.";"Paraguay";"Scope 2 (location-based)";1
+"Ita√∫sa S.A.";"Uruguay";"Scope 1";2
+"Ita√∫sa S.A.";"Uruguay";"Scope 2 (location-based)";1
 "Ito En, Ltd.";"Japan";"Scope 1+2 (market-based)";1
 "ITV";"Australia";"Scope 1+2 (market-based)";1
 "ITV";"Australia";"Scope 3 (upstream)";1
@@ -8249,7 +8221,6 @@
 "Kindred Group";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";1
 "Kindred Group";"United Kingdom of Great Britain and Northern Ireland";"Scope 3: Business travel";1
 "KING MOUNT INTERNATIONAL";"China";"Scope 1+2 (location-based)";1
-"KING TEAM CO., LTD.";"Taiwan, Greater China";"Scope 1";1
 "KING TEAM CO., LTD.";"Taiwan, Greater China";"Scope 2 (location-based)";1
 "KING TEAM CO., LTD.";"Taiwan, Greater China";"Scope 3: Employee commuting";1
 "Kingfisher";"France";"Scope 1+2 (market-based)";1
@@ -8432,7 +8403,7 @@
 "Klepierre";"Turkey";"Other, please specify: Transport visitors";1
 "Klepierre";"Turkey";"Scope 1+2 (market-based)";1
 "Klepierre";"Turkey";"Scope 3: Downstream leased assets";1
-"Klˆvern";"Sweden";"Scope 1+2 (market-based) +3 (upstream)";1
+"Kl√∂vern";"Sweden";"Scope 1+2 (market-based) +3 (upstream)";1
 "Kobayashi Pharmaceutical Co., Ltd.";"Japan";"Scope 1+2 (market-based)";1
 "Kohl's Corporation";"United States of America";"Scope 1+2 (location-based)";1
 "Kohl's Corporation";"United States of America";"Scope 1+2 (market-based)";1
@@ -8509,11 +8480,11 @@
 "Koninklijke Philips NV";"Thailand";"Scope 1+2 (market-based)";2
 "Koninklijke Philips NV";"United States of America";"Scope 1+2 (market-based)";2
 "Koninklijke Philips NV";"United States of America";"Scope 3 (upstream & downstream)";2
-"KORDSA TEKNIK TEKSTIL A.S.";"Brazil";"Scope 1+2 (location-based)";2
-"KORDSA TEKNIK TEKSTIL A.S.";"Indonesia";"Scope 1+2 (location-based)";2
-"KORDSA TEKNIK TEKSTIL A.S.";"Thailand";"Scope 1+2 (location-based)";2
-"KORDSA TEKNIK TEKSTIL A.S.";"Turkey";"Scope 1+2 (location-based)";2
-"KORDSA TEKNIK TEKSTIL A.S.";"United States of America";"Scope 1+2 (location-based)";2
+"KORDSA TEKNƒ∞K TEKSTƒ∞L A.≈û.";"Brazil";"Scope 1+2 (location-based)";2
+"KORDSA TEKNƒ∞K TEKSTƒ∞L A.≈û.";"Indonesia";"Scope 1+2 (location-based)";2
+"KORDSA TEKNƒ∞K TEKSTƒ∞L A.≈û.";"Thailand";"Scope 1+2 (location-based)";2
+"KORDSA TEKNƒ∞K TEKSTƒ∞L A.≈û.";"Turkey";"Scope 1+2 (location-based)";2
+"KORDSA TEKNƒ∞K TEKSTƒ∞L A.≈û.";"United States of America";"Scope 1+2 (location-based)";2
 "Korea District Heating Corp.";"Republic of Korea";"Scope 1+2 (location-based)";1
 "Korea East-West Power";"Republic of Korea";"Scope 1+2 (location-based)";1
 "Korea Electric Power Corp";"Republic of Korea";"Scope 1+2 (location-based)";1
@@ -8537,7 +8508,7 @@
 "KOSE Corporation";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";2
 "KOSE Corporation";"United States of America";"Scope 1+2 (market-based)";2
 "KPMG UK";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";1
-"KPMG UK";"United Kingdom of Great Britain and Northern Ireland";"Scope 3: Purchased goods & services";2
+"KPMG UK";"United Kingdom of Great Britain and Northern Ireland";"Scope 3: Purchased goods & services";1
 "Kroger";"United States of America";"Scope 1+2 (market-based)";1
 "Krueger International, Inc";"Canada";"Scope 1+2 (location-based)";1
 "Krueger International, Inc";"United States of America";"Scope 1+2 (location-based)";1
@@ -8586,251 +8557,251 @@
 "Kyocera Corporation";"Japan";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
 "Kyocera Corporation";"Rest of world";"Scope 1+2 (location-based)";1
 "Kyocera Corporation";"Rest of world";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Argentina";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Argentina";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Argentina";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Argentina";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Argentina";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Australia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Australia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Australia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Australia";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Australia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Austria";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Austria";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Austria";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Austria";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Belgium";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Belgium";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Belgium";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Belgium";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Belgium";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Brazil";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Brazil";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Brazil";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Brazil";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Brazil";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Canada";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Canada";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Canada";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Canada";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Canada";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Chile";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Chile";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Chile";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Chile";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Chile";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"China";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"China";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"China";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"China";"Scope 1+2 (market-based)";1
-"L'OrÈal";"China";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Colombia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Colombia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Colombia";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Colombia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Czech Republic";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Czech Republic";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Czech Republic";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Czech Republic";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Czech Republic";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Denmark";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Denmark";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Denmark";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Denmark";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Denmark";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Egypt";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Egypt";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Egypt";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Egypt";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Finland";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Finland";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Finland";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"France";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"France";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"France";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"France";"Scope 1+2 (market-based)";1
-"L'OrÈal";"France";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Germany";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Germany";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Germany";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Germany";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Germany";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Ghana";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Ghana";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Ghana";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Ghana";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Ghana";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Greece";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Greece";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Greece";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Greece";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Greece";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Hong Kong";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Hong Kong";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Hong Kong";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Hungary";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Hungary";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Hungary";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"India";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"India";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"India";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"India";"Scope 1+2 (market-based)";1
-"L'OrÈal";"India";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Indonesia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Indonesia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Indonesia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Indonesia";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Indonesia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Israel";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Israel";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Israel";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Israel";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Israel";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Italy";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Italy";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Italy";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Italy";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Italy";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Japan";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Japan";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Japan";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Japan";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Japan";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Kazakhstan";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Kazakhstan";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Kazakhstan";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Kenya";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Kenya";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Kenya";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Kenya";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Latvia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Latvia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Lebanon";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Lebanon";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Lebanon";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Lebanon";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Malaysia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Malaysia";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Malaysia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Mexico";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Mexico";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Mexico";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Mexico";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Mexico";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Morocco";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Morocco";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Morocco";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Netherlands";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Netherlands";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Netherlands";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Netherlands";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Netherlands";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"New Zealand";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"New Zealand";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"New Zealand";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"New Zealand";"Scope 1+2 (market-based)";1
-"L'OrÈal";"New Zealand";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Norway";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Norway";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Norway";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Panama";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Panama";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Panama";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Peru";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Peru";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Peru";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Philippines";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Philippines";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Philippines";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Poland";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Poland";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Poland";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Poland";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Poland";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Portugal";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Portugal";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Portugal";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Portugal";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Rest of world";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Rest of world";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Rest of world";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Rest of world";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Romania";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Romania";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Romania";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Russia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Russia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Russia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Russia";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Russia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Singapore";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Singapore";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Singapore";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Slovakia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Slovakia";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Slovakia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"South Africa";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"South Africa";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"South Africa";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"South Africa";"Scope 1+2 (market-based)";1
-"L'OrÈal";"South Africa";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"South Korea";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"South Korea";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"South Korea";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"South Korea";"Scope 1+2 (market-based)";1
-"L'OrÈal";"South Korea";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Spain";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Spain";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Spain";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Spain";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Spain";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Sweden";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Sweden";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Sweden";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Sweden";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Switzerland";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Switzerland";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Switzerland";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Taiwan";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Taiwan";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Taiwan";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Thailand";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Thailand";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Thailand";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Thailand";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Thailand";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Turkey";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Turkey";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Turkey";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Turkey";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Turkey";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"United Arab Emirates";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"United Arab Emirates";"Scope 1+2 (market-based)";1
-"L'OrÈal";"United Arab Emirates";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"United Kingdom";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"United Kingdom";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"United Kingdom";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"United Kingdom";"Scope 1+2 (market-based)";1
-"L'OrÈal";"United Kingdom";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"United States of America";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"United States of America";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"United States of America";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"United States of America";"Scope 1+2 (market-based)";1
-"L'OrÈal";"United States of America";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Uruguay";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Uruguay";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Uruguay";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Uruguay";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Uruguay";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Venezuela";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Venezuela";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
-"L'OrÈal";"Venezuela";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
-"L'OrÈal";"Venezuela";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Venezuela";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"L'OrÈal";"Vietnam";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
-"L'OrÈal";"Vietnam";"Scope 1+2 (market-based)";1
-"L'OrÈal";"Vietnam";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Argentina";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Argentina";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Argentina";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Argentina";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Argentina";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Australia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Australia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Australia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Australia";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Australia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Austria";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Austria";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Austria";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Austria";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Belgium";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Belgium";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Belgium";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Belgium";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Belgium";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Brazil";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Brazil";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Brazil";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Brazil";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Brazil";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Canada";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Canada";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Canada";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Canada";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Canada";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Chile";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Chile";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Chile";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Chile";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Chile";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"China";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"China";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"China";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"China";"Scope 1+2 (market-based)";1
+"L'Or√©al";"China";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Colombia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Colombia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Colombia";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Colombia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Czech Republic";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Czech Republic";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Czech Republic";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Czech Republic";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Czech Republic";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Denmark";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Denmark";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Denmark";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Denmark";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Denmark";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Egypt";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Egypt";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Egypt";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Egypt";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Finland";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Finland";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Finland";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"France";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"France";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"France";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"France";"Scope 1+2 (market-based)";1
+"L'Or√©al";"France";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Germany";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Germany";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Germany";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Germany";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Germany";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Ghana";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Ghana";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Ghana";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Ghana";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Ghana";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Greece";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Greece";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Greece";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Greece";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Greece";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Hong Kong";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Hong Kong";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Hong Kong";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Hungary";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Hungary";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Hungary";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"India";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"India";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"India";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"India";"Scope 1+2 (market-based)";1
+"L'Or√©al";"India";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Indonesia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Indonesia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Indonesia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Indonesia";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Indonesia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Israel";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Israel";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Israel";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Israel";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Israel";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Italy";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Italy";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Italy";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Italy";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Italy";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Japan";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Japan";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Japan";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Japan";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Japan";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Kazakhstan";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Kazakhstan";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Kazakhstan";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Kenya";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Kenya";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Kenya";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Kenya";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Latvia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Latvia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Lebanon";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Lebanon";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Lebanon";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Lebanon";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Malaysia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Malaysia";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Malaysia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Mexico";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Mexico";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Mexico";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Mexico";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Mexico";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Morocco";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Morocco";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Morocco";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Netherlands";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Netherlands";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Netherlands";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Netherlands";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Netherlands";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"New Zealand";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"New Zealand";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"New Zealand";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"New Zealand";"Scope 1+2 (market-based)";1
+"L'Or√©al";"New Zealand";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Norway";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Norway";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Norway";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Panama";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Panama";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Panama";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Peru";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Peru";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Peru";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Philippines";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Philippines";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Philippines";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Poland";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Poland";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Poland";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Poland";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Poland";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Portugal";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Portugal";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Portugal";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Portugal";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Rest of world";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Rest of world";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Rest of world";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Rest of world";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Romania";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Romania";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Romania";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Russia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Russia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Russia";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Russia";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Russia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Singapore";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Singapore";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Singapore";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Slovakia";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Slovakia";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Slovakia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"South Africa";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"South Africa";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"South Africa";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"South Africa";"Scope 1+2 (market-based)";1
+"L'Or√©al";"South Africa";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"South Korea";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"South Korea";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"South Korea";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"South Korea";"Scope 1+2 (market-based)";1
+"L'Or√©al";"South Korea";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Spain";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Spain";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Spain";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Spain";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Spain";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Sweden";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Sweden";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Sweden";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Sweden";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Switzerland";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Switzerland";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Switzerland";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Taiwan";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Taiwan";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Taiwan";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Thailand";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Thailand";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Thailand";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Thailand";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Thailand";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Turkey";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Turkey";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Turkey";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Turkey";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Turkey";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"United Arab Emirates";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"United Arab Emirates";"Scope 1+2 (market-based)";1
+"L'Or√©al";"United Arab Emirates";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"United Kingdom";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"United Kingdom";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"United Kingdom";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"United Kingdom";"Scope 1+2 (market-based)";1
+"L'Or√©al";"United Kingdom";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"United States of America";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"United States of America";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"United States of America";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"United States of America";"Scope 1+2 (market-based)";1
+"L'Or√©al";"United States of America";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Uruguay";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Uruguay";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Uruguay";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Uruguay";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Uruguay";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Venezuela";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Venezuela";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations sites: factories and distribution centres)";1
+"L'Or√©al";"Venezuela";"Other, please specify: Scope 1 + Scope 2 Market-Based (Operations, administrative and research sites) + Scope 3: Downstream transportation and distribution";1
+"L'Or√©al";"Venezuela";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Venezuela";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
+"L'Or√©al";"Vietnam";"Other, please specify: Scope 1 + Scope 2 Market-Based (administrative sites and research centres)";1
+"L'Or√©al";"Vietnam";"Scope 1+2 (market-based)";1
+"L'Or√©al";"Vietnam";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "L3Harris Technologies INC";"Australia";"Scope 1+2 (location-based)";1
 "L3Harris Technologies INC";"Canada";"Scope 1+2 (location-based)";1
 "L3Harris Technologies INC";"China";"Scope 1+2 (location-based)";1
@@ -9785,55 +9756,55 @@
 "Meiji Holdings Co Ltd";"China";"Scope 1+2 (market-based)";1
 "Meiji Holdings Co Ltd";"Japan";"Scope 1+2 (market-based)";1
 "Meiji Holdings Co Ltd";"Other, please specify: ???(?????????????????????)";"Scope 1+2 (market-based)";1
-"Meiji Holdings Co Ltd";"Other, please specify: ??∑??(????∑????)";"Scope 1+2 (market-based)";1
+"Meiji Holdings Co Ltd";"Other, please specify: ??¬∑??(????¬∑????)";"Scope 1+2 (market-based)";1
 "Melco Resorts & Entertainment";"China, Hong Kong Special Administrative Region";"Scope 1+2 (market-based)";1
 "Melco Resorts & Entertainment";"China, Macao Special Administrative Region";"Scope 1+2 (market-based)";1
 "Melco Resorts & Entertainment";"Cyprus";"Scope 1+2 (market-based)";1
 "Melco Resorts & Entertainment";"Japan";"Scope 1+2 (market-based)";1
 "Melco Resorts & Entertainment";"Philippines";"Scope 1+2 (market-based)";1
 "Melco Resorts & Entertainment";"Taiwan, Greater China";"Scope 1+2 (market-based)";1
-"Meli· Hotels International S.A.";"Austria";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Austria";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Brazil";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Brazil";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Cabo Verde";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Cabo Verde";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"China";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"China";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Dominican Republic";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Dominican Republic";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"France";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"France";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Germany";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Germany";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Greece";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Greece";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Indonesia";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Indonesia";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Italy";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Italy";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Luxembourg";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Luxembourg";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Malaysia";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Malaysia";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Mexico";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Mexico";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Morocco";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Morocco";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Panama";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Panama";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Peru";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Peru";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Spain";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Spain";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"United Kingdom of Great Britain and Northern Ireland";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"United Republic of Tanzania";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"United Republic of Tanzania";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Venezuela (Bolivarian Republic of)";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Venezuela (Bolivarian Republic of)";"Scope 3 (upstream & downstream)";2
-"Meli· Hotels International S.A.";"Viet Nam";"Scope 1+2 (location-based)";2
-"Meli· Hotels International S.A.";"Viet Nam";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Austria";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Austria";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Brazil";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Brazil";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Cabo Verde";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Cabo Verde";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"China";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"China";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Dominican Republic";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Dominican Republic";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"France";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"France";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Germany";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Germany";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Greece";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Greece";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Indonesia";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Indonesia";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Italy";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Italy";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Luxembourg";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Luxembourg";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Malaysia";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Malaysia";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Mexico";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Mexico";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Morocco";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Morocco";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Panama";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Panama";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Peru";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Peru";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Spain";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Spain";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"United Kingdom of Great Britain and Northern Ireland";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"United Republic of Tanzania";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"United Republic of Tanzania";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Venezuela (Bolivarian Republic of)";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Venezuela (Bolivarian Republic of)";"Scope 3 (upstream & downstream)";2
+"Meli√° Hotels International S.A.";"Viet Nam";"Scope 1+2 (location-based)";2
+"Meli√° Hotels International S.A.";"Viet Nam";"Scope 3 (upstream & downstream)";2
 "Mercialys";"France";"Scope 3: Business travel";1
 "Merck & Co., Inc.";"Algeria";"Scope 1+2 (market-based)";1
 "Merck & Co., Inc.";"Argentina";"Scope 1+2 (market-based)";1
@@ -9933,8 +9904,8 @@
 "Metro AG";"Other, please specify: Asia (incl. Japan)";"Scope 3 (upstream)";1
 "Metro AG";"Other, please specify: Asia incl. Japan";"Scope 3 (upstream)";1
 "Metro AG";"Western Europe";"Scope 3 (upstream)";1
-"Mets‰ Board Corporation";"Finland";"Scope 1+2 (market-based)";1
-"Mets‰ Board Corporation";"Sweden";"Scope 1+2 (market-based)";1
+"Mets√§ Board Corporation";"Finland";"Scope 1+2 (market-based)";1
+"Mets√§ Board Corporation";"Sweden";"Scope 1+2 (market-based)";1
 "Metso";"Australia";"Other, please specify: Scope 3 Upstream and downstream transportation and distribution";1
 "Metso";"Australia";"Scope 1+2 (location-based)";1
 "Metso";"Australia";"Scope 3: Use of sold products";1
@@ -10622,28 +10593,28 @@
 "Neste Oyj";"Russian Federation";"Scope 1+2 (market-based)";2
 "Neste Oyj";"Singapore";"Scope 1+2 (market-based)";2
 "Neste Oyj";"Switzerland";"Scope 1+2 (market-based)";2
-"NestlÈ";"Australia";"Scope 1+2 (market-based)";1
-"NestlÈ";"Brazil";"Scope 1+2 (market-based)";1
-"NestlÈ";"Chile";"Scope 1+2 (market-based)";1
-"NestlÈ";"China";"Scope 1+2 (market-based)";1
-"NestlÈ";"France";"Scope 1+2 (market-based)";1
-"NestlÈ";"Germany";"Scope 1+2 (market-based)";1
-"NestlÈ";"India";"Scope 1+2 (market-based)";1
-"NestlÈ";"Indonesia";"Scope 1+2 (market-based)";1
-"NestlÈ";"Italy";"Scope 1+2 (market-based)";1
-"NestlÈ";"Japan";"Scope 1+2 (market-based)";1
-"NestlÈ";"Malaysia";"Scope 1+2 (market-based)";1
-"NestlÈ";"Mexico";"Scope 1+2 (market-based)";1
-"NestlÈ";"Pakistan";"Scope 1+2 (market-based)";1
-"NestlÈ";"Philippines";"Scope 1+2 (market-based)";1
-"NestlÈ";"Poland";"Scope 1+2 (market-based)";1
-"NestlÈ";"Rest of world";"Scope 1+2 (market-based)";1
-"NestlÈ";"Russia";"Scope 1+2 (market-based)";1
-"NestlÈ";"South Africa";"Scope 1+2 (market-based)";1
-"NestlÈ";"Spain";"Scope 1+2 (market-based)";1
-"NestlÈ";"Thailand";"Scope 1+2 (market-based)";1
-"NestlÈ";"United Kingdom";"Scope 1+2 (market-based)";1
-"NestlÈ";"United States of America";"Scope 1+2 (market-based)";1
+"Nestl√©";"Australia";"Scope 1+2 (market-based)";1
+"Nestl√©";"Brazil";"Scope 1+2 (market-based)";1
+"Nestl√©";"Chile";"Scope 1+2 (market-based)";1
+"Nestl√©";"China";"Scope 1+2 (market-based)";1
+"Nestl√©";"France";"Scope 1+2 (market-based)";1
+"Nestl√©";"Germany";"Scope 1+2 (market-based)";1
+"Nestl√©";"India";"Scope 1+2 (market-based)";1
+"Nestl√©";"Indonesia";"Scope 1+2 (market-based)";1
+"Nestl√©";"Italy";"Scope 1+2 (market-based)";1
+"Nestl√©";"Japan";"Scope 1+2 (market-based)";1
+"Nestl√©";"Malaysia";"Scope 1+2 (market-based)";1
+"Nestl√©";"Mexico";"Scope 1+2 (market-based)";1
+"Nestl√©";"Pakistan";"Scope 1+2 (market-based)";1
+"Nestl√©";"Philippines";"Scope 1+2 (market-based)";1
+"Nestl√©";"Poland";"Scope 1+2 (market-based)";1
+"Nestl√©";"Rest of world";"Scope 1+2 (market-based)";1
+"Nestl√©";"Russia";"Scope 1+2 (market-based)";1
+"Nestl√©";"South Africa";"Scope 1+2 (market-based)";1
+"Nestl√©";"Spain";"Scope 1+2 (market-based)";1
+"Nestl√©";"Thailand";"Scope 1+2 (market-based)";1
+"Nestl√©";"United Kingdom";"Scope 1+2 (market-based)";1
+"Nestl√©";"United States of America";"Scope 1+2 (market-based)";1
 "NetApp Inc.";"Americas";"Scope 2 (location-based)";1
 "NetApp Inc.";"Europe, Middle East and Africa (EMEA)";"Scope 2 (location-based)";1
 "NetApp Inc.";"India";"Scope 2 (location-based)";1
@@ -11587,10 +11558,10 @@
 "Orkla ASA";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";2
 "Orkla ASA";"United Kingdom of Great Britain and Northern Ireland";"Scope 3 (upstream & downstream)";2
 "Orkla ASA";"United Kingdom of Great Britain and Northern Ireland";"Scope 3: Waste generated in operations";1
-"Orkuveita ReykjavÌkur (Reykjavik Energy)";"Iceland";"Scope 1+2 (location-based) +3 (downstream)";1
-"ÿrsted";"Denmark";"Scope 3 (upstream & downstream)";1
-"ÿrsted";"Germany";"Scope 3 (upstream & downstream)";1
-"ÿrsted";"United Kingdom of Great Britain and Northern Ireland";"Scope 3 (upstream & downstream)";1
+"Orkuveita Reykjav√≠kur (Reykjavik Energy)";"Iceland";"Scope 1+2 (location-based) +3 (downstream)";1
+"√òrsted";"Denmark";"Scope 3 (upstream & downstream)";1
+"√òrsted";"Germany";"Scope 3 (upstream & downstream)";1
+"√òrsted";"United Kingdom of Great Britain and Northern Ireland";"Scope 3 (upstream & downstream)";1
 "Oshita Shigyoco., Ltd.";"Japan";"Scope 2 (location-based)";1
 "OSRAM Licht AG";"Bulgaria";"Scope 1+2 (market-based)";2
 "OSRAM Licht AG";"China";"Scope 1+2 (market-based)";2
@@ -11603,8 +11574,8 @@
 "OSRAM Licht AG";"Philippines";"Scope 1+2 (market-based)";2
 "OSRAM Licht AG";"Slovakia";"Scope 1+2 (market-based)";2
 "OSRAM Licht AG";"United States of America";"Scope 1+2 (market-based)";2
-"÷sterreichische Post AG";"Austria";"Scope 1";1
-"÷sterreichische Post AG";"Austria";"Scope 1+2 (location-based) +3 (upstream)";1
+"√ñsterreichische Post AG";"Austria";"Scope 1";1
+"√ñsterreichische Post AG";"Austria";"Scope 1+2 (location-based) +3 (upstream)";1
 "Otsuka Holdings Co., Ltd.";"Americas";"Scope 1+2 (market-based)";1
 "Otsuka Holdings Co., Ltd.";"China";"Scope 1+2 (market-based)";1
 "Otsuka Holdings Co., Ltd.";"Egypt";"Scope 1+2 (market-based)";1
@@ -11672,7 +11643,6 @@
 "PACIFIC INDUSTRIAL CO.,LTD.";"Thailand";"Scope 1+2 (location-based)";2
 "PACIFIC INDUSTRIAL CO.,LTD.";"United States of America";"Scope 1+2 (location-based)";2
 "PACIFIC QUARTZ";"China";"Scope 1+2 (location-based) +3 (upstream)";1
-"PACIFIC QUARTZ";"China";NA;1
 "Palfinger AG";"Asia Middle East (AME)";"Scope 1+2 (market-based)";1
 "Palfinger AG";"CEE (Central and Eastern Europe)";"Scope 1+2 (market-based)";1
 "Palfinger AG";"Commonwealth of Independent States (CIS)";"Scope 1+2 (market-based)";1
@@ -11894,14 +11864,14 @@
 "Perrigo Company plc";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (location-based)";1
 "Perrigo Company plc";"United States of America";"Scope 1+2 (location-based)";1
 "PETER'S TECHNOLOGY";"China";"Scope 2 (location-based)";1
-"PetrÛleo Brasileiro SA - Petrobras";"Argentina";"Scope 1+2 (location-based)";1
-"PetrÛleo Brasileiro SA - Petrobras";"Bolivia";"Scope 1+2 (location-based)";1
-"PetrÛleo Brasileiro SA - Petrobras";"Brazil";"Scope 1+2 (location-based)";1
-"PetrÛleo Brasileiro SA - Petrobras";"Colombia";"Scope 1+2 (location-based)";1
-"PetrÛleo Brasileiro SA - Petrobras";"Mexico";"Scope 1+2 (location-based)";1
-"PetrÛleo Brasileiro SA - Petrobras";"Paraguay";"Scope 1+2 (location-based)";1
-"PetrÛleo Brasileiro SA - Petrobras";"United States of America";"Scope 1+2 (location-based)";1
-"PetrÛleo Brasileiro SA - Petrobras";"Uruguay";"Scope 1+2 (location-based)";1
+"Petr√≥leo Brasileiro SA - Petrobras";"Argentina";"Scope 1+2 (location-based)";1
+"Petr√≥leo Brasileiro SA - Petrobras";"Bolivia";"Scope 1+2 (location-based)";1
+"Petr√≥leo Brasileiro SA - Petrobras";"Brazil";"Scope 1+2 (location-based)";1
+"Petr√≥leo Brasileiro SA - Petrobras";"Colombia";"Scope 1+2 (location-based)";1
+"Petr√≥leo Brasileiro SA - Petrobras";"Mexico";"Scope 1+2 (location-based)";1
+"Petr√≥leo Brasileiro SA - Petrobras";"Paraguay";"Scope 1+2 (location-based)";1
+"Petr√≥leo Brasileiro SA - Petrobras";"United States of America";"Scope 1+2 (location-based)";1
+"Petr√≥leo Brasileiro SA - Petrobras";"Uruguay";"Scope 1+2 (location-based)";1
 "PETRONAS Lubricants International Sdn Bhd";"Belgium";"Scope 1+2 (location-based)";1
 "PETRONAS Lubricants International Sdn Bhd";"Brazil";"Scope 1+2 (location-based)";1
 "PETRONAS Lubricants International Sdn Bhd";"China";"Scope 1+2 (location-based)";1
@@ -11915,7 +11885,6 @@
 "Pfizer Inc.";"Other, please specify: Rest of World";"Scope 1+2 (location-based)";2
 "Pfizer Inc.";"Puerto Rico";"Scope 1+2 (location-based)";2
 "Pfizer Inc.";"United States of America";"Scope 1+2 (location-based)";2
-"PG&E Corporation";"United States of America";"Other, please specify: Scope 1 + 3 (downstream)";1
 "PG&E Corporation";"United States of America";"Scope 1+2 (market-based)";1
 "Philip Morris International";"Argentina";"Scope 1+2 (market-based)";2
 "Philip Morris International";"Argentina";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
@@ -12051,18 +12020,18 @@
 "Pitney Bowes Inc.";"Switzerland";"Scope 1+2 (market-based)";1
 "Pitney Bowes Inc.";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";1
 "Pitney Bowes Inc.";"United States of America";"Scope 1+2 (market-based)";1
-"PJSC ìLUKOILî";"Azerbaijan";"Scope 1";1
-"PJSC ìLUKOILî";"Belgium";"Scope 1";1
-"PJSC ìLUKOILî";"Bulgaria";"Scope 1";1
-"PJSC ìLUKOILî";"Croatia";"Scope 1";1
-"PJSC ìLUKOILî";"Finland";"Scope 1";1
-"PJSC ìLUKOILî";"Georgia";"Scope 1";1
-"PJSC ìLUKOILî";"Italy";"Scope 1";1
-"PJSC ìLUKOILî";"Romania";"Scope 1";1
-"PJSC ìLUKOILî";"Russian Federation";"Scope 1";1
-"PJSC ìLUKOILî";"Serbia";"Scope 1";1
-"PJSC ìLUKOILî";"Turkey";"Scope 1";1
-"PJSC ìLUKOILî";"Uzbekistan";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Azerbaijan";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Belgium";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Bulgaria";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Croatia";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Finland";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Georgia";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Italy";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Romania";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Russian Federation";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Serbia";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Turkey";"Scope 1";1
+"PJSC ‚ÄúLUKOIL‚Äù";"Uzbekistan";"Scope 1";1
 "PLAMAC  MANUFACTURING CORP";"Taiwan, Greater China";"Scope 1";1
 "PLAMAC  MANUFACTURING CORP";"Taiwan, Greater China";"Scope 2 (location-based)";1
 "PLAMAC  MANUFACTURING CORP";"Taiwan, Greater China";"Scope 3 (upstream)";1
@@ -12107,7 +12076,6 @@
 "PostNL";"Belgium";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "PostNL";"Netherlands";"Scope 1+2 (market-based)";1
 "PostNL";"Netherlands";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"POTZU";"Taiwan, Greater China";"Scope 1";1
 "POTZU";"Taiwan, Greater China";"Scope 2 (location-based)";1
 "Power Corporation of Canada";"Canada";"Scope 1+2 (location-based)";3
 "Power Corporation of Canada";"Canada";"Scope 1+2 (market-based)";2
@@ -12215,7 +12183,7 @@
 "Prysmian SpA";"China";"Scope 1+2 (location-based)";1
 "Prysmian SpA";"Colombia";"Scope 1+2 (location-based)";1
 "Prysmian SpA";"Costa Rica";"Scope 1+2 (location-based)";1
-"Prysmian SpA";"CÙte d'Ivoire";"Scope 1+2 (location-based)";1
+"Prysmian SpA";"C√¥te d'Ivoire";"Scope 1+2 (location-based)";1
 "Prysmian SpA";"Czechia";"Scope 1+2 (location-based)";1
 "Prysmian SpA";"Estonia";"Scope 1+2 (location-based)";1
 "Prysmian SpA";"Finland";"Scope 1+2 (location-based)";1
@@ -12641,7 +12609,7 @@
 "Reconext";"Singapore";"Scope 1+2 (location-based)";1
 "Reconext";"United States of America";"Scope 1+2 (location-based)";1
 "Reconext";"Western Europe";"Scope 1+2 (location-based)";1
-"Red ElÈctrica CorporaciÛn, S.A.";"Spain";"Scope 1+2 (market-based)";2
+"Red El√©ctrica Corporaci√≥n, S.A.";"Spain";"Scope 1+2 (market-based)";2
 "Regions Financial Corporation";"United States of America";"Scope 1+2 (location-based)";1
 "Reliance Jio Infocomm Limited";"India";"Scope 1+2 (location-based)";2
 "RELX Group Plc";"Netherlands";"Scope 1+2 (location-based)";1
@@ -12654,7 +12622,7 @@
 "Remy Cointreau";"France";"Scope 1+2 (market-based)";3
 "Remy Cointreau";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";3
 "Remy Cointreau";"United States of America";"Scope 1+2 (market-based)";3
-"REN - Redes EnergÈticas Nacionais";"Portugal";"Scope 1";1
+"REN - Redes Energ√©ticas Nacionais";"Portugal";"Scope 1";1
 "Rengo Co., Ltd.";"China";"Scope 1+2 (location-based)";1
 "Rengo Co., Ltd.";"Japan";"Scope 1+2 (location-based)";3
 "Rengo Co., Ltd.";"Malaysia";"Scope 1+2 (location-based)";1
@@ -12865,7 +12833,7 @@
 "SAAB";"Switzerland";"Scope 1+2 (market-based) +3 (upstream)";1
 "SAAB";"United Kingdom";"Scope 1+2 (market-based) +3 (upstream)";1
 "SAAB";"United States of America";"Scope 1+2 (market-based) +3 (upstream)";1
-"SABANCI HOLDING A.S.";"Turkey";"Scope 1";1
+"SABANCI HOLDƒ∞NG A.≈û.";"Turkey";"Scope 1";1
 "Sacyr";"Angola";"Scope 1+2 (location-based)";1
 "Sacyr";"Australia";"Scope 1+2 (location-based)";1
 "Sacyr";"Cabo Verde";"Scope 1+2 (location-based)";1
@@ -13131,17 +13099,14 @@
 "Sanying Packaging (Jiangsu) Co., Ltd";"China";"Scope 1";1
 "Sanying Packaging (Jiangsu) Co., Ltd";"China";"Scope 2 (location-based)";1
 "Sanying Packaging (Jiangsu) Co., Ltd";"China";"Scope 3: Employee commuting";1
-"SAP SE";"China";"Scope 1+2 (location-based) +3 (upstream & downstream)";2
-"SAP SE";"Germany";"Scope 1+2 (location-based) +3 (upstream & downstream)";2
-"SAP SE";"India";"Scope 1+2 (location-based) +3 (upstream & downstream)";2
+"SAP SE";"China";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
+"SAP SE";"Germany";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
+"SAP SE";"India";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
 "SAP SE";"Israel";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
-"SAP SE";"Italy";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
 "SAP SE";"Netherlands";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
-"SAP SE";"Other, please specify: Rest of the World";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
-"SAP SE";"Philippines";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
 "SAP SE";"Rest of world";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
-"SAP SE";"Switzerland";"Scope 1+2 (location-based) +3 (upstream & downstream)";2
-"SAP SE";"United States of America";"Scope 1+2 (location-based) +3 (upstream & downstream)";2
+"SAP SE";"Switzerland";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
+"SAP SE";"United States of America";"Scope 1+2 (location-based) +3 (upstream & downstream)";1
 "Sapporo Holdings Limited";"Canada";"Scope 1+2 (market-based)";2
 "Sapporo Holdings Limited";"Japan";"Scope 1+2 (market-based)";2
 "Sapporo Holdings Limited";"Malaysia";"Scope 1+2 (market-based)";2
@@ -13450,12 +13415,12 @@
 "Severfield";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";2
 "Severn Trent";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";1
 "SG Holdings";"Japan";"Scope 1+2 (location-based)";2
-"SGS SociÈtÈ GÈnÈrale de Surveillance SA";"Americas";"Other, please specify: Scope 1 + 2 (market based) + Scope 3 (business travel)";1
-"SGS SociÈtÈ GÈnÈrale de Surveillance SA";"Americas";"Other, please specify: Scope1+2(market based)+3.Business travel";1
-"SGS SociÈtÈ GÈnÈrale de Surveillance SA";"Asia Pacific (or JAPA)";"Other, please specify: Scope 1 + 2 (market based) + Scope 3 (business travel)";1
-"SGS SociÈtÈ GÈnÈrale de Surveillance SA";"Asia Pacific (or JAPA)";"Other, please specify: Scope1+2(market based)+3.Business travel";1
-"SGS SociÈtÈ GÈnÈrale de Surveillance SA";"Europe, the Middle East, Africa and Russia (EMEAR)";"Other, please specify: Scope 1 + 2 (market based) + Scope 3 (business travel)";1
-"SGS SociÈtÈ GÈnÈrale de Surveillance SA";"Europe, the Middle East, Africa and Russia (EMEAR)";"Other, please specify: Scope1+2(market based)+3.Business travel";1
+"SGS Soci√©t√© G√©n√©rale de Surveillance SA";"Americas";"Other, please specify: Scope 1 + 2 (market based) + Scope 3 (business travel)";1
+"SGS Soci√©t√© G√©n√©rale de Surveillance SA";"Americas";"Other, please specify: Scope1+2(market based)+3.Business travel";1
+"SGS Soci√©t√© G√©n√©rale de Surveillance SA";"Asia Pacific (or JAPA)";"Other, please specify: Scope 1 + 2 (market based) + Scope 3 (business travel)";1
+"SGS Soci√©t√© G√©n√©rale de Surveillance SA";"Asia Pacific (or JAPA)";"Other, please specify: Scope1+2(market based)+3.Business travel";1
+"SGS Soci√©t√© G√©n√©rale de Surveillance SA";"Europe, the Middle East, Africa and Russia (EMEAR)";"Other, please specify: Scope 1 + 2 (market based) + Scope 3 (business travel)";1
+"SGS Soci√©t√© G√©n√©rale de Surveillance SA";"Europe, the Middle East, Africa and Russia (EMEAR)";"Other, please specify: Scope1+2(market based)+3.Business travel";1
 "SH ZIJIANG INT'L";"China";"Scope 1";1
 "SH ZIJIANG INT'L";"China";"Scope 2 (location-based)";1
 "SH ZIJIANG INT'L";"China";"Scope 3: Business travel";1
@@ -13564,7 +13529,6 @@
 "Signify NV";"United States of America";"Scope 3: Use of sold products";1
 "Silgan Plastics";"Canada";"Scope 1+2 (location-based)";1
 "Silgan Plastics";"United States of America";"Scope 1+2 (location-based)";1
-"SimCorp A/S";"Denmark";"Scope 3 (upstream)";1
 "Simon Property Group";"Puerto Rico";"Scope 1+2 (market-based)";1
 "Simon Property Group";"United States of America";"Scope 1+2 (market-based)";1
 "Singtel";"Australia";"Scope 1+2 (market-based)";1
@@ -13651,11 +13615,11 @@
 "SMUD";"United States of America";"Scope 1+2 (market-based)";2
 "Snam S.P.A";"Italy";"Scope 1";1
 "Snam S.P.A";"Italy";"Scope 1+2 (market-based)";1
-"SOCIEDAD ESPAÑOLA DE MONTAJES INDUS";"Chile";"Scope 1+2 (location-based) +3 (upstream)";1
-"SOCIEDAD ESPAÑOLA DE MONTAJES INDUS";"Dominican Republic";"Scope 1+2 (location-based) +3 (upstream)";1
-"SOCIEDAD ESPAÑOLA DE MONTAJES INDUS";"France";"Scope 1+2 (location-based) +3 (upstream)";1
-"SOCIEDAD ESPAÑOLA DE MONTAJES INDUS";"Lithuania";"Scope 1+2 (location-based) +3 (upstream)";1
-"SOCIEDAD ESPAÑOLA DE MONTAJES INDUS";"Spain";"Scope 1+2 (location-based) +3 (upstream)";1
+"SOCIEDAD ESPA‚ÄûOLA DE MONTAJES INDUS";"Chile";"Scope 1+2 (location-based) +3 (upstream)";1
+"SOCIEDAD ESPA‚ÄûOLA DE MONTAJES INDUS";"Dominican Republic";"Scope 1+2 (location-based) +3 (upstream)";1
+"SOCIEDAD ESPA‚ÄûOLA DE MONTAJES INDUS";"France";"Scope 1+2 (location-based) +3 (upstream)";1
+"SOCIEDAD ESPA‚ÄûOLA DE MONTAJES INDUS";"Lithuania";"Scope 1+2 (location-based) +3 (upstream)";1
+"SOCIEDAD ESPA‚ÄûOLA DE MONTAJES INDUS";"Spain";"Scope 1+2 (location-based) +3 (upstream)";1
 "Sodexo";"Australia";"Scope 1+2 (market-based)";1
 "Sodexo";"Australia";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
 "Sodexo";"Belgium";"Scope 1+2 (market-based)";1
@@ -13818,9 +13782,9 @@
 "Sopra Steria Group";"China";"Scope 1+2 (market-based)";3
 "Sopra Steria Group";"China";"Scope 3: Business travel";1
 "Sopra Steria Group";"China";"Scope 3: Purchased goods & services";1
-"Sopra Steria Group";"CÙte d'Ivoire";"Scope 1+2 (market-based)";3
-"Sopra Steria Group";"CÙte d'Ivoire";"Scope 3: Business travel";1
-"Sopra Steria Group";"CÙte d'Ivoire";"Scope 3: Purchased goods & services";1
+"Sopra Steria Group";"C√¥te d'Ivoire";"Scope 1+2 (market-based)";3
+"Sopra Steria Group";"C√¥te d'Ivoire";"Scope 3: Business travel";1
+"Sopra Steria Group";"C√¥te d'Ivoire";"Scope 3: Purchased goods & services";1
 "Sopra Steria Group";"Denmark";"Scope 1+2 (market-based)";3
 "Sopra Steria Group";"Denmark";"Scope 3: Business travel";1
 "Sopra Steria Group";"Denmark";"Scope 3: Purchased goods & services";1
@@ -13881,8 +13845,8 @@
 "Sopra Steria Group";"United States of America";"Scope 1+2 (market-based)";3
 "Sopra Steria Group";"United States of America";"Scope 3: Business travel";1
 "Sopra Steria Group";"United States of America";"Scope 3: Purchased goods & services";1
-"SpareBank 1 ÿstlandet";"Norway";"Scope 1+2 (location-based)";2
-"SpareBank 1 ÿstlandet";"Norway";"Scope 3 (upstream & downstream)";2
+"SpareBank 1 √òstlandet";"Norway";"Scope 1+2 (location-based)";2
+"SpareBank 1 √òstlandet";"Norway";"Scope 3 (upstream & downstream)";2
 "Spark New Zealand";"New Zealand";"Scope 1+2 (location-based) +3 (upstream)";1
 "Spirit Aerosystems Holdings Inc";"France";"Scope 1+2 (market-based)";1
 "Spirit Aerosystems Holdings Inc";"Malaysia";"Scope 1+2 (market-based)";1
@@ -14047,7 +14011,7 @@
 "Suez";"China, Hong Kong Special Administrative Region";"Scope 1+2 (market-based)";1
 "Suez";"China, Macao Special Administrative Region";"Scope 1+2 (market-based)";1
 "Suez";"Colombia";"Scope 1+2 (market-based)";1
-"Suez";"CuraÁao";"Scope 1+2 (market-based)";1
+"Suez";"Cura√ßao";"Scope 1+2 (market-based)";1
 "Suez";"Czechia";"Scope 1+2 (market-based)";1
 "Suez";"Egypt";"Scope 1+2 (market-based)";1
 "Suez";"France";"Scope 1+2 (market-based)";1
@@ -14072,7 +14036,7 @@
 "Suez";"Portugal";"Scope 1+2 (market-based)";1
 "Suez";"Qatar";"Scope 1+2 (market-based)";1
 "Suez";"Republic of Korea";"Scope 1+2 (market-based)";1
-"Suez";"RÈunion";"Scope 1+2 (market-based)";1
+"Suez";"R√©union";"Scope 1+2 (market-based)";1
 "Suez";"Romania";"Scope 1+2 (market-based)";1
 "Suez";"Singapore";"Scope 1+2 (market-based)";1
 "Suez";"Slovakia";"Scope 1+2 (market-based)";1
@@ -14086,7 +14050,7 @@
 "Suez";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";1
 "Suez";"United States of America";"Scope 1+2 (market-based)";1
 "Suez";"United States Virgin Islands";"Scope 1+2 (market-based)";1
-"Sul AmÈrica S/A";"Brazil";"Other, please specify: Escopo 1 + Escopo 2 + Escopo 3";1
+"Sul Am√©rica S/A";"Brazil";"Other, please specify: Escopo 1 + Escopo 2 + Escopo 3";1
 "Sumitomo Bakelite Company Limited";"Japan";"Scope 1+2 (market-based)";1
 "Sumitomo Bakelite Company Limited";"Other: ??";"Scope 1+2 (market-based)";1
 "Sumitomo Bakelite Company Limited";"Other: ???";"Scope 1+2 (market-based)";1
@@ -14129,33 +14093,33 @@
 "Sumitomo Electric Industries, Ltd.";"Ukraine";"Scope 1+2 (market-based)";1
 "Sumitomo Electric Industries, Ltd.";"United States of America";"Scope 1+2 (market-based)";1
 "Sumitomo Electric Industries, Ltd.";"Vietnam";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"Australasia";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"Australasia";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"Australasia";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"Australia";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"Australia";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"Australia";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"Canada";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"Canada";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"Canada";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"China";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"China";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"China";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"Indonesia";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"Indonesia";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"Indonesia";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"Japan";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"Japan";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"Japan";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"Malaysia";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"Malaysia";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"Malaysia";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"Netherlands";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"Netherlands";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"Netherlands";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"New Zealand";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"New Zealand";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"New Zealand";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"Papua New Guinea";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"Papua New Guinea";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"Papua New Guinea";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"Singapore";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"Singapore";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"Singapore";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"Thailand";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"Thailand";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"Thailand";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"United States of America";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"United States of America";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"United States of America";"Scope 1+2 (market-based)";1
-"Sumitomo Forestry Co., Ltd.";"Vietnam";"Other, please specify: <U+30B9><U+30B3><U+30FC><U+30D7>3<U+30AB><U+30C6><U+30B4><U+30EA>1<U+3068><U+30AB><U+30C6><U+30B4><U+30EA>11<U+306E><U+5408><U+7B97><U+5024>";1
+"Sumitomo Forestry Co., Ltd.";"Vietnam";"Other, please specify: „Çπ„Ç≥„Éº„Éó3„Ç´„ÉÜ„Ç¥„É™1„Å®„Ç´„ÉÜ„Ç¥„É™11„ÅÆÂêàÁÆóÂÄ§";1
 "Sumitomo Forestry Co., Ltd.";"Vietnam";"Scope 1+2 (market-based)";1
 "Sumitomo Mitsui Financial Group";"Australia";"Scope 2 (location-based)";1
 "Sumitomo Mitsui Financial Group";"Belgium";"Scope 2 (location-based)";1
@@ -14342,7 +14306,7 @@
 "T Mobile USA inc";"United States of America";"Scope 1+2 (market-based)";1
 "T Mobile USA inc";"United States of America";"Scope 2 (market-based)";2
 "T&D Holdings, Inc.";"Japan";"Scope 2 (location-based)";1
-"T. IS BANKASI A.S.";"Turkey";"Scope 1+2 (market-based)";3
+"T. ƒ∞≈û BANKASI A.≈û.";"Turkey";"Scope 1+2 (market-based)";3
 "T. Rowe Price Associates, Inc.";"Australia";"Scope 1+2 (location-based) +3 (downstream)";1
 "T. Rowe Price Associates, Inc.";"Canada";"Scope 1+2 (location-based) +3 (downstream)";1
 "T. Rowe Price Associates, Inc.";"China";"Scope 1+2 (location-based) +3 (downstream)";1
@@ -14359,7 +14323,7 @@
 "T. Rowe Price Associates, Inc.";"United Arab Emirates";"Scope 1+2 (location-based) +3 (downstream)";1
 "T. Rowe Price Associates, Inc.";"United Kingdom";"Scope 1+2 (location-based) +3 (downstream)";1
 "T. Rowe Price Associates, Inc.";"United States of America";"Scope 1+2 (location-based) +3 (downstream)";1
-"T.GARANTI BANKASI A.S.";"Turkey";"Scope 1+2 (location-based)";2
+"T.GARANTƒ∞ BANKASI A.≈û.";"Turkey";"Scope 1+2 (location-based)";2
 "Taisei Corporation";"Japan";"Scope 1+2 (market-based)";1
 "Taisei Corporation";"Japan";"Scope 3: Use of sold products";1
 "Taisei Corporation";"Singapore";"Scope 1+2 (market-based)";1
@@ -14447,12 +14411,12 @@
 "Teijin Ltd.";"Thailand";"Scope 1+2 (market-based)";2
 "Teijin Ltd.";"United States of America";"Scope 1+2 (market-based)";2
 "Teijin Ltd.";"Vietnam";"Scope 1+2 (market-based)";2
-"TEKFEN HOLDING A.S.";"Azerbaijan";"Scope 1+2 (location-based)";2
-"TEKFEN HOLDING A.S.";"Iraq";"Scope 1+2 (location-based)";2
-"TEKFEN HOLDING A.S.";"Kazakhstan";"Scope 1+2 (location-based)";2
-"TEKFEN HOLDING A.S.";"Qatar";"Scope 1+2 (location-based)";2
-"TEKFEN HOLDING A.S.";"Saudi Arabia";"Scope 1+2 (location-based)";2
-"TEKFEN HOLDING A.S.";"Turkey";"Scope 1+2 (location-based)";2
+"TEKFEN HOLDƒ∞NG A.≈û.";"Azerbaijan";"Scope 1+2 (location-based)";2
+"TEKFEN HOLDƒ∞NG A.≈û.";"Iraq";"Scope 1+2 (location-based)";2
+"TEKFEN HOLDƒ∞NG A.≈û.";"Kazakhstan";"Scope 1+2 (location-based)";2
+"TEKFEN HOLDƒ∞NG A.≈û.";"Qatar";"Scope 1+2 (location-based)";2
+"TEKFEN HOLDƒ∞NG A.≈û.";"Saudi Arabia";"Scope 1+2 (location-based)";2
+"TEKFEN HOLDƒ∞NG A.≈û.";"Turkey";"Scope 1+2 (location-based)";2
 "Teknion Limited";"Canada";"Scope 1";1
 "Teknion Limited";"Canada";"Scope 2 (location-based)";1
 "Teknion Limited";"Canada";"Scope 3: Waste generated in operations";1
@@ -14466,42 +14430,42 @@
 "Telecom Italia";"Brazil";"Scope 2 (market-based)";1
 "Telecom Italia";"Italy";"Scope 1+2 (market-based)";1
 "Telecom Italia";"Italy";"Scope 2 (market-based)";1
-"TelefÛnica";"Argentina";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Argentina";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Brazil";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Brazil";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Chile";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Chile";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Colombia";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Colombia";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Costa Rica";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Costa Rica";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Ecuador";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Ecuador";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"El Salvador";"Scope 1+2 (market-based)";3
-"TelefÛnica";"El Salvador";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Germany";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Germany";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Guatemala";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Guatemala";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"International Waters";"Scope 1+2 (market-based)";3
-"TelefÛnica";"International Waters";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Mexico";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Mexico";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Nicaragua";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Nicaragua";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Panama";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Panama";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Peru";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Peru";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Spain";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Spain";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"United Kingdom";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"United States of America";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Uruguay";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Uruguay";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
-"TelefÛnica";"Venezuela";"Scope 1+2 (market-based)";3
-"TelefÛnica";"Venezuela";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Argentina";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Argentina";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Brazil";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Brazil";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Chile";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Chile";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Colombia";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Colombia";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Costa Rica";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Costa Rica";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Ecuador";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Ecuador";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"El Salvador";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"El Salvador";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Germany";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Germany";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Guatemala";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Guatemala";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"International Waters";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"International Waters";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Mexico";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Mexico";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Nicaragua";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Nicaragua";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Panama";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Panama";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Peru";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Peru";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Spain";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Spain";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"United Kingdom";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"United States of America";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Uruguay";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Uruguay";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
+"Telef√≥nica";"Venezuela";"Scope 1+2 (market-based)";3
+"Telef√≥nica";"Venezuela";"Scope 3: Fuel and energy-related activities (not included in Scopes 1 or 2)";1
 "Telefonica Brasil S.A.";"Brazil";"Scope 1+2 (market-based)";3
 "Telekom Austria AG";"Austria";"Scope 1+2 (market-based)";2
 "Telekom Austria AG";"Austria";"Scope 3 (upstream & downstream)";1
@@ -14852,7 +14816,7 @@
 "Toda Kogyo Corp";"South Korea";"Scope 1+2 (market-based) +3 (downstream)";1
 "Toda Kogyo Corp";"South Korea";"Scope 3: Downstream transportation and distribution";1
 "Toda Kogyo Corp";"South Korea";"Scope 3: Employee commuting";1
-"TOFAS T‹RK OTOMOBIL FABRIKASI A.S.";"Turkey";"Scope 1+2 (location-based)";1
+"TOFA≈û T√úRK OTOMOBƒ∞L FABRƒ∞KASI A.≈û.";"Turkey";"Scope 1+2 (location-based)";1
 "Tokai Rika Co., Ltd.";"Americas";"Scope 1+2 (location-based)";1
 "Tokai Rika Co., Ltd.";"Asia, Australasia";"Scope 1+2 (location-based)";1
 "Tokai Rika Co., Ltd.";"Asia, Australasia, Middle East and Africa";"Scope 1+2 (location-based)";1
@@ -15037,7 +15001,7 @@
 "Toyota Boshoku Corporation";"Japan";"Scope 1+2 (location-based)";1
 "Toyota Boshoku Corporation";"Other, please specify: ????";"Scope 1+2 (location-based)";1
 "Toyota Boshoku Corporation";"Other, please specify: ???????????????????????????";"Scope 1+2 (location-based)";1
-"Toyota Boshoku Corporation";"Other, please specify: ????∑??∑?????∑????????";"Scope 1+2 (location-based)";1
+"Toyota Boshoku Corporation";"Other, please specify: ????¬∑??¬∑?????¬∑????????";"Scope 1+2 (location-based)";1
 "TOYOTA CAETANO";"Portugal";"Scope 1+2 (location-based)";2
 "TOYOTA CAETANO";"Portugal";"Scope 1+2 (market-based)";2
 "Toyota Motor Corporation";"Asia, Australasia, Middle East and Africa";"Scope 1+2 (market-based)";3
@@ -15099,12 +15063,12 @@
 "Tsubakimoto Chain Co.";"United Kingdom";"Scope 1+2 (location-based)";1
 "Tsubakimoto Chain Co.";"United States of America";"Scope 1+2 (location-based)";1
 "TUBES INTERNATIONAL GMBH";"Austria";"Scope 1+2 (market-based) +3 (upstream & downstream)";1
-"TURKCELL ILETISIM HIZMETLERI A.S.";"Turkey";"Scope 1+2 (location-based)";1
-"T‹RKIYE KALKINMA BANKASI A.S.";"Turkey";"Scope 1+2 (location-based)";1
-"T‹RKIYE VAKIFLAR BANKASI T.A.O.";"Turkey";"Scope 1";1
-"T‹RKIYE VAKIFLAR BANKASI T.A.O.";"Turkey";"Scope 1+2 (location-based)";1
-"T‹RKIYE VAKIFLAR BANKASI T.A.O.";"Turkey";"Scope 2 (location-based)";1
-"T‹RKIYE VAKIFLAR BANKASI T.A.O.";"Turkey";"Scope 3 (upstream & downstream)";1
+"TURKCELL ƒ∞LETƒ∞≈ûƒ∞M Hƒ∞ZMETLERƒ∞ A.≈û.";"Turkey";"Scope 1+2 (location-based)";1
+"T√úRKƒ∞YE KALKINMA BANKASI A.≈û.";"Turkey";"Scope 1+2 (location-based)";1
+"T√úRKƒ∞YE VAKIFLAR BANKASI T.A.O.";"Turkey";"Scope 1";1
+"T√úRKƒ∞YE VAKIFLAR BANKASI T.A.O.";"Turkey";"Scope 1+2 (location-based)";1
+"T√úRKƒ∞YE VAKIFLAR BANKASI T.A.O.";"Turkey";"Scope 2 (location-based)";1
+"T√úRKƒ∞YE VAKIFLAR BANKASI T.A.O.";"Turkey";"Scope 3 (upstream & downstream)";1
 "Tyson Foods, Inc.";"United States of America";"Scope 1+2 (market-based)";1
 "U.S. Bancorp";"Rest of world";"Scope 1+2 (market-based)";2
 "U.S. Bancorp";"United States of America";"Scope 1+2 (market-based)";2
@@ -15146,10 +15110,10 @@
 "UCB SA";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based) +3 (downstream)";1
 "UCB SA";"United States of America";"Scope 1+2 (location-based) +3 (downstream)";3
 "UCB SA";"United States of America";"Scope 1+2 (market-based) +3 (downstream)";1
-"Ultrapar ParticipaÁıes S/A";"Brazil";"Scope 1+2 (location-based)";1
-"Ultrapar ParticipaÁıes S/A";"Mexico";"Scope 1+2 (location-based)";1
-"Ultrapar ParticipaÁıes S/A";"Uruguay";"Scope 1+2 (location-based)";1
-"Ultrapar ParticipaÁıes S/A";"Venezuela (Bolivarian Republic of)";"Scope 1+2 (location-based)";1
+"Ultrapar Participa√ß√µes S/A";"Brazil";"Scope 1+2 (location-based)";1
+"Ultrapar Participa√ß√µes S/A";"Mexico";"Scope 1+2 (location-based)";1
+"Ultrapar Participa√ß√µes S/A";"Uruguay";"Scope 1+2 (location-based)";1
+"Ultrapar Participa√ß√µes S/A";"Venezuela (Bolivarian Republic of)";"Scope 1+2 (location-based)";1
 "Uni-Charm Corporation";"Brazil";"Scope 1+2 (location-based)";1
 "Uni-Charm Corporation";"China";"Scope 1+2 (location-based)";1
 "Uni-Charm Corporation";"India";"Scope 1+2 (location-based)";1
@@ -15193,7 +15157,7 @@
 "Unilever plc";"China";"Scope 1+2 (market-based)";2
 "Unilever plc";"Colombia";"Scope 1+2 (market-based)";2
 "Unilever plc";"Costa Rica";"Scope 1+2 (market-based)";2
-"Unilever plc";"CÙte d'Ivoire";"Scope 1+2 (market-based)";2
+"Unilever plc";"C√¥te d'Ivoire";"Scope 1+2 (market-based)";2
 "Unilever plc";"Cyprus";"Scope 1+2 (market-based)";2
 "Unilever plc";"Czechia";"Scope 1+2 (market-based)";2
 "Unilever plc";"Denmark";"Scope 1+2 (market-based)";2
@@ -15545,7 +15509,7 @@
 "Vertex Pharmaceuticals Inc";"Switzerland";"Scope 1+2 (market-based)";1
 "Vertex Pharmaceuticals Inc";"United Kingdom of Great Britain and Northern Ireland";"Scope 1+2 (market-based)";1
 "Vertex Pharmaceuticals Inc";"United States of America";"Scope 1+2 (market-based)";1
-"VESTEL ELEKTRONIK SANAYI VE TICARET A.S.";"Turkey";"Scope 1+2 (location-based)";1
+"VESTEL ELEKTRONƒ∞K SANAYƒ∞ VE Tƒ∞CARET A.≈û.";"Turkey";"Scope 1+2 (location-based)";1
 "VF Corporation";"Asia, Australasia";"Scope 1+2 (market-based)";1
 "VF Corporation";"Asia, Australasia";"Scope 3 (upstream)";1
 "VF Corporation";"Europe, Middle East and Africa (EMEA)";"Scope 1+2 (market-based)";1
@@ -15622,7 +15586,7 @@
 "Vivendi SA";"Colombia";"Scope 1+2 (location-based)";1
 "Vivendi SA";"Congo";"Scope 1+2 (location-based)";1
 "Vivendi SA";"Costa Rica";"Scope 1+2 (location-based)";1
-"Vivendi SA";"CÙte d'Ivoire";"Scope 1+2 (location-based)";1
+"Vivendi SA";"C√¥te d'Ivoire";"Scope 1+2 (location-based)";1
 "Vivendi SA";"Czechia";"Scope 1+2 (location-based)";1
 "Vivendi SA";"Democratic Republic of the Congo";"Scope 1+2 (location-based)";1
 "Vivendi SA";"Denmark";"Scope 1+2 (location-based)";1
@@ -15656,7 +15620,7 @@
 "Vivendi SA";"Poland";"Scope 1+2 (location-based)";1
 "Vivendi SA";"Portugal";"Scope 1+2 (location-based)";1
 "Vivendi SA";"Republic of Korea";"Scope 1+2 (location-based)";1
-"Vivendi SA";"RÈunion";"Scope 1+2 (location-based)";1
+"Vivendi SA";"R√©union";"Scope 1+2 (location-based)";1
 "Vivendi SA";"Romania";"Scope 1+2 (location-based)";1
 "Vivendi SA";"Russian Federation";"Scope 1+2 (location-based)";1
 "Vivendi SA";"Senegal";"Scope 1+2 (location-based)";1
@@ -16026,8 +15990,8 @@
 "Wanxiang Qianchao Co Ltd";"China";"Scope 1";1
 "Wanxiang Qianchao Co Ltd";"China";"Scope 2 (location-based)";1
 "Warehouse Group";"New Zealand";"Scope 1+2 (location-based) +3 (upstream)";1
-"W‰rtsil‰ Corporation";"Finland";"Scope 1+2 (location-based)";1
-"W‰rtsil‰ Corporation";"Rest of world";"Scope 1+2 (location-based)";1
+"W√§rtsil√§ Corporation";"Finland";"Scope 1+2 (location-based)";1
+"W√§rtsil√§ Corporation";"Rest of world";"Scope 1+2 (location-based)";1
 "Waste Management, Inc.";"Canada";"Scope 1";1
 "Waste Management, Inc.";"Canada";"Scope 2 (location-based)";1
 "Waste Management, Inc.";"United States of America";"Scope 1";1
@@ -16264,7 +16228,7 @@
 "Yamato Holdings Co., Ltd.";"Japan";"Scope 1+2 (market-based)";1
 "Yangzhou Fuping Living Supplies Factory";"China";"Scope 1";1
 "YANGZHOU SHENGYE MACHINERY";"China";"Scope 1";1
-"YAPI VE KREDI BANKASI A.S.";"Turkey";"Scope 1+2 (location-based)";1
+"YAPI VE KREDƒ∞ BANKASI A.≈û.";"Turkey";"Scope 1+2 (location-based)";1
 "YI CHENG PARER.CO., LTD.";"Taiwan, Greater China";"Scope 1";1
 "YI CHENG PARER.CO., LTD.";"Taiwan, Greater China";"Scope 2 (location-based)";1
 "YI LI SHA HARDWARE & PLASTIC PROD";"China";"Scope 1";1
@@ -16370,5 +16334,5 @@
 "Zimmer Biomet Holdings, Inc.";"Switzerland";"Scope 1+2 (market-based)";1
 "Zimmer Biomet Holdings, Inc.";"United Kingdom";"Scope 1+2 (market-based)";1
 "Zimmer Biomet Holdings, Inc.";"United States of America";"Scope 1+2 (market-based)";1
-"ZORLU ENERJI ELEKTRIK ‹RETIM A.S.";"Pakistan";"Scope 1+2 (location-based)";1
-"ZORLU ENERJI ELEKTRIK ‹RETIM A.S.";"Turkey";"Scope 1+2 (location-based)";1
+"ZORLU ENERJƒ∞ ELEKTRƒ∞K √úRETƒ∞M A.≈û.";"Pakistan";"Scope 1+2 (location-based)";1
+"ZORLU ENERJƒ∞ ELEKTRƒ∞K √úRETƒ∞M A.≈û.";"Turkey";"Scope 1+2 (location-based)";1

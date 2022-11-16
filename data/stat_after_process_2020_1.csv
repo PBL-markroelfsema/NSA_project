@@ -58,8 +58,8 @@
 "Central Europe";5
 "Chad";3
 "Chile";107
-"China";487
-"China, Hong Kong Special Administrative Region";68
+"China";486
+"China, Hong Kong Special Administrative Region";67
 "China, Macao Special Administrative Region";13
 "CIS and Asia";2
 "CIS+";1
@@ -70,17 +70,17 @@
 "Congo, Democratic Republic of the";3
 "Cook Islands";1
 "Costa Rica";43
-"Côte d'Ivoire";10
+"CÃ´te d'Ivoire";10
 "Cote d Ivoire";4
 "Croatia";32
 "Cuba";6
-"Curaçao";1
+"CuraÃ§ao";1
 "Cyprus";8
 "Czech Republic";44
 "Czechia";91
 "Democratic People's Republic of Korea";4
 "Democratic Republic of the Congo";4
-"Denmark";101
+"Denmark";100
 "Djibouti";2
 "Dominica";1
 "Dominican Republic";26
@@ -111,7 +111,7 @@
 "Gabon";8
 "Gambia";3
 "Georgia";4
-"Germany";332
+"Germany";331
 "Ghana";23
 "Gibraltar";2
 "Greece";67
@@ -139,7 +139,7 @@
 "Ireland";144
 "Isle of Man";1
 "Israel";52
-"Italy";244
+"Italy";243
 "Jamaica";3
 "Japan";364
 "Jersey";1
@@ -171,7 +171,7 @@
 "Mauritania";1
 "Mauritius";8
 "Mayotte";2
-"Mexico";238
+"Mexico";237
 "Micronesia (Federated States of)";1
 "Middle and Near East";1
 "Middle East";9
@@ -203,8 +203,8 @@
 "Other, please specify: ????";1
 "Other, please specify: ???????????????????????????";1
 "Other, please specify: ?????????????????????????????????????????????UAE?????";1
-"Other, please specify: ????·??·?????·????????";1
-"Other, please specify: ??·??(????·????)";1
+"Other, please specify: ????Â·??Â·?????Â·????????";1
+"Other, please specify: ??Â·??(????Â·????)";1
 "Other, please specify: 1% of operations estimated";1
 "Other, please specify: 10% of IAG kWh is from overseas offices in dozens of countries. Aggregated emissions are disclosed here.";1
 "Other, please specify: All countries not including the US";1
@@ -275,8 +275,8 @@
 "Other, please specify: Other countries than the above countries";1
 "Other, please specify: Other countries with less than 50 tCO2e emissions in Scope 2.  See the comments section for a list of the countries included.";1
 "Other, please specify: Others (Europe, America, Africa)";1
-"Other, please specify: Planta 4001 Aluminio Jalisco México";1
-"Other, please specify: Planta 8003 Aluminio Yucatan México";1
+"Other, please specify: Planta 4001 Aluminio Jalisco MÃ©xico";1
+"Other, please specify: Planta 8003 Aluminio Yucatan MÃ©xico";1
 "Other, please specify: Polynesia";1
 "Other, please specify: Remaining Offices";1
 "Other, please specify: Remaining offices around the globe";1
@@ -286,7 +286,7 @@
 "Other, please specify: Rest of Hydro's ownership equity";1
 "Other, please specify: rest of the world";2
 "Other, please specify: Rest of the world";15
-"Other, please specify: Rest of the World";6
+"Other, please specify: Rest of the World";5
 "Other, please specify: Rest of the world (without Germany)";1
 "Other, please specify: rest of world";1
 "Other, please specify: Rest of world";14
@@ -411,7 +411,7 @@
 "Papua New Guinea";6
 "Paraguay";15
 "Peru";60
-"Philippines";117
+"Philippines";116
 "Poland";185
 "Portugal";113
 "Puerto Rico";34
@@ -419,7 +419,7 @@
 "Republic of Korea";128
 "Republic of Moldova";2
 "Rest of world";90
-"Réunion";3
+"RÃ©union";3
 "Romania";96
 "Russia";52
 "Russian Federation";93
@@ -469,7 +469,7 @@
 "United Kingdom";169
 "United Kingdom of Great Britain and Northern Ireland";264
 "United Republic of Tanzania";12
-"United States of America";605
+"United States of America";604
 "United States Virgin Islands";3
 "Uruguay";35
 "US, Latin America and Caribbean (USLAC)";3

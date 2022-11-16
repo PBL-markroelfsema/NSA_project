@@ -1,39 +1,566 @@
 "company_name";"Scope_short";"Target year";"Base year";"count_branches";"sum_percent_alloc";"remaing";"perc_from_closest_number"
+"ABB";"S12M";2020;2013;3;3;0;0
+"Abengoa";"S12L";2023;2017;3;3;0;0
+"Abengoa";"S3";2023;2017;3;3;0;0
+"Abengoa";"S3";2023;2018;3;3;0;0
+"Accenture";"S12M3";2025;2016;2;2;0;0
+"ACCIONA S.A.";"S3";2030;2017;2;2;0;0
+"Acuity Brands Inc";"S2L";2020;2019;2;2;0;0
+"Acuity Brands Inc";"S2L";2022;2019;2;2;0;0
+"Acuity Brands Inc";"S3";2020;2019;2;2;0;0
+"Acuity Brands Inc";"S3";2022;2019;2;2;0;0
+"adidas AG";"S12M";2020;2015;2;2;0;0
+"Adobe, Inc.";"S12M";2025;2015;3;3;0;0
+"Adobe, Inc.";"S12M";2035;2015;3;3;0;0
+"Adobe, Inc.";"S3";2020;2013;3;3;0;0
+"ADVA Optical Networking SE";"S1";2032;2016;3;3;0;0
+"ADVA Optical Networking SE";"S2L";2032;2016;3;3;0;0
+"ADVA Optical Networking SE";"S3";2032;2016;3;3;0;0
+"Advanced Micro Devices, Inc";"S12L";2020;2014;2;2;0;0
+"Aisin Seiki Co., Ltd.";"S12L";2050;2016;2;2;0;0
+"Akamai Technologies Inc";"S12M";2020;2015;2;2;0;0
 "AL KARAM TOWEL INDUSTRIES";"S1";2019;2016;2;2;0;0
 "AL KARAM TOWEL INDUSTRIES";"S1";2020;2019;2;2;0;0
+"ALPLA";"S12L3";2022;2018;2;2;0;0
+"ALPS ALPINE CO LTD.";"S12M";2051;2014;2;2;0;0
+"Alten";"S3";2025;2018;2;2;0;0
+"Altria Group, Inc.";"S3";2030;2017;2;2;0;0
 "Ameren Corporation";"S1";2019;2018;3;3;0;0
+"American Express";"S12M3";2025;2011;2;2;0;0
+"American Express";"S12M3";2040;2011;2;2;0;0
+"AmerisourceBergen Corp.";"S2L";2020;2016;2;2;0;0
+"Amgen, Inc.";"S12L";2020;2012;2;2;0;0
+"Amtrak";"S12L";2019;2018;2;2;0;0
+"An Post";"S1";2020;2009;2;2;0;0
+"ANA Holdings Inc.";"S1";2020;2012;2;2;0;0
+"AOE GMBH";"S3";2020;2019;2;2;0;0
+"Apple Inc.";"S12M";2020;2012;3;3;0;0
+"Apple Inc.";"S12M";2036;2012;3;3;0;0
+"Apple Inc.";"S12M3";2030;2015;3;3;0;0
+"Apple Inc.";"S2M";2019;2011;3;3;0;0
+"Applied Materials Inc.";"S12M";2020;2018;2;2;0;0
+"Arce Avícola";"S12M";2020;2020;2;2;0;0
+"Archer Daniels Midland";"S12L";2035;2019;3;3;0;0
+"ARKEMA";"S12M";2030;2015;2;2;0;0
+"ASE Technology Holding Co., Ltd.";"S12M";2025;2016;2;2;0;0
+"ASE Technology Holding Co., Ltd.";"S12M";2035;2016;2;2;0;0
+"Asics Corporation";"S12M";2020;2015;2;2;0;0
+"Asics Corporation";"S12M";2030;2015;2;2;0;0
+"ASML Holding";"S12M";2025;2019;2;2;0;0
+"AstraZeneca";"S3";2025;2015;3;3;0;0
+"ASUSTeK Computer Inc";"S12L";2025;2008;2;2;0;0
+"ASUSTeK Computer Inc";"S3";2019;2019;2;2;0;0
+"AT&T Inc.";"S1";2020;2008;2;2;0;0
+"Atos SE";"S12X3";2021;2012;3;3;0;0
+"Atos SE";"S12X3";2050;2012;3;3;0;0
+"Automatic Data Processing, Inc.";"S12L";2020;2014;3;3;0;0
+"Avis Budget Group";"S12M";2030;2018;2;2;0;0
+"Avon Products, Inc.";"S12L";2020;2005;3;3;0;0
+"Bain & Company";"S12L";2030;2016;3;3;0;0
+"Bain & Company";"S12M";2040;2011;3;3;0;0
+"Baker Hughes Company";"S12M";2020;2012;3;3;0;0
+"Baker Hughes Company";"S12M";2030;2012;3;3;0;0
+"Baker Hughes Company";"S12M";2050;2012;3;3;0;0
+"Ball Corporation";"S12M";2030;2017;2;2;0;0
+"Ball Corporation";"S3";2030;2017;2;2;0;0
+"Banco BPM SpA";"S1";2023;2019;3;3;0;0
+"BanColombia SA";"S3";2020;2010;2;2;0;0
+"BanColombia SA";"S3";2020;2015;2;2;0;0
+"BanColombia SA";"S3";2020;2016;2;2;0;0
+"BanColombia SA";"S3";2020;2019;2;2;0;0
+"Barrick Gold Corporation";"S12M";2030;2018;2;2;0;0
+"Bayer AG";"S12M";2029;2019;3;3;0;0
+"Bayer AG";"S3";2029;2019;3;3;0;0
+"BayWa AG Munich";"S12M";2025;2017;2;2;0;0
+"BBA Aviation";"S12L";2025;2018;2;2;0;0
+"BBA Aviation";"S12L";2030;2018;2;2;0;0
+"BBA Aviation";"S12L";2050;2018;2;2;0;0
+"BBVA";"S12M";2025;2015;2;2;0;0
+"BBVA";"S12M";2050;2015;2;2;0;0
 "BerBrand Srl";"S2L";NA;2020;3;3;0;0
-"BMW AG";"S12M";2020;2015;18;2;0;0
-"BMW AG";"S12M";2050;2015;18;2;0;0
+"BerBrand Srl";"S3";NA;2020;3;3;0;0
+"Berkeley Group";"S12M";2030;2019;2;2;0;0
+"BMW AG";"S12M";2020;2015;2;2;0;0
+"BMW AG";"S12M";2050;2015;2;2;0;0
+"Boeing Company";"S12M";2025;2017;2;2;0;0
+"Bolloré SA";"S12L";2027;2017;2;2;0;0
+"Bouygues";"S12L3";2030;2015;3;3;0;0
+"bpost";"S12M";2030;2017;2;2;0;0
+"bpost";"S3";2030;2017;2;2;0;0
+"Broadridge Financial Solutions Inc";"S12L";2025;2019;3;3;0;0
+"Brother Industries, Ltd.";"S12M";2030;2015;2;2;0;0
+"Brother Industries, Ltd.";"S12X3";2030;2015;2;2;0;0
+"Burberry Group";"S12M";2022;2016;2;2;0;0
+"Burberry Group";"S3";2030;2016;2;2;0;0
 "Butterball";"S1";2022;2018;2;2;0;0
-"Chubb Limited";"S12M";2025;2016;4;2;0;0
-"Chubb Limited";"S12M";2035;2016;4;2;0;0
-"Commonwealth Bank of Australia";"S2L";2020;2009;8;2;0;0
+"Butterball";"S2L";2022;2018;2;2;0;0
+"Caixa Geral de Depósitos";"S12M";2021;2015;2;2;0;0
+"Capgemini SE";"S12L";2030;2015;3;3;0;0
+"Capgemini SE";"S3";2030;2015;3;3;0;0
+"Carlsberg Breweries A/S";"S12M";2030;2015;2;2;0;0
+"Carrefour";"S3";2030;2019;3;3;0;0
+"CBRE Group, Inc.";"S1";2026;2016;2;2;0;0
+"CBRE Group, Inc.";"S2L";2025;2015;2;2;0;0
+"CBRE Group, Inc.";"S2L";2035;2015;2;2;0;0
+"Celestica Inc.";"S12M";2025;2018;2;2;0;0
+"Celestica Inc.";"S3";2025;2018;2;2;0;0
+"Centrica";"S12L";2030;2015;2;2;0;0
+"Centrica";"S12L";2050;2015;2;2;0;0
+"Centrica";"S12L3";2025;2015;2;2;0;0
+"CEWE Stiftung & Co. KGaA";"S1";2020;2015;2;2;0;0
+"CGI Group Inc.";"S12L";2020;2008;2;2;0;0
+"CGI Group Inc.";"S3";2020;2010;2;2;0;0
+"Charles Komar & Sons";"S12L3";2025;2018;2;2;0;0
+"CHENG YU METALS MANUFACTORY, INC.";"S3";2030;2019;2;2;0;0
+"Chubb Limited";"S12M";2025;2016;2;2;0;0
+"Chubb Limited";"S12M";2035;2016;2;2;0;0
+"Church & Dwight Co., Inc";"S12L";2019;2018;2;2;0;0
+"CJ Cheiljedang";"S12L";2030;2018;2;2;0;0
+"Coloplast A/S";"S12M";2019;2017;2;2;0;0
+"Commonwealth Bank of Australia";"S1";2020;2009;2;2;0;0
+"Commonwealth Bank of Australia";"S2L";2020;2009;2;2;0;0
+"COMPASS CORPORATION";"S3";2030;2018;2;2;0;0
+"CONCORD INTERNATIONAL ENGINEERING & TRADING CO., LTD.";"S12L";2023;2018;2;2;0;0
+"CONCORD INTERNATIONAL ENGINEERING & TRADING CO., LTD.";"S3";2023;2018;4;4;0;0
+"Continental AG";"S12L";2040;2018;3;3;0;0
+"Continental AG";"S2L";2020;2018;3;3;0;0
+"Continental AG";"S3";2050;2019;3;3;0;0
+"ConvaTec";"S12M";2023;2018;2;2;0;0
+"Córas Iompair Éireann Group (CIÉ)";"S12M";2020;2006;2;2;0;0
+"Core Laboratories N.V.";"S1";2020;2015;2;2;0;0
+"Core Laboratories N.V.";"S1";2025;2018;2;2;0;0
+"Core Laboratories N.V.";"S12L";2020;2015;2;2;0;0
+"Core Laboratories N.V.";"S12L";2025;2018;2;2;0;0
+"Core Laboratories N.V.";"S2L";2020;2015;2;2;0;0
+"Core Laboratories N.V.";"S2L";2025;2018;2;2;0;0
 "CPFL Energia SA";"S1";2022;2018;2;2;0;0
+"Cummins Inc.";"S12M";2030;2018;2;2;0;0
+"Cummins Inc.";"S3";2020;2014;2;2;0;0
+"Cummins Inc.";"S3";2030;2018;2;2;0;0
+"CVS Health";"S12M";2030;2010;2;2;0;0
+"CVS Health";"S12M";2050;2010;2;2;0;0
+"Daelim Industrial";"S12L3";2030;2019;3;3;0;0
+"Daelim Industrial";"S12L3";2050;2019;3;3;0;0
+"Daifuku Co., Ltd.";"S12M";2020;2005;2;2;0;0
+"Daiichi Sankyo Co., Ltd.";"S12M";2020;2015;2;2;0;0
+"Daiichi Sankyo Co., Ltd.";"S12M";2030;2015;2;2;0;0
+"Daikin Industries, Ltd.";"S12M";2020;2005;2;2;0;0
+"Danone";"S12M";2030;2015;2;2;0;0
+"Decathlon SA";"S12M";2026;2016;2;2;0;0
+"Deere & Company";"S12M";2022;2017;2;2;0;0
+"Deutsche Lufthansa AG";"S1";2019;2019;3;3;0;0
+"Deutsche Lufthansa AG";"S1";2030;2019;3;3;0;0
+"Deutsche Lufthansa AG";"S1";2050;2005;3;3;0;0
+"Deutsche Lufthansa AG";"S12M";2025;2018;3;3;0;0
+"Deutsche Lufthansa AG";"S2M";2020;2019;3;3;0;0
+"Deutsche Post DHL Group";"S12M3";2050;2016;2;2;0;0
+"Deutsche Telekom AG";"S12L3";2020;2008;2;2;0;0
 "Dexus";"S12L";2020;2015;2;2;0;0
+"DIC Corporation";"S12M";2030;2013;2;2;0;0
+"Domtar Corporation";"S12M";2020;2010;2;2;0;0
+"Downer EDI";"S12L";2035;2018;2;2;0;0
+"Downer EDI";"SX";2050;2018;2;2;0;0
+"DSC Logistics";"S2L";2020;2016;2;2;0;0
+"Ebara Corporation";"S12M";2030;2018;2;2;0;0
+"Ebara Corporation";"S12M3";2030;2019;2;2;0;0
+"Ecolab Inc.";"S12M";2030;2018;2;2;0;0
+"Elbit Systems Ltd";"S12M";2020;2013;2;2;0;0
+"Electrolux";"S12M";2025;2015;2;2;0;0
+"Electrolux";"S3";2025;2015;2;2;0;0
+"Elekta";"S2M";2021;2017;2;2;0;0
+"Elia System Operator";"S3";2022;2014;2;2;0;0
+"Elisa Oyj";"S12M";2020;2016;2;2;0;0
+"Elisa Oyj";"S12M";2025;2016;2;2;0;0
+"Elisa Oyj";"S3";2025;2016;2;2;0;0
+"Elitegroup computer systems co., Ltd.";"S12L";2019;2018;3;3;0;0
+"Elitegroup computer systems co., Ltd.";"S3";2018;2018;3;3;0;0
+"Elitegroup computer systems co., Ltd.";"S3";2019;2018;6;6;0;0
 "ENAGAS";"S12M";2030;2018;2;2;0;0
 "ENAGAS";"S12M";2040;2018;2;2;0;0
+"ENGIE";"S1";2050;2012;3;3;0;0
+"ENGIE";"S12X3";2030;2017;3;3;0;0
+"ENGIE";"S3";2030;2017;3;3;0;0
+"Eni SpA";"S1";2025;2014;2;2;0;0
+"Envases Universales";"S2M";2023;2017;2;2;0;0
+"EQUINIX, INC.";"S2M";2029;2015;3;3;0;0
+"Ericsson";"S1";2022;2016;2;2;0;0
+"Ericsson";"S12M";2022;2016;2;2;0;0
+"Ericsson";"S12M";2030;2019;2;2;0;0
+"Ericsson";"S12M3";2022;2016;2;2;0;0
+"Ericsson";"S3";2022;2016;4;4;0;0
+"Essity";"S12L";2030;2016;3;3;0;0
+"Essity";"S3";2030;2016;3;3;0;0
+"EVER YIELD WORLDWIDE LIGHT LIMITED";"S3";2025;2018;2;2;0;0
+"Evonik Industries AG";"S12M";2025;2008;2;2;0;0
+"Evonik Industries AG";"S3";2025;2020;2;2;0;0
+"Faurecia";"S12L";2025;2019;3;3;0;0
+"Fisher & Paykel Healthcare Corporation";"S12L";2034;2019;3;3;0;0
+"Fiskars Corporation";"S12M";2030;2017;2;2;0;0
+"FLSmidth & Co. A/S";"S12L";2023;2017;2;2;0;0
+"Fonterra Co-operative Group";"S12L";2030;2015;2;2;0;0
+"Fonterra Co-operative Group";"S12L";2030;2018;2;2;0;0
+"Ford Motor Company";"S12L";2023;2017;2;2;0;0
+"Ford Motor Company";"S12L";2035;2017;2;2;0;0
+"Fresh Del Monte Produce Inc";"S1";2025;2018;2;2;0;0
+"Freshfields Bruckhaus Deringer";"S2M";2020;2015;2;2;0;0
+"Freshfields Bruckhaus Deringer";"S3";2020;2015;2;2;0;0
+"Freshfields Bruckhaus Deringer";"SX";2020;2015;4;4;0;0
+"Fujitsu Limited";"S12L";2030;2013;2;2;0;0
+"Fujitsu Limited";"S12L";2050;2013;2;2;0;0
+"Fujitsu Limited";"S3";2030;2013;2;2;0;0
+"Furukawa Electric Co., Ltd.";"S12M";2031;2018;2;2;0;0
+"Furukawa Electric Co., Ltd.";"S3";2031;2018;2;2;0;0
+"Garan Manufacturing Corp";"S2L";2025;2016;2;2;0;0
+"Gas Networks Ireland";"S12L3";2025;2010;2;2;0;0
+"Gas Networks Ireland";"S12L3";2030;2010;2;2;0;0
+"GEA Group AG";"S12M";2019;2015;3;3;0;0
+"GEA Group AG";"S12M";2025;2015;3;3;0;0
+"GEA Group AG";"S12M";2050;2015;3;3;0;0
+"GEA Group AG";"S3";2050;2015;3;3;0;0
+"Gefco";"S3";2019;2018;2;2;0;0
+"Gefco";"S3";2020;2019;2;2;0;0
+"GENEL ENERGY PLC";"S1";2020;2019;2;2;0;0
+"General Mills Inc.";"S12M3";2025;2010;2;2;0;0
+"General Mills Inc.";"S12M3";2050;2010;2;2;0;0
+"General Motors Company";"S12M";2030;2010;3;3;0;0
+"General Motors Company";"S3";2021;2016;3;3;0;0
+"Gilead Sciences, Inc.";"S12M";2025;2016;3;3;0;0
+"Givaudan SA";"S12M";2030;2015;2;2;0;0
+"Givaudan SA";"S3";2030;2015;2;2;0;0
+"Global Brands Group";"S2L";2030;2020;2;2;0;0
+"Goldman Sachs Group Inc.";"S12M";2020;2013;2;2;0;0
+"Goldman Sachs Group Inc.";"S12M";2036;2013;2;2;0;0
+"Goldman Sachs Group Inc.";"S12M3";2019;2019;2;2;0;0
 "Goodman Property Trust";"S1";2025;2019;2;2;0;0
-"International Flavors & Fragrances Inc.";"S12M";2025;2015;4;2;0;0
+"Goodman Property Trust";"S3";2025;2019;3;3;0;0
+"GRIFOLS";"S1";2019;2016;2;2;0;0
+"GRIFOLS";"S12L";2030;2018;2;2;0;0
+"Grimaldi Group";"S1";2023;2016;3;3;0;0
+"Grimaldi Group";"S1";2025;2016;3;3;0;0
+"Grimaldi Group";"S1";2050;2016;3;3;0;0
+"Grimaldi Group";"S2L";2025;2016;3;3;0;0
+"Groupe Fnac-Darty";"S3";2030;2018;2;2;0;0
+"Hasbro, Inc.";"S12L";2025;2015;2;2;0;0
+"Hermes International";"S12L";2030;2018;3;3;0;0
+"Hewlett Packard Enterprise Company";"S3";2025;2016;2;2;0;0
+"Hikma Pharmaceuticals";"S1";2019;2015;2;2;0;0
+"Hikma Pharmaceuticals";"S2L";2019;2015;2;2;0;0
+"Hitachi Construction Machinery Co., Ltd.";"S12L";2030;2010;2;2;0;0
+"Hitachi Construction Machinery Co., Ltd.";"S3";2030;2010;2;2;0;0
+"Hitachi High-Tech Corporation";"S12M";2031;2010;2;2;0;0
+"Hitachi High-Tech Corporation";"S12M";2051;2011;2;2;0;0
+"Holmen";"S12M";2020;2005;3;3;0;0
+"Honda Motor Co., Ltd.";"S12L3";2051;2001;2;2;0;0
+"Honda Motor Co., Ltd.";"S12L3";2051;2019;3;3;0;0
+"HudBay Minerals Inc.";"S12L";2019;2018;2;2;0;0
+"Humana Inc.";"S12L";2022;2017;2;2;0;0
+"HWACOM SYSTEMS";"S3";2022;2017;2;2;0;0
+"Hyundai Steel Co";"S12L";2019;2015;2;2;0;0
+"Hyundai Steel Co";"S12L";2030;2015;2;2;0;0
+"Hyundai Steel Co";"S12L";2050;2015;2;2;0;0
+"HYUNDAI WIA CORPORATION";"S12L";2030;2018;2;2;0;0
+"HYUNDAI WIA CORPORATION";"S12L";2050;2018;2;2;0;0
+"Icon PLC";"S2L";2030;2018;2;2;0;0
+"IGT PLC";"S12L";2019;2018;3;3;0;0
+"IINO KAIUN KAISHA, LTD";"S1";2050;2008;2;2;0;0
+"IMI plc";"S12L";2018;2015;2;2;0;0
+"INDRA";"S12M";2020;2013;3;3;0;0
+"INDRA";"S12M";2030;2013;3;3;0;0
+"Informa plc";"S12M";2030;2017;2;2;0;0
+"Informa plc";"S3";2030;2017;2;2;0;0
+"Ingenico";"S2L";2023;2018;3;3;0;0
+"Inmarsat";"S12M";2025;2019;2;2;0;0
+"Insight Enterprises Inc";"S1";2019;2018;2;2;0;0
+"Insight Enterprises Inc";"S2L";2019;2018;2;2;0;0
+"Insight Enterprises Inc";"S3";2019;2018;2;2;0;0
+"International Consolidated Airlines Group, S.A.";"S12M";2030;2019;3;3;0;0
+"International Consolidated Airlines Group, S.A.";"S12M";2050;2019;3;3;0;0
+"International Flavors & Fragrances Inc.";"S12M";2025;2015;2;2;0;0
+"Intesa Sanpaolo S.p.A";"S12M";2022;2012;2;2;0;0
+"Intesa Sanpaolo S.p.A";"S12M";2037;2012;2;2;0;0
+"Intesa Sanpaolo S.p.A";"S3";2022;2012;2;2;0;0
+"Intuit Inc.";"S12M3";2019;2018;2;2;0;0
+"ITV";"S12M";2030;2019;3;3;0;0
+"ITV";"S3";2030;2019;3;3;0;0
+"IWIS MOTORSYSTEME";"S3";2020;2018;3;3;0;0
+"Japan Airlines Corporation";"S1";2050;2019;2;2;0;0
+"JCDecaux SA.";"S2L";2020;2012;2;2;0;0
+"JINHUA JINGYAN MECHANICAL AND";"S12L";2022;2019;2;2;0;0
+"Johnson & Johnson";"S12M";2020;2010;2;2;0;0
+"Johnson & Johnson";"S12M";2050;2010;2;2;0;0
+"JTEKT Corporation";"S12M";2030;2013;2;2;0;0
+"Juniper Networks, Inc.";"S12M";2020;2011;2;2;0;0
+"Juniper Networks, Inc.";"S12M";2025;2018;2;2;0;0
+"Juniper Networks, Inc.";"S12M";2035;2018;2;2;0;0
+"Kawasaki Kisen Kaisha, Ltd.";"S2L";2019;2018;3;3;0;0
+"Kawasaki Kisen Kaisha, Ltd.";"S2L";2020;2019;3;3;0;0
+"KBC Group";"S12M3";2030;2015;2;2;0;0
+"KBC Group";"S12M3";2040;2015;2;2;0;0
+"Kemira Corporation";"S12M";2030;2018;2;2;0;0
+"Keyera Corp.";"S1";2019;2019;7;7;0;0
+"Keysight Technologies Inc";"S12L";2019;2018;3;3;0;0
+"Kimball Electronics";"S2L";2019;2018;2;2;0;0
+"Kimball Electronics";"S2L";2020;2019;2;2;0;0
+"Kimball Electronics";"S3";2020;2019;2;2;0;0
+"Kindred Group";"S12M";2023;2018;2;2;0;0
+"Kindred Group";"S3";2023;2018;2;2;0;0
+"Kingclean Electric Co.,Ltd";"S3";2020;2019;4;4;0;0
+"Kone Oyj";"S12M";2030;2018;3;3;0;0
+"Kongsberg Gruppen ASA";"S12L3";2020;2015;2;2;0;0
+"Korean Air Lines Co Ltd";"S1";2021;2019;2;2;0;0
+"KPMG UK";"S3";2020;2010;2;2;0;0
 "Landsvirkjun";"S1";2030;2008;2;2;0;0
+"Landsvirkjun";"S3";2030;2018;2;2;0;0
+"LEGRAND";"S1";2030;2016;2;2;0;0
+"LEGRAND";"S2M";2030;2016;2;2;0;0
+"Leidos";"S12M";2020;2010;3;3;0;0
+"LG Electronics";"S12L";2030;2017;2;2;0;0
+"LG Electronics";"S12L";2035;2017;2;2;0;0
+"Lloyds Banking Group";"S3";2020;2009;2;2;0;0
+"Lloyds Banking Group";"S3";2030;2009;2;2;0;0
+"Lloyds Banking Group";"S3";2050;2009;2;2;0;0
 "Loblaw Companies Limited";"S12L3";2030;2011;2;2;0;0
-"Lyft, Inc";"S12M3";2018;2018;4;2;0;0
+"Logitech Europe S.A.";"S12M";2030;2018;2;2;0;0
+"London Stock Exchange Group";"S12M";2030;2016;3;3;0;0
+"Lululemon Athletica Inc.";"S12M";2030;2018;3;3;0;0
+"Lyft, Inc";"S12M3";2018;2018;2;2;0;0
+"Mace Ltd";"S12M";2022;2017;3;3;0;0
+"Mace Ltd";"S3";2022;2017;3;3;0;0
 "Mahindra Lifespace Developers Limited";"S12L";2033;2018;2;2;0;0
+"Mahindra Lifespace Developers Limited";"S3";2033;2018;2;2;0;0
+"Maire Tecnimont SpA";"S12L3";2023;2018;3;3;0;0
+"Maisons du Monde SA";"S12M";2030;2018;2;2;0;0
+"Maisons du Monde SA";"S3";2030;2018;2;2;0;0
+"Mastercard Incorporated";"S12L";2025;2016;2;2;0;0
+"Mastercard Incorporated";"S3";2025;2016;2;2;0;0
+"McCormick & Company, Incorporated";"S12M";2025;2015;2;2;0;0
+"McCormick & Company, Incorporated";"S3";2030;2017;2;2;0;0
+"Media6";"S12M";2025;2017;2;2;0;0
+"Media6";"S3";2025;2017;4;4;0;0
+"Melco Resorts & Entertainment";"S12M";2030;2016;2;2;0;0
+"Metro AG";"S3";2030;2018;3;3;0;0
+"Metso";"S3";2025;2018;2;2;0;0
+"Microchip Technology";"S3";2020;2013;2;2;0;0
+"MiTAC Holdings Corporation (MHC)";"S12L";2020;2015;5;5;0;0
+"Mitsubishi Chemical Holdings Corporation";"S12L";2030;2013;3;3;0;0
+"Mitsui Chemicals, Inc.";"S12M";2019;2018;2;2;0;0
+"Mitsui O.S.K. Lines Ltd";"S1";2050;2008;3;3;0;0
+"Mitsui O.S.K. Lines Ltd";"S12L";2100;2008;3;3;0;0
+"Mobimo";"S12L";2022;2011;2;2;0;0
+"Mobimo";"S12M";2022;2011;2;2;0;0
+"Moody's Corporation";"S12M";2030;2019;2;2;0;0
+"Moody's Corporation";"S13";2025;2019;2;2;0;0
+"Motorola Solutions";"S12L";2022;2016;3;3;0;0
+"MUNTONS PLC";"S12M";2025;2010;2;2;0;0
+"Murata Mfg. Co.";"S12L";2030;2017;2;2;0;0
+"Murata Mfg. Co.";"S12L";2050;2017;2;2;0;0
+"Nabtesco Corporation";"S12M";2030;2015;2;2;0;0
+"Nabtesco Corporation";"S12M";2050;2015;2;2;0;0
+"Neapco Europe";"S12L";2018;2016;2;2;0;0
+"NEC Corporation";"S12M";2030;2017;2;2;0;0
+"NEC Corporation";"S3";2030;2017;2;2;0;0
+"Neste Oyj";"S12M";2025;2014;2;2;0;0
+"Neste Oyj";"S12M";2035;2019;2;2;0;0
+"NetApp Inc.";"S2L";2022;2016;3;3;0;0
+"New Kinpo Group";"S3";2025;2017;2;2;0;0
+"News Corp";"S12M3";2050;2018;2;2;0;0
+"Nexans";"S12L3";2022;2016;2;2;0;0
+"NH Hotel Group";"S12M";2030;2018;3;3;0;0
+"NH Hotel Group";"S3";2030;2018;3;3;0;0
+"Nichirei Corporation";"S12M";2020;2009;2;2;0;0
+"Nifco Inc.";"S3";2030;2019;8;8;0;0
+"NINGBO YINZHOU BINHAN CASE & BAG INDUSTRY AND TRADE CO., LTD.";"S1";2020;2018;2;2;0;0
+"Nippon Closures";"S3";2030;2016;2;2;0;0
+"Nippon Express Co., Ltd.";"S12M";2031;2013;2;2;0;0
 "NiSource Inc.";"S1";2025;2005;2;2;0;0
 "NiSource Inc.";"S1";2030;2005;2;2;0;0
+"Nissin Foods Holdings Co., Ltd.";"S3";2030;2018;6;6;0;0
+"Nokia Group";"S12M";2030;2014;2;2;0;0
+"Nokia Group";"S3";2030;2014;2;2;0;0
+"Nomura Research Institute, Ltd.";"S12M";2030;2013;2;2;0;0
+"Novartis";"S12M";2025;2016;2;2;0;0
+"Novartis";"S12M3";2030;2016;2;2;0;0
+"Novo Nordisk A/S";"S12L3";2030;2018;3;3;0;0
+"Novo Nordisk A/S";"S12M";2030;2018;3;3;0;0
+"Novo Nordisk A/S";"S3";2030;2018;6;6;0;0
+"Novozymes A/S";"S12M";2019;2018;2;2;0;0
+"Novozymes A/S";"S12M";2030;2018;2;2;0;0
+"Novozymes A/S";"S3";2020;2015;2;2;0;0
+"Novozymes A/S";"S3";2030;2018;2;2;0;0
+"NTN Corporation";"S12L";2019;2018;2;2;0;0
+"NUCERIA ADESIVI SRL";"S3";2025;2014;2;2;0;0
+"OFFICINE METALLURGICHE G. CORNAGLIA SPA";"S3";2030;2019;2;2;0;0
+"Oki Electric Industry Co., Ltd";"S12M3";2030;2013;2;2;0;0
+"OMV AG";"S1";2025;2020;2;2;0;0
+"Ontex Group NV";"S12M";2030;2018;2;2;0;0
+"Orkla ASA";"S3";2020;2014;2;2;0;0
+"Owens Corning";"S12M";2030;2018;2;2;0;0
+"Owens Corning";"S3";2030;2018;2;2;0;0
+"Pacific Market International";"S12M3";2019;2018;2;2;0;0
+"Panasonic Corporation";"S12L";2031;2014;2;2;0;0
+"Panasonic Corporation";"S12L";2051;2014;2;2;0;0
+"Panasonic Corporation";"S3";2031;2014;2;2;0;0
+"Pandora A/S";"S2L";2020;2019;2;2;0;0
 "Pennon Group";"S12L3";2020;2015;3;3;0;0
+"PepsiCo, Inc.";"S12M3";2030;2015;3;3;0;0
+"Perrigo Company plc";"S12L";2020;2015;3;3;0;0
+"Petróleo Brasileiro SA - Petrobras";"S12L";2025;2015;2;2;0;0
+"PI Electronics";"S12L";2019;2018;2;2;0;0
+"Pick 'n Pay Stores Ltd";"S12L";2020;2015;2;2;0;0
+"PIOLAX";"SX";2019;2016;2;2;0;0
+"PolyOne";"S2M";2024;2019;2;2;0;0
 "Prairiesky Royalty Ltd";"S12L";2025;2017;2;2;0;0
+"Prologis";"S12M";2025;2016;2;2;0;0
+"Prologis";"S12M";2040;2016;2;2;0;0
+"Prologis";"S3";2025;2016;2;2;0;0
+"Prologis";"S3";2040;2016;2;2;0;0
+"Proximus";"S12M";2025;2015;2;2;0;0
+"Proximus";"S12M3";2020;2007;2;2;0;0
+"Proximus";"S3";2025;2014;2;2;0;0
+"Proximus";"S3";2040;2014;2;2;0;0
+"PURATOS";"S2M";2023;2016;3;3;0;0
+"Pyxus International, Inc.";"S12L";2020;2014;2;2;0;0
+"QUADPACK INDUSTRIES SA (GROUP)";"S2L";2019;2017;2;2;0;0
+"QUALITY TECHNOLOGY SERVICES";"S12M";2025;2017;2;2;0;0
+"QUALITY TECHNOLOGY SERVICES";"S3";2050;2017;2;2;0;0
+"Raytheon Technologies Corporation";"S12L";2020;2015;3;3;0;0
+"Raytheon Technologies Corporation";"S12M";2020;2015;3;3;0;0
+"Raytheon Technologies Corporation";"S3";2020;2015;3;3;0;0
+"Reconext";"S12L";2024;2018;3;3;0;0
 "REN - Redes Energéticas Nacionais";"S1";2020;2012;2;2;0;0
 "Rengo Co., Ltd.";"S12L";2020;1990;2;2;0;0
+"Rengo Co., Ltd.";"S12L";2030;2013;2;2;0;0
 "Rengo Co., Ltd.";"S12L";2050;1990;2;2;0;0
 "Republic Services, Inc.";"S12M";2030;2017;2;2;0;0
-"Severfield";"S12L";2020;2014;4;3;0;0
-"Severfield";"S12M";2025;2019;4;3;0;0
-"Severfield";"S12M";2040;2019;4;3;0;0
-"Slovenska Grafia";"S1";2022;2015;4;4;0;0
+"RFS";"S2L";2019;2018;2;2;0;0
+"RFS";"S2L";2020;2019;3;3;0;0
+"Ricoh Co., Ltd.";"S12M";2030;2015;3;3;0;0
+"Ricoh Co., Ltd.";"S12M";2050;2015;3;3;0;0
+"Ricoh Co., Ltd.";"S3";2030;2015;3;3;0;0
+"RK Japan";"S3";2020;2018;2;2;0;0
+"Royal Dutch Shell";"S1";2025;2015;2;2;0;0
+"Royal Dutch Shell";"S1";2030;2015;2;2;0;0
+"Royal Dutch Shell";"S12M";2050;2019;2;2;0;0
+"Royal Dutch Shell";"S12M3";2050;2019;2;2;0;0
+"Ryder System, Inc.";"S12L";2020;2009;2;2;0;0
+"S Group";"S12L";2030;2015;2;2;0;0
+"Sage Group";"S12L";2020;2015;3;3;0;0
+"Salesforce.com, Inc.";"S12M";2030;2015;2;2;0;0
+"Salesforce.com, Inc.";"S12M";2030;2018;2;2;0;0
+"Salesforce.com, Inc.";"S12M";2050;2015;4;4;0;0
+"Salesforce.com, Inc.";"S3";2030;2018;2;2;0;0
+"Samsung Engineering";"S12L";2020;2014;2;2;0;0
+"Samsung Engineering";"S12L";2036;2014;2;2;0;0
+"Samsung SDI";"S12L";2020;2015;3;3;0;0
+"SAUER";"S2L";2019;2017;2;2;0;0
+"SBM (Somers Building Maintenance)";"S1";2030;2013;2;2;0;0
+"SBM (Somers Building Maintenance)";"S2L";2016;2013;2;2;0;0
+"Scatec Solar";"S12M";2030;2019;2;2;0;0
+"Scatec Solar";"S12M";2050;2019;2;2;0;0
+"Schaeffler";"S12M";2024;2019;3;3;0;0
+"SCOTIA GAS NETWORKS";"S1";2021;2013;4;4;0;0
+"SCOTIA GAS NETWORKS";"S3";2021;2013;2;2;0;0
+"SCOTIA GAS NETWORKS";"S3";2021;2015;2;2;0;0
+"SCOTIA GAS NETWORKS";"SX";2021;2016;2;2;0;0
+"SCOTIA GAS NETWORKS";"SX";2021;2017;2;2;0;0
+"Seagate Technology PLC";"S12M";2025;2017;2;2;0;0
+"Seagate Technology PLC";"S12M";2040;2017;2;2;0;0
+"Seagate Technology PLC";"S3";2025;2017;2;2;0;0
+"Seagate Technology PLC";"S3";2040;2017;2;2;0;0
+"Seiko Epson Corporation";"S12M";2025;2017;2;2;0;0
+"SH ZIJIANG INT'L";"S3";2020;2016;2;2;0;0
+"SHANGHAI JINLANG INTERNATIONAL";"S12L";2019;2018;2;2;0;0
+"SICHUAN ZHONGXING ELECTRONIC";"S1";2020;2019;3;3;0;0
+"Smithfield Foods, Inc.";"S12L3";2025;2010;3;3;0;0
+"Sojitz Corporation";"S3";2030;2018;2;2;0;0
+"Solid State Storage Technology Co., Ltd.";"S12L";2019;2009;2;2;0;0
+"Solvay S.A.";"S12M";2030;2018;3;3;0;0
+"Sopra Steria Group";"S12M";2020;2014;3;3;0;0
+"Sopra Steria Group";"S12M";2025;2015;3;3;0;0
+"Sopra Steria Group";"S12M";2040;2015;3;3;0;0
+"Sopra Steria Group";"S3";2020;2014;3;3;0;0
+"Sopra Steria Group";"S3";2025;2018;3;3;0;0
+"Steelcase";"S3";2030;2019;2;2;0;0
+"Sthree Plc";"S12L3";2024;2019;2;2;0;0
+"Suez";"S12M";2030;2014;3;3;0;0
+"Sumitomo Electric Industries, Ltd.";"S12M";2022;2017;2;2;0;0
 "Sumitomo Mitsui Trust Holdings, Inc.";"S12L";2019;2014;3;3;0;0
+"Superdry";"S2M";2020;2014;2;2;0;0
+"Swire Pacific";"S12M3";2030;2018;2;2;0;0
+"Sykes Enterprises Incorporated";"S12L";2016;2016;2;2;0;0
+"Syniverse";"S2M";2020;2010;3;3;0;0
+"Syniverse";"S3";2020;2010;3;3;0;0
 "T Mobile USA inc";"S2M";2020;2012;3;3;0;0
-"TTR Transport";"S1";2019;2015;6;3;0;0
-"United Microelectronics";"S1";2025;2010;4;2;0;0
-"UPS";"S12M";2025;2015;4;2;0;0
+"TANAX, INC.";"S12M";2030;2013;3;3;0;0
+"TaYu Group";"SX";2019;2018;9;9;0;0
+"Technicolor SA";"S2L";2018;2015;2;2;0;0
+"Telenor Group";"S12M";2030;2019;2;2;0;0
+"Tennant Company";"S12M";2030;2016;2;2;0;0
+"Teradyne Inc.";"S12L";2019;2018;2;2;0;0
+"Tesco";"S12M";2025;2015;2;2;0;0
+"Tesco";"S3";2030;2015;2;2;0;0
+"Texas Instruments Incorporated";"S12L";2020;2015;2;2;0;0
+"Thales";"S3";2030;2018;3;3;0;0
+"The Coca-Cola Company";"S12M3";2030;2015;2;2;0;0
+"The Dow Chemical Company";"S12M";2025;2006;2;2;0;0
+"Thule Group Ab";"S12M";2020;2014;3;3;0;0
+"thyssenkrupp AG";"S12L";2030;2018;6;6;0;0
+"thyssenkrupp AG";"S3";2030;2017;4;4;0;0
+"thyssenkrupp Elevator AG";"S12L";2022;2014;2;2;0;0
+"Tiffany & Co.";"S12M";2020;2013;3;3;0;0
+"Toda Kogyo Corp";"S3";2033;2013;2;2;0;0
+"Tokyo Electron Ltd.";"S12M";2030;2019;2;2;0;0
+"Tokyu Construction Co., Ltd.";"S1";2030;2018;2;2;0;0
+"Tokyu Construction Co., Ltd.";"S2L";2030;2018;2;2;0;0
+"Tokyu Construction Co., Ltd.";"S3";2030;2018;2;2;0;0
+"Toray Industries, Inc.";"S3";2018;2017;2;2;0;0
+"Tosoh SMD";"S2L";2020;2019;2;2;0;0
+"Total System Services (TSYS)";"S2L";2019;2018;2;2;0;0
+"Toyota Boshoku Corporation";"S12L";2020;2010;3;3;0;0
+"Toyota Boshoku Corporation";"S12L";2050;2013;3;3;0;0
+"Trane Technologies";"S3";2020;2013;3;3;0;0
+"TTR Transport";"S1";2019;2015;3;3;0;0
+"UCB SA";"S12L3";2020;2015;2;2;0;0
+"UCB SA";"S12L3";2025;2015;2;2;0;0
+"UCB SA";"S12L3";2050;2015;2;2;0;0
+"UCB SA";"S12M3";2030;2015;2;2;0;0
+"United Airlines Holdings";"S12L3";2050;2005;3;3;0;0
+"United Microelectronics";"S1";2025;2010;2;2;0;0
+"Unitika Ltd.";"S12M";2017;2005;3;3;0;0
+"Universal Corporation";"S12L";2030;2019;2;2;0;0
+"Universal Corporation";"S3";2030;2019;2;2;0;0
+"UPS";"S12M";2025;2015;2;2;0;0
+"VAPOR ACQUISITION CORP";"S2L";2020;2018;2;2;0;0
+"VAULTEX";"S1";2017;2016;2;2;0;0
+"VAULTEX";"S1";2018;2016;2;2;0;0
+"VAULTEX";"SX";2019;2016;2;2;0;0
+"Veolia Environnement SA";"S1";2023;2018;3;3;0;0
+"Veolia Environnement SA";"S12L";2023;2018;3;3;0;0
+"Veolia Environnement SA";"S12L";2034;2018;3;3;0;0
+"Verizon Communications Inc.";"S12L";2035;2018;2;2;0;0
+"Verizon Communications Inc.";"S2L";2025;2018;2;2;0;0
+"Via Seating";"S12L";2020;2017;2;2;0;0
+"Vifor Pharma AG";"S1";2020;2013;2;2;0;0
+"Vifor Pharma AG";"S1";2020;2015;2;2;0;0
+"Vifor Pharma AG";"S1";2022;2013;4;4;0;0
+"Vivendi SA";"S12L";2025;2018;2;2;0;0
+"VMware, Inc";"S12M";2031;2019;2;2;0;0
+"VMware, Inc";"S3";2031;2019;4;4;0;0
+"Vodafone Group";"S12M";2025;2017;2;2;0;0
+"Vodafone Group";"S12M3";2050;2020;2;2;0;0
+"Voestalpine AG";"S1";2035;1990;3;3;0;0
+"Voestalpine AG";"S1";2050;1990;3;3;0;0
+"Walmart, Inc.";"S12M";2025;2015;2;2;0;0
+"Walmart, Inc.";"S3";2030;2015;2;2;0;0
 "WEC Energy Group";"S1";2030;2005;2;2;0;0
+"Western Digital Corp";"S12L";2019;2018;2;2;0;0
+"Weyerhaeuser Company";"S12L";2020;2000;2;2;0;0
+"Wood Plc";"S12M";2030;2019;3;3;0;0
+"Worldline SA";"S12L3";2025;2018;3;3;0;0
+"Worldline SA";"S12L3";2035;2018;3;3;0;0
+"Wyndham Hotels & Resorts";"S12M";2025;2019;2;2;0;0
+"YI CHENG PARER.CO., LTD.";"S2L";2030;2018;2;2;0;0
+"YKK";"S12M";2020;2013;2;2;0;0
+"Zhongshan Tender Electric Appliance Co.,Ltd.";"S1";2000;2018;2;2;0;0
+"ZIM Shipping";"S12L";2030;2016;2;2;0;0
+"ZIMAG TECHNOLOGY CO., LTD.";"S3";2030;2019;3;3;0;0
