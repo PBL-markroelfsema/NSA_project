@@ -133,7 +133,7 @@ for (YEAR in years)
     }
 
   if (YEAR == 2018) {change_row=TRUE} else {change_row=FALSE}
-  col_numbers_mry <- read.table(paste0(data_dir, 'input/col_names_mry.csv'), sep=';', header=TRUE) # Process most recent year scope 1 emissions data
+  col_numbers_mry <- read.table(paste0(data_dir, 'col_names_mry.csv'), sep=';', header=TRUE) # Process most recent year scope 1 emissions data
   mry_s1_em_form <- Process_MRY_s1(mry_s1_em, filter(col_numbers_mry, year==YEAR, variable=='mry_s1')$col1, filter(col_numbers_mry, year==YEAR, variable=='mry_s1')$col2, change_row)
   #rm(mry_s1_em)
   if(output)  {write.xlsx(mry_s1_em_form, paste0(data_dir, "output/IKEA_NSA_MRY_S1_EM_", YEAR, ".xlsx"))
