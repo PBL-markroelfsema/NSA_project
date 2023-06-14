@@ -240,40 +240,40 @@ CDP_data_raw_inventory_2021_MRY_S2 <- mutate(CDP_data_raw_inventory_2021_MRY_S2,
 
 # 2a3. Scope 3
 #2018
-CDP_data_raw_inventory_2018_MRY_S3 <- read_excel("data/CDP/input/CDP_2018_Global_Aggregation_raw_response.xlsx", sheet="C6.5")
-names(CDP_data_raw_inventory_2018_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3), "Account for your organization’s ", "")
-names(CDP_data_raw_inventory_2018_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3), "gross global ", "")
-names(CDP_data_raw_inventory_2018_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3), "C6\\.5_C", "")
-names(CDP_data_raw_inventory_2018_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3), "^[0123456789]", "")
-names(CDP_data_raw_inventory_2018_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3), "^[0123456789]", "")
-names(CDP_data_raw_inventory_2018_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3), "_", "")
-names(CDP_data_raw_inventory_2018_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3), "\\?", "")
-names(CDP_data_raw_inventory_2018_MRY_S3) <- trimws(names(CDP_data_raw_inventory_2018_MRY_S3))
-CDP_data_raw_inventory_2018_MRY_S3 <- select(CDP_data_raw_inventory_2018_MRY_S3, -Row)
-col_names_S3 = unique(CDP_data_raw_inventory_2018_MRY_S3$RowName)
-CDP_data_raw_inventory_2018_MRY_S3[CDP_data_raw_inventory_2018_MRY_S3=="Question not applicable"] <- "0"
-CDP_data_raw_inventory_2018_MRY_S3$`Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e` <- as.numeric(CDP_data_raw_inventory_2018_MRY_S3$`Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e`)
-CDP_data_raw_inventory_2018_MRY_S3 <- spread(CDP_data_raw_inventory_2018_MRY_S3, key="RowName", value="Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e")
-CDP_data_raw_inventory_2018_MRY_S3 <- mutate(CDP_data_raw_inventory_2018_MRY_S3, EM_MRY_S3=rowSums(across(all_of(col_names_S3)))) %>%
+CDP_data_raw_inventory_2018_MRY_S3_categories <- read_excel("data/CDP/input/CDP_2018_Global_Aggregation_raw_response.xlsx", sheet="C6.5")
+names(CDP_data_raw_inventory_2018_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3_categories), "Account for your organization’s ", "")
+names(CDP_data_raw_inventory_2018_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3_categories), "gross global ", "")
+names(CDP_data_raw_inventory_2018_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3_categories), "C6\\.5_C", "")
+names(CDP_data_raw_inventory_2018_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3_categories), "^[0123456789]", "")
+names(CDP_data_raw_inventory_2018_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3_categories), "^[0123456789]", "")
+names(CDP_data_raw_inventory_2018_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3_categories), "_", "")
+names(CDP_data_raw_inventory_2018_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2018_MRY_S3_categories), "\\?", "")
+names(CDP_data_raw_inventory_2018_MRY_S3_categories) <- trimws(names(CDP_data_raw_inventory_2018_MRY_S3_categories))
+CDP_data_raw_inventory_2018_MRY_S3_categories <- select(CDP_data_raw_inventory_2018_MRY_S3_categories, -Row)
+col_names_S3 = unique(CDP_data_raw_inventory_2018_MRY_S3_categories$RowName)
+CDP_data_raw_inventory_2018_MRY_S3_categories[CDP_data_raw_inventory_2018_MRY_S3_categories=="Question not applicable"] <- "0"
+CDP_data_raw_inventory_2018_MRY_S3_categories$`Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e` <- as.numeric(CDP_data_raw_inventory_2018_MRY_S3_categories$`Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e`)
+CDP_data_raw_inventory_2018_MRY_S3_total <- spread(CDP_data_raw_inventory_2018_MRY_S3_categories, key="RowName", value="Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e")
+CDP_data_raw_inventory_2018_MRY_S3_total <- mutate(CDP_data_raw_inventory_2018_MRY_S3_total, EM_MRY_S3=rowSums(across(all_of(col_names_S3)))) %>%
   select(-all_of(col_names_S3))
 
 
 # 2021
-CDP_data_raw_inventory_2021_MRY_S3 <- read_excel("data/CDP/input/CDP_2021_Global_Aggregation_raw_response.xlsx", sheet="C6.5")
-names(CDP_data_raw_inventory_2021_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3), "Account for your organization’s ", "")
-names(CDP_data_raw_inventory_2021_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3), "gross global ", "")
-names(CDP_data_raw_inventory_2021_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3), "C6\\.5_C", "")
-names(CDP_data_raw_inventory_2021_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3), "^[0123456789]", "")
-names(CDP_data_raw_inventory_2021_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3), "^[0123456789]", "")
-names(CDP_data_raw_inventory_2021_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3), "_", "")
-names(CDP_data_raw_inventory_2021_MRY_S3) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3), "\\?", "")
-names(CDP_data_raw_inventory_2021_MRY_S3) <- trimws(names(CDP_data_raw_inventory_2021_MRY_S3))
-CDP_data_raw_inventory_2021_MRY_S3 <- select(CDP_data_raw_inventory_2021_MRY_S3, -Row)
-col_names_S3 = unique(CDP_data_raw_inventory_2021_MRY_S3$RowName)
-CDP_data_raw_inventory_2021_MRY_S3[CDP_data_raw_inventory_2021_MRY_S3=="Question not applicable"] <- "0"
-CDP_data_raw_inventory_2021_MRY_S3$`Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e` <- as.numeric(CDP_data_raw_inventory_2021_MRY_S3$`Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e`)
-CDP_data_raw_inventory_2021_MRY_S3 <- spread(CDP_data_raw_inventory_2021_MRY_S3, key="RowName", value="Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e")
-CDP_data_raw_inventory_2021_MRY_S3 <- mutate(CDP_data_raw_inventory_2021_MRY_S3, EM_MRY_S3=rowSums(across(all_of(col_names_S3)))) %>%
+CDP_data_raw_inventory_2021_MRY_S3_categories <- read_excel("data/CDP/input/CDP_2021_Global_Aggregation_raw_response.xlsx", sheet="C6.5")
+names(CDP_data_raw_inventory_2021_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3_categories), "Account for your organization’s ", "")
+names(CDP_data_raw_inventory_2021_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3_categories), "gross global ", "")
+names(CDP_data_raw_inventory_2021_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3_categories), "C6\\.5_C", "")
+names(CDP_data_raw_inventory_2021_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3_categories), "^[0123456789]", "")
+names(CDP_data_raw_inventory_2021_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3_categories), "^[0123456789]", "")
+names(CDP_data_raw_inventory_2021_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3_categories), "_", "")
+names(CDP_data_raw_inventory_2021_MRY_S3_categories) <- str_replace_all(names(CDP_data_raw_inventory_2021_MRY_S3_categories), "\\?", "")
+names(CDP_data_raw_inventory_2021_MRY_S3_categories) <- trimws(names(CDP_data_raw_inventory_2021_MRY_S3_categories))
+CDP_data_raw_inventory_2021_MRY_S3_categories <- select(CDP_data_raw_inventory_2021_MRY_S3_categories, -Row)
+col_names_S3 = unique(CDP_data_raw_inventory_2021_MRY_S3_categories$RowName)
+CDP_data_raw_inventory_2021_MRY_S3_categories[CDP_data_raw_inventory_2021_MRY_S3_categories=="Question not applicable"] <- "0"
+CDP_data_raw_inventory_2021_MRY_S3_categories$`Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e` <- as.numeric(CDP_data_raw_inventory_2021_MRY_S3_categories$`Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e`)
+CDP_data_raw_inventory_2021_MRY_S3_total <- spread(CDP_data_raw_inventory_2021_MRY_S3_categories, key="RowName", value="Scope 3 emissions, disclosing and explaining any exclusions. - Metric tonnes CO2e")
+CDP_data_raw_inventory_2021_MRY_S3_total <- mutate(CDP_data_raw_inventory_2021_MRY_S3_total, EM_MRY_S3=rowSums(across(all_of(col_names_S3)))) %>%
                                       select(-all_of(col_names_S3)) 
 #CHECK Scope 3 column names, makes upstream, downstream, upstream/downstream
 
@@ -296,7 +296,7 @@ CDP_data_raw_inventory_2021 <- left_join(CDP_data_raw_2021_summary, CDP_data_raw
                                mutate(source_year=2021) %>%
                                select(source_year, everything())
 
-CDP_data_raw_inventory_2018_2021 <- rbind(CDP_data_raw_inventory_2018, CDP_data_raw_inventory_2021) 
+CDP_data_raw_inventory_2018_2021 <- rbind(CDP_data_raw_inventory_2018_total, CDP_data_raw_inventory_2021_total) 
 
 
 CDP_data_raw_inventory_2018_2021_total <- group_by(CDP_data_raw_inventory_2018_2021, source_year) %>%

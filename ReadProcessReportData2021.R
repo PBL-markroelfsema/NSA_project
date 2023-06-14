@@ -5,6 +5,8 @@ library(tidyverse)
 library(data.table)
 library(patchwork)
 
+# CDP data processed to compare ambition and progress of companies
+
 #SETTNGS
 choice_data_source = "response" # response or processed
 choice_data_source_year = 2021
