@@ -27,13 +27,15 @@ library("stringr")
 
 output <- TRUE #Set to TRUE if new files should be output
 
+curent_dir = getwd()
+setwd('./Ambition_scripts')
 
 # 4. Data =============================================================================
 
 #abs and int target types
 
-abs_er_2018 <- read.xlsx("data/CDP/input/CDP_2018_Global_Aggregation_raw_response.xlsx", sheet = "C4.1a")
-abs_er_2021 <- read.xlsx("data/CDP/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C4.1a")
+abs_er_2018 <- read.xlsx("data/CDP_2022/input/CDP_2018_Global_Aggregation_raw_response.xlsx", sheet = "C4.1a")
+abs_er_2021 <- read.xlsx("data/CDP_2022/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C4.1a")
 #int_er_2018 <- read.xlsx("input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C4.1b")
 #int_er_2021 <- read.xlsx("input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C4.1b")
 
@@ -229,7 +231,7 @@ rm("add_back", "final", "last_score", "score_df", "test2")
 
 
 ##2018 Base year emissions data
-base_year_em_2018 <- read.xlsx("data/CDP/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C5.1")
+base_year_em_2018 <- read.xlsx("data/CDP_2022/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C5.1")
 base_year_em_2018_form <- base_year_em_2018 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
@@ -245,13 +247,13 @@ base_year_em_2018_form <- base_year_em_2018 %>%
 rm(base_year_em_2018)
 
 #Output dataset
-if(output)  {write.xlsx(base_year_em_2018_form, "data/CDP/output/IKEA_NSA_BY_EM_2018_v2022.xlsx")
+if(output)  {write.xlsx(base_year_em_2018_form, "data/CDP_2022/output/IKEA_NSA_BY_EM_2018_v2022.xlsx")
   print("Output 2018 base year emissions file")
   }
 
 
 ##2021 Base year emissions data
-base_year_em_2021 <- read.xlsx("data/CDP/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C5.1")
+base_year_em_2021 <- read.xlsx("data/CDP_2022/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C5.1")
 base_year_em_2021_form <- base_year_em_2021 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
@@ -267,13 +269,13 @@ base_year_em_2021_form <- base_year_em_2021 %>%
 rm(base_year_em_2021)
 
 #Output dataset
-if(output)  {write.xlsx(base_year_em_2021_form, "data/CDP/output/IKEA_NSA_BY_EM_2021_v2022.xlsx")
+if(output)  {write.xlsx(base_year_em_2021_form, "data/CDP_2022/output/IKEA_NSA_BY_EM_2021_v2022.xlsx")
   print("Output 2021 base year emissions file")
 }
 
 
 ##2018 most recent year scope 1 emissions data
-mry_s1_em_2018 <- read.xlsx("data/CDP/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C6.1")
+mry_s1_em_2018 <- read.xlsx("data/CDP_2022/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C6.1")
 mry_s1_em_2018_form <- mry_s1_em_2018 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
@@ -295,13 +297,13 @@ mry_s1_em_2018_form <- mry_s1_em_2018 %>%
 rm(mry_s1_em_2018)
 
 #Output dataset
-if(output)  {write.xlsx(mry_s1_em_2018_form, "data/CDP/output/IKEA_NSA_MRY_S1_EM_2018_v2022.xlsx")
+if(output)  {write.xlsx(mry_s1_em_2018_form, "data/CDP_2022/output/IKEA_NSA_MRY_S1_EM_2018_v2022.xlsx")
   print("Output 2018 most recent year scope 1 emissions file")
 }
 
          
 ##2021 most recent year scope 1 emissions data
-mry_s1_em_2021 <- read.xlsx("data/CDP/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C6.1")
+mry_s1_em_2021 <- read.xlsx("data/CDP_2022/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C6.1")
 mry_s1_em_2021_form <- mry_s1_em_2021 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
@@ -321,13 +323,13 @@ mry_s1_em_2021_form <- mry_s1_em_2021 %>%
 rm(mry_s1_em_2021)
          
 #Output dataset
-if(output)  {write.xlsx(mry_s1_em_2021_form, "data/CDP/output/IKEA_NSA_MRY_S1_EM_2021_v2022.xlsx")
+if(output)  {write.xlsx(mry_s1_em_2021_form, "data/CDP_2022/output/IKEA_NSA_MRY_S1_EM_2021_v2022.xlsx")
   print("Output 2021 most recent year scope 1 emissions file")
 }
 
 
 ##2018 most recent year scope 2 emissions data
-mry_s2_em_2018 <- read.xlsx("data/CDP/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C6.3")
+mry_s2_em_2018 <- read.xlsx("data/CDP_2022/input/CDP_2018_Global_aggregation_raw_response.xlsx", sheet = "C6.3")
 mry_s2_em_2018_form <- mry_s2_em_2018 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
@@ -351,12 +353,12 @@ mry_s2_em_2018_form <- mry_s2_em_2018 %>%
 rm(mry_s2_em_2018)
 
 #Output dataset
-if(output)  {write.xlsx(mry_s2_em_2018_form, "data/CDP/output/IKEA_NSA_MRY_S2_EM_2018_v2022.xlsx")
+if(output)  {write.xlsx(mry_s2_em_2018_form, "data/CDP_2022/output/IKEA_NSA_MRY_S2_EM_2018_v2022.xlsx")
   print("Output 2018 most recent year scope 2 emissions file")
 }
 
 ##2021 most recent year scope 2 emissions data
-mry_s2_em_2021 <- read.xlsx("data/CDP/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C6.3")
+mry_s2_em_2021 <- read.xlsx("data/CDP_2022/input/CDP_2021_Global_aggregation_raw_response.xlsx", sheet = "C6.3")
 mry_s2_em_2021_form <- mry_s2_em_2021 %>%
   rename(account_id = `Account.number`,
          access = `Public`,
@@ -378,7 +380,7 @@ mry_s2_em_2021_form <- mry_s2_em_2021 %>%
 rm(mry_s2_em_2021)
 
 #Output dataset
-if(output)  {write.xlsx(mry_s2_em_2021_form, "data/CDP/output/IKEA_NSA_MRY_S2_EM_2021_v2022.xlsx")
+if(output)  {write.xlsx(mry_s2_em_2021_form, "data/CDP_2022/output/IKEA_NSA_MRY_S2_EM_2021_v2022.xlsx")
   print("Output 2021 most recent year scope 2 emissions file")
 }
 
@@ -423,11 +425,11 @@ abs_er_2021_prof1 <- abs_er_2021_form %>%
 
 #Output profile 1 - single target companies
 #2018
-if(output)  {write.xlsx(abs_er_2018_prof1, "data/CDP/output/IKEA_NSA_abs_er_2018_prof1_vF_v2022.xlsx")
+if(output)  {write.xlsx(abs_er_2018_prof1, "data/CDP_2022/output/IKEA_NSA_abs_er_2018_prof1_vF_v2022.xlsx")
   print("Output 2018 absolute emissions reduction - profile 1")
 }
 
-if(output)  {write.xlsx(abs_er_2021_prof1, "data/CDP/output/IKEA_NSA_abs_er_2021_prof1_vF_v2022.xlsx")
+if(output)  {write.xlsx(abs_er_2021_prof1, "data/CDP_2022/output/IKEA_NSA_abs_er_2021_prof1_vF_v2022.xlsx")
   print("Output 2021 absolute emissions reduction - profile 1")
 }
 
@@ -514,12 +516,12 @@ abs_er_2021_prof2 <- abs_er_2021_form_alt_post1 %>%
 
 #Output profile 2 - sequential matched targets
 #2018
-if(output)  {write.xlsx(abs_er_2018_prof2, "data/CDP/output/IKEA_NSA_abs_er_2018_prof2_vF_v2022.xlsx")
+if(output)  {write.xlsx(abs_er_2018_prof2, "data/CDP_2022/output/IKEA_NSA_abs_er_2018_prof2_vF_v2022.xlsx")
   print("Output 2018 absolute emissions reduction - profile 2")
 }
 
 #2021
-if(output)  {write.xlsx(abs_er_2021_prof2, "data/CDP/output/IKEA_NSA_abs_er_2021_prof2_vF_v2022.xlsx")
+if(output)  {write.xlsx(abs_er_2021_prof2, "data/CDP_2022/output/IKEA_NSA_abs_er_2021_prof2_vF_v2022.xlsx")
   print("Output 2021 absolute emissions reduction - profile 2")
 }
 
@@ -612,12 +614,12 @@ abs_er_2021_prof3 <- abs_er_2021_form_alt_post2 %>%
 
 #Output profile 3 - parallel matched targets
 #2018
-if(output)  {write.xlsx(abs_er_2018_prof3, "data/CDP/output/IKEA_NSA_abs_er_2018_prof3_vF_v2022.xlsx")
+if(output)  {write.xlsx(abs_er_2018_prof3, "data/CDP_2022/output/IKEA_NSA_abs_er_2018_prof3_vF_v2022.xlsx")
   print("Output 2018 absolute emissions reduction - profile 3")
 }
 
 #2021
-if(output)  {write.xlsx(abs_er_2021_prof3, "data/CDP/output/IKEA_NSA_abs_er_2021_prof3_vF_v2022.xlsx")
+if(output)  {write.xlsx(abs_er_2021_prof3, "data/CDP_2022/output/IKEA_NSA_abs_er_2021_prof3_vF_v2022.xlsx")
   print("Output 2021 absolute emissions reduction - profile 3")
 }
 
@@ -641,16 +643,16 @@ abs_er_2021_prof4 <- abs_er_2021_form %>%
 
 #Output profile 4 - top priority score targets
 #2018
-if(output)  {write.xlsx(abs_er_2018_prof4, "data/CDP/output/IKEA_NSA_abs_er_2018_prof4_vF_v2022.xlsx")
+if(output)  {write.xlsx(abs_er_2018_prof4, "data/CDP_2022/output/IKEA_NSA_abs_er_2018_prof4_vF_v2022.xlsx")
   print("Output 2018 absolute emissions reduction - profile 4")
 }
 
 #2021
-if(output)  {write.xlsx(abs_er_2021_prof4, "data/CDP/output/IKEA_NSA_abs_er_2021_prof4_vF_v2022.xlsx")
+if(output)  {write.xlsx(abs_er_2021_prof4, "data/CDP_2022/output/IKEA_NSA_abs_er_2021_prof4_vF_v2022.xlsx")
   print("Output 2021 absolute emissions reduction - profile 4")
 }
 
-
+setwd(curent_dir)
 
 
 
