@@ -1,4 +1,0 @@
-# records: 21473
-# companies: 1484
-# company branches: 11349
-# target year <2020: 0

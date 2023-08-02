@@ -1,10 +1,11 @@
 library(stringr)
 library(tidyverse)
 library(plotly)
+library(patchwork)
 
 # This script used the processed CDP data from ReadProcessCDPData_2020 and translates it into a table that can be used in the CAAT tool
 
-source('ReadProcessCDPData_2020.R')
+source('Aggregation_scripts/ReadProcessCDPData_2020.R')
 
 #----------------------------------
 # SELECT TWO TARGETS per company/country
@@ -53,7 +54,7 @@ data_select1a <- arrange(data_select1a, company_name, `Country/Region`, `Target 
                  group_by(company_name, `Country/Region`) %>%
                  slice_min(n=1, order_by=select1, with_ties=FALSE) %>%
                  select(-select1)
-write.table(data_select1a, "data/CDP/output/data_select1a.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(data_select1a, "Aggregation_scripts/data/CDP/output/data_select1a.csv", sep=";", col.names = TRUE, row.names=FALSE)
 # check if number of rows is equal to number of unique keys 
 nrow(data_select1a)==n_test
 
@@ -72,7 +73,7 @@ data_select1b2 <- left_join(data_select1b1, data_select1a, by=c('company_name', 
                   filter(Scope.x==Scope.y)
 data_select1b2 <- select(data_select1b2, !contains(".y"))
 colnames(data_select1b2) <- names(data_select1b2) %>% str_replace_all("\\.x", "")
-write.table(data_select1b2, "data/CDP/output/data_select1b.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(data_select1b2, "Aggregation_scripts/data/CDP/output/data_select1b.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 # bind target 1 and target 2 data frames
 data_select2 <- rbind(data_select1a, data_select1b2)
@@ -83,7 +84,38 @@ data_select2 <- rbind(data_select1a, data_select1b2)
 data_select2 <- mutate(data_select2, perc_scope1=ifelse(Scope=="Scope 1", 1, perc_scope1))
 data_select2 <- mutate(data_select2, perc_scope1=ifelse(Scope=="Scope 1+3", 1, perc_scope1))
 data_select2 <- mutate(data_select2, perc_scope1=ifelse(Scope=="Scope 2", 0, perc_scope1))
-write.table(data_select2, "data/CDP/output/data_select2.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(data_select2, "Aggregation_scripts/data/CDP/output/data_select2.csv", sep=";", col.names = TRUE, row.names=FALSE)
+
+data_select2$`Year target was set` <- as.numeric(data_select2$`Year target was set` )
+data_select2 <- mutate(data_select2, YearsTargetActive=`Most recent accounting year` - `Year target was set`+1) %>%
+                mutate(target_period = ifelse(`Target year`>=2020 & `Target year`<=2025, 1, ifelse(`Target year`>2025 & `Target year`<=2030, 2, ifelse(`Target year`>2030, 3, 0))))
+data_select2$target_period <- factor(data_select2$target_period)
+unique(data_select2$YearsTargetActive)
+stats_exist <- mean(data_select2$`YearsTargetActive`)
+stats_exist_group <- group_by(data_select2, target_period) %>% summarise(avg_active = mean(YearsTargetActive))
+
+
+#----------------------------
+
+# plot graph for SBTi paper
+g1 <- ggplot(data=data_select2, aes(x=`Target year`, fill=target_period)) +
+  geom_bar() + 
+  scale_x_continuous(limits=c(2020, 2052), breaks=seq(2020, 2051, 10)) +
+  scale_fill_discrete(name="Target period", labels=c("2020-2025", "2026-2030", "2030-")) +
+  ylab("Number of targets") +
+  theme_bw() +
+  theme(axis.text=element_text(size=12, face="bold"),
+        axis.title=element_text(size=14),
+        legend.text = element_text(size=12))
+g2 <- ggplot(data=data_select2, aes(`Year target was set`)) +
+      geom_histogram(bins=100, fill="firebrick3") + 
+      scale_x_continuous(limits=c(2000, 2021), breaks=seq(2000, 2020, 1)) +
+      ylab("Number of targets") +
+      theme_bw() +
+      theme(axis.text.x=element_text(angle = 90, hjust = 0, size=12, face="bold"),
+            axis.title=element_text(size=14))
+g <- g1 + g2 + ylab("")
+g
 
 #----------------------------
 # PUT TWO TARGETS ON SAME ROW
@@ -98,7 +130,7 @@ data_select3 <- group_by_at(data_select2, cols_id_row) %>%
 max_nr_targets <- str_split(max(data_select3$target_nr), pattern="_", simplify = TRUE)
 max_nr_targets <- as.integer(max_nr_targets[1,2])
 cat(paste0("maximum number of targets per row is ", max_nr_targets, "\n"))
-write.table(data_select3, "data/CDP/output/data_select3.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(data_select3, "Aggregation_scripts/data/CDP/output/data_select3.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 # 2. select necassary fields
 data_select4 <- select(data_select3, all_of(cols_id_row), `Base year`, `Target year`, `Most recent accounting year`, 
@@ -112,7 +144,7 @@ data_select4 <- pivot_wider(data_select4,
                                           `BaseYearEmissions_excl_scope3`, `MRY_EM_excl_scope3`, `% reduction from base year`, 
                                           `Is this a science-based target?`, `% of target achieved [auto-calculated]`),
                                            values_fill=NA)
-write.table(data_select4, "data/CDP/output/data_select4.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(data_select4, "Aggregation_scripts/data/CDP/output/data_select4.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 # 4. order columns keep target info (BY, MRY, %-reduction) next to each other
 order_targets_empty <- c('Base year_Target_', 'Target year_Target_', 'Most recent accounting year_Target_', 'Scope_Target_', 'perc_scope1_Target_', 
@@ -135,13 +167,13 @@ cols_other <- cols_other[!(cols_other %in% order_targets)]
 data_select5 <- select(data_select4, all_of(cols_other), all_of(order_targets))
 data_select5 <- select(data_select5, cols_other, order_targets) %>%
                 arrange(company_name, `Country/Region`)
-write.table(data_select5, "data/CDP/output/absolute_2020_targets_selection_per_row.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(data_select5, "Aggregation_scripts/data/CDP/output/absolute_2020_targets_selection_per_row.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 #-----------------------------------------------
 
 # Create CAAT tool table
 # Add CAAT sector
-Sectors_CDP_CAAT <- read_excel('data/CDP/input/Sectors CDP_CAAT.xlsx', sheet = "sectors")
+Sectors_CDP_CAAT <- read_excel('Aggregation_scripts/data/CDP/input/Sectors CDP_CAAT.xlsx', sheet = "sectors")
 # missing primary_sector, primary_activity, primary_industry data for Sumitomo Mitsui Financial Group
 data_select6 <- mutate(data_select5, CDP_sector = paste0(primary_sector, "-", primary_industry, "-", primary_activity))
 absolute_2020_targets_remove_duplicates <- left_join(data_select6, Sectors_CDP_CAAT, by=c("CDP_sector"))
@@ -214,8 +246,21 @@ data_CAAT <- data_select6 %>% ungroup() %>%
                       primary_sector=primary_sector)
 data_CAAT$TwoTargets <- as.character(data_CAAT$TwoTargets)
 data_CAAT_select <- select(data_CAAT,cols_CAAT)
-write.table(data_CAAT_select, "data/CDP/output/data_2020_CAAT.csv", sep=";", col.names = TRUE, row.names=FALSE, fileEncoding="UTF-16LE")
+write.table(data_CAAT_select, "Aggregation_scripts/data/CDP/output/data_2020_CAAT.csv", sep=";", col.names = TRUE, row.names=FALSE, fileEncoding="UTF-16LE")
 
 
+# IF used again we need to check
+# - why some do not end up as target1 and target2 while BY and scope are the same?
 
-
+# find unique account_id, target_years1 combinations for SBTi targets
+# company is selected if it at least has one SBTi target
+sbti = 'Yes, this target has been approved as science-based by the Science-Based Targets initiative'
+data_CAAT_select2 <- filter(data_CAAT_select, SBT_target1==sbti | SBT_target2==sbti)
+companies_sbti <- unique(data_CAAT_select2$account_id)
+data_CAAT_select3 <- filter(data_CAAT_select, account_id%in%companies_sbti)
+data_CAAT_select_unique_TY <- unique(data_CAAT_select3[c('account_id', 'Target Year 1', 'Target Year 2', 'SBT_target1', 'SBT_target2')])
+check_unique_TY <- data_CAAT_select_unique_TY %>% group_by(account_id) %>% filter(n()>1)
+write.table(check_unique_TY, 'Aggregation_scripts/data/CDP/output/check_unique_TY.csv', sep=";", row.names =F)
+select_unique_TY <- left_join(check_unique_TY, data_CAAT, by=c('account_id', 'Target Year 1',  'Target Year 2')) %>%
+                     select(account_id, 'Target Year 1', 'Target Year 2', everything())
+write.table(select_unique_TY, 'Aggregation_scripts/data/CDP/output/select_unique_TY.csv', sep=";", row.names =F)

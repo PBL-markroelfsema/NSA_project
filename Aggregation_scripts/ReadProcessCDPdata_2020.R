@@ -5,7 +5,7 @@ library(tidyverse)
 # This script uses absolute targets data from CDP and processes it
 # use for 2021 report Global Climate Action from cities, regions and businesses
 
-source("statistics_CDP.R")
+source("Aggregation_scripts/statistics_CDP.R")
 
 # Description of worksheet 'CDP_companies_commitments_abs1' that links to 'absolute_processed'. In brackets is column in 'absolute_processed', and description is also added how raw data was used for this
 # add Industry_Group = organisation, Industry_Group, Country
@@ -92,10 +92,10 @@ delete_companies_account_ID= c(829595, 829599, 829603, 829640, 830933, 846242, 8
 options(scipen = 999)
 # (X) Read in CDP data from Excel
 
-#absolute_2020_data_excel <- read_excel('data/CDP/input/2020_CDP_Country_Specific_Dataset_for_NSA_Report_v2_adjusted.xlsx', sheet = "Absolute ER")
+#absolute_2020_data_excel <- read_excel('Aggregation_scripts/data/CDP/input/2020_CDP_Country_Specific_Dataset_for_NSA_Report_v2_adjusted.xlsx', sheet = "Absolute ER")
 # In version v3 changes have been made for Global S1, S2M, S2L where the sum of the countries was higher than global 
 # Based on check_percent_alloc which is calculated in this Scipt
-absolute_2020_data_excel <- read_excel('data/CDP/input/2020_CDP_Country_Specific_Dataset_for_NSA_Report_v3_adjusted.xlsx', sheet = "Absolute ER_v3")
+absolute_2020_data_excel <- read_excel('Aggregation_scripts/data/CDP/input/2020_CDP_Country_Specific_Dataset_for_NSA_Report_v3_adjusted.xlsx', sheet = "Absolute ER_v3")
 
 absolute_2020_data_excel <- as.data.frame(absolute_2020_data_excel)
 absolute_2020_data_excel$`Target year` <- as.integer(absolute_2020_data_excel$`Target year`)
@@ -179,7 +179,7 @@ levels(absolute_2020_data$Scope_short_tmp) <- list(
   S12M = c("S12M", "S12M3")
                                                
 )
-write.table(absolute_2020_data, "data/CDP/output/absolute_2020_data_tmp1.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(absolute_2020_data, "Aggregation_scripts/data/CDP/output/absolute_2020_data_tmp1.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 # There are many duplicates (one with Country/Global S1/S2M/S2L information, and one row without) --> they are removed further down the script
 # But to do this in a more controlled way, this could be changed --> TO DO
@@ -188,8 +188,8 @@ absolute_2020_data_tmp <- group_by_at(absolute_2020_data, cols_id_tmp) %>%
                           top_n(n=1, wt=`Global S1`) %>%
                           top_n(n=1, wt=`Global S2L`) %>%
                           top_n(n=1, wt=`Global S2M`)
-write.table(absolute_2020_data_tmp, "data/CDP/output/absolute_2020_data_tmp.csv", sep=";", col.names = TRUE, row.names=FALSE) 
-write.table(absolute_2020_data, "data/CDP/output/absolute_2020_data.csv", sep=";", col.names = TRUE, row.names=FALSE) 
+write.table(absolute_2020_data_tmp, "Aggregation_scripts/data/CDP/output/absolute_2020_data_tmp.csv", sep=";", col.names = TRUE, row.names=FALSE) 
+write.table(absolute_2020_data, "Aggregation_scripts/data/CDP/output/absolute_2020_data.csv", sep=";", col.names = TRUE, row.names=FALSE) 
 check_percent_alloc <- group_by(absolute_2020_data, account_id, `Target reference number`, `Country/Region`) %>%
                           summarise(check_percent_alloc_S1=sum(`Country S1`, na.rm=T)/mean(`Global S1`, na.rm=T),
                                     check_percent_alloc_S2L=sum(`Country S2L`, na.rm=T)/mean(`Global S2L`, na.rm=T),
@@ -201,7 +201,7 @@ check_percent_alloc <- group_by(check_percent_alloc, account_id, `Target referen
 check_percent_alloc <- filter(check_percent_alloc, (check_percent_alloc_S1!=0 & (check_percent_alloc_S1<0.9|check_percent_alloc_S1>1.1)) |
                                                          (check_percent_alloc_S2L!=0 & (check_percent_alloc_S2L<0.9|check_percent_alloc_S2L>1.1)) |
                                                          (check_percent_alloc_S2M!=0 & (check_percent_alloc_S2M<0.9|check_percent_alloc_S2M>1.1))) #%>%
-write.table(check_percent_alloc, "data/CDP/output/check_percent_alloc.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(check_percent_alloc, "Aggregation_scripts/data/CDP/output/check_percent_alloc.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 absolute_2020_data <- mutate(absolute_2020_data, percent_alloc_tmp = case_when(
   Scope_short_tmp=="S1" ~ (`Country S1`)/(`Global S1`),
@@ -212,10 +212,10 @@ absolute_2020_data <- mutate(absolute_2020_data, percent_alloc_tmp = case_when(
   TRUE ~ 0
   )
 )
-#write.table(absolute_2020_data, "data/CDP/output/tmp1.csv", sep=";", col.names = TRUE, row.names=FALSE)
+#write.table(absolute_2020_data, "Aggregation_scripts/data/CDP/output/tmp1.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 absolute_2020_data <- mutate(absolute_2020_data, percent_alloc=ifelse(percent_alloc %in% c(0, NA), percent_alloc_tmp, percent_alloc))
-write.table(absolute_2020_data, "data/CDP/output/absolute_2020_data_tmp2.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(absolute_2020_data, "Aggregation_scripts/data/CDP/output/absolute_2020_data_tmp2.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 # (X) delete remaining percent_alloc that is zero or NA
 tmp<-filter(absolute_2020_data, is.na(percent_alloc))
@@ -228,7 +228,7 @@ absolute_2020_data <- filter(absolute_2020_data, !(is.na(percent_alloc) | percen
 nrow(absolute_2020_data)
 # remove ; because this is inconvenient for csv files. TEMP --> does not work, so remove columsn
 absolute_2020_data <- select(absolute_2020_data, -`Please explain (including target coverage)`)
-write.table(absolute_2020_data, "data/CDP/output/absolute_2020_data.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(absolute_2020_data, "Aggregation_scripts/data/CDP/output/absolute_2020_data.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 #--------------------------------------------
 
@@ -296,7 +296,7 @@ nrow(absolute_2020_targets)
 #check <- select(absolute_2020_targets, company_name, `Country/Region`, percent_alloc, percent_alloc_tmp) %>% mutate(diff_perc=round(100*(percent_alloc_tmp/percent_alloc-1),1))
 #absolute_2020_targets <- mutate(absolute_2020_targets, percent_alloc=ifelse(is.na(percent_alloc) | percent_alloc==0, percent_alloc_tmp, percent_alloc)) %>%
 #                         select(-N1, -N2, -D1, -D2, -percent_alloc_tmp)
-#write.table(absolute_2020_targets, "data/CDP/output/absolute_2020_check_percent_alloc.csv", sep=";", col.names = TRUE, row.names=FALSE)
+#write.table(absolute_2020_targets, "Aggregation_scripts/data/CDP/output/absolute_2020_check_percent_alloc.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 # 4. Calculate EXCL_SCOPE3
 # 4a. Scope 3 emissions are excluded, so change "Scope 1+2+3" to "Scope 1+2" and  "Scope 1+3" to  "Scope 1" --> TO DO
@@ -343,7 +343,7 @@ absolute_2020_targets <- mutate(absolute_2020_targets, perc_scope1 = ifelse(!is.
 
 absolute_2020_targets$BaseYearEmissions_excl_scope3 <- as.numeric(absolute_2020_targets$BaseYearEmissions_excl_scope3)
 absolute_2020_targets$TargetYearEmissions_excl_scope3 <- as.numeric(absolute_2020_targets$TargetYearEmissions_excl_scope3)
-write.table(absolute_2020_targets, "data/CDP/output/absolute_2020_targets.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(absolute_2020_targets, "Aggregation_scripts/data/CDP/output/absolute_2020_targets.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 cat("absolute_2020_targets:\n")
 nrow(absolute_2020_targets)
@@ -357,7 +357,7 @@ tmp3 <- filter(absolute_2020_targets, is.na(`% emissions in Scope`))
 #tmp4 <- filter(absolute_2020_targets, is.na(Scope_long))
 #tmp5 <- filter(absolute_2020_targets, is.na(`Country impact (excl. scope 3)`))
 absolute_2020_remove <- rbind(tmp1, tmp2, tmp3)
-write.table(absolute_2020_remove, "data/CDP/output/absolute_2020_removed.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(absolute_2020_remove, "Aggregation_scripts/data/CDP/output/absolute_2020_removed.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 nrow(absolute_2020_remove)
 
@@ -400,9 +400,9 @@ cat("absolute_2020_targets_remove_duplicates:\n")
 nrow(absolute_2020_targets_remove_duplicates)
 length(unique(absolute_2020_targets_remove_duplicates$account_id))
 
-write.table(absolute_2020_targets_remove_duplicates, "data/CDP/output/absolute_2020_targets_remove_duplicates.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(absolute_2020_targets_remove_duplicates, "Aggregation_scripts/data/CDP/output/absolute_2020_targets_remove_duplicates.csv", sep=";", col.names = TRUE, row.names=FALSE)
 absolute_2020_duplicates <- anti_join(absolute_2020_targets, absolute_2020_targets_remove_duplicates, by=cols_id)
-write.table(absolute_2020_duplicates, "data/CDP/output/absolute_2020_duplicates.csv", sep=";", col.names = TRUE, row.names=FALSE)
+write.table(absolute_2020_duplicates, "Aggregation_scripts/data/CDP/output/absolute_2020_duplicates.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
 cat("absolute_2020_duplicates:\n")
 nrow(absolute_2020_duplicates)

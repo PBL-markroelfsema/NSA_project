@@ -23,7 +23,6 @@ library(tidyr)
 library(openxlsx)
 library(stringdist)
 library(fuzzyjoin)
-library(openxlsx)
 library("stringr")
 library(zeallot)
 
@@ -156,5 +155,3 @@ write.xlsx(by_mry_2019_final, file = paste0(data_dir, 'output/IKEA_NSA_2019_BY_M
 write.xlsx(by_mry_2020_final, file = paste0(data_dir, 'output/IKEA_NSA_2020_BY_MRY_s3_perc.xlsx'))
 write.xlsx(by_mry_2021_final, file = paste0(data_dir, 'output/IKEA_NSA_2021_BY_MRY_s3_perc.xlsx')) 
 write.xlsx(by_mry_2021_final, file = paste0(data_dir, 'output/IKEA_NSA_2022_BY_MRY_s3_perc.xlsx')) 
-
-

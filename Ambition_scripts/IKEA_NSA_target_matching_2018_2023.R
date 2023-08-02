@@ -24,7 +24,7 @@ library(openxlsx)
 library(stringdist)
 library(fuzzyjoin)
 library(openxlsx)
-library("stringr")
+library(stringr)
 library(data.table)
 
 #------------------------------------- 
@@ -36,12 +36,11 @@ source('Ambition_scripts/IKEA_NSA_target_matching_functions.R')
 data_dir = "Ambition_scripts/data/CDP_2023/"
 # Target status options: New, Underway, Achieved, Revised, Expired, Replaced, Retired
 # exclude 'Expired', 'Replaced', 'Retired'
-target_status_select = c('New', 'Underway', 'Achieved', 'Revised')
+target_status_include = c('New', 'Underway', 'Achieved', 'Revised')
 target_status_exclude = c('Expired', 'Replaced', 'Retired')
 
 output <- TRUE #Set to TRUE if new files should be output
-overwrite_input_file <- TRUE # Boolean to express if excel files should be read in even if this was already done before
-
+overwrite_input_file <- FALSE # Boolean to express if excel files should be read in even if this was already done before
 
 raw_response_files <- data.frame(year = c(2018, 2019, 2020, 2021, 2022),
                                  filename = c('CDP_2018_Global_Aggregation_raw_response.xlsx',
@@ -50,9 +49,9 @@ raw_response_files <- data.frame(year = c(2018, 2019, 2020, 2021, 2022),
                                               'CDP_2021_Global_aggregation_raw_response.xlsx',
                                               '2023_NSA_report_CDP_2022_climate_raw_response.xlsx'))
 
-YEAR = 2018
+#YEAR = 2022
 years = c(2018, 2019, 2020, 2021, 2022)
-#years = c(2018)
+#years = c(2022)
 
 
 # dataframe to collect column names
@@ -61,6 +60,20 @@ colnames(abs_colnames) <- c('reporting year', 'column_name', 'profile')
 
 # dataframe to collect all data
 abs_er_prof <- data.frame()
+
+# dataframe to collect number of records
+statistics <- data.frame(matrix(ncol = 5, nrow = 0))
+colnames(statistics) <- c('stage', 'reporting_year', 'item', 'profile', 'value')
+statistics$stage <- as.character(statistics$stage)
+statistics$reporting_year <- as.numeric(statistics$reporting_year)
+statistics$item <- as.character(statistics$item)
+statistics$profile <- as.character(statistics$profile)
+statistics$value <- as.numeric(statistics$value)
+
+# dataframe to collect selection statistics
+stat_selection_before <- NULL
+stat_selection_after <- NULL
+
 #-------------------------------------
 # 4. Data =============================================================================
 
@@ -110,22 +123,37 @@ for (YEAR in years)
   
   # Clean files
   abs_er <- CleanColumnNames_TargetMatching(abs_er)
+  assign(paste0("abs_er_", YEAR), abs_er) 
   base_year_em <- CleanColumnNames_TargetMatching(base_year_em)
   mry_s1_em <- CleanColumnNames_TargetMatching(mry_s1_em)
   mry_s2_em <- CleanColumnNames_TargetMatching(mry_s2_em)
+
+ source('Ambition_scripts/stats.R')
   
   # 5. Code =============================================================================
 
   ########### 5.1 Prepare dataframes for target comparison ###########
 
+  scopes <- unique(abs_er$`Scope(s)`) %>% as.data.frame()
+  assign(paste0("scopes_", YEAR), scopes)
+  
   ## Prepare abs targets dataframes 
   ## Rename and select key columns, remove rows that do not contain target information, i.e. row = 0,  "Question not applicable", target_year = NA
-  abs_er_form <- PrepareAbsTargets(abs_er, YEAR)
-
-  # Determine priority score, order and Target Rank 
-  abs_er_form <- AddPriorityScore_Order(abs_er_form) %>% group_by(account_id) %>% mutate(priority_order = dense_rank(desc(priority_score))) %>% as.data.frame
-  assign(paste0("abs_er_form_", YEAR), abs_er_form)
+  abs_er_form_prepared <- abs_er %>% mutate(id=row_number()) %>% select(id, everything()) %>% PrepareAbsTargets(YEAR) 
+  assign(paste0("abs_er_form_prepared_", YEAR), abs_er_form_prepared)
   
+  if (YEAR == 2018) {tss <- c(target_status_include, 'Expired')} else {tss <- target_status_include}
+  abs_er_form_processed <- ProcessSelect_CDPData(abs_er_form_prepared, tss, YEAR)
+  assign(paste0("abs_er_form_processed_", YEAR), abs_er_form_processed)
+  
+  # show records that have not been included
+  abs_er_form_removed <- anti_join(abs_er_form_processed, abs_er_form_prepared, by=c('id'))
+  assign(paste0("abs_er_form_removed_", YEAR), abs_er_form_removed)
+  
+  # Determine priority score, order and Target Rank 
+  abs_er_form <- AddPriorityScore_Order(abs_er_form_processed) %>% group_by(account_id) %>% mutate(priority_order = dense_rank(desc(priority_score))) %>% as.data.frame
+  assign(paste0("abs_er_form_", YEAR), abs_er_form)
+
   base_year_em_form <- Process_BY(base_year_em, YEAR)
   #rm(base_year_em)
   if(output)  {write.xlsx(base_year_em_form, paste0(data_dir, "output/IKEA_NSA_BY_EM_", YEAR, ".xlsx"))
@@ -154,14 +182,14 @@ for (YEAR in years)
 
   # Identify companies that have a single target
   tar_count_abs <- abs_er_form %>% count(account_id)
-
-
+  assign(paste0("tar_count_abs", YEAR), tar_count_abs) 
+  
   #subset of single target companies  
   single_tar_abs <- filter(tar_count_abs, n == 1) 
   single_tar_accids <- single_tar_abs$account_id
 
   ########### 5.3 Target profiles  ################################################################
-
+  
   ###### Profile 1 - Companies with only one target ####################
   abs_er_prof1 <- abs_er_form %>%
     filter(account_id %in% single_tar_accids) %>%
@@ -252,13 +280,17 @@ for (YEAR in years)
     select(-row)
 
   #Pivot dataset by root_id
-  abs_er_prof3 <- PivotDatasetByRoot_id_prof3(abs_er_form_alt_post2)
+  if (nrow(abs_er_form_alt_post2) > 0)
+  { abs_er_prof3 <- PivotDatasetByRoot_id_prof3(abs_er_form_alt_post2)
+  } else 
+  { abs_er_prof3 <- NULL
+  }
 
   #Output profile 3 - parallel matched targets
   if(output)  {write.xlsx(abs_er_prof3, paste0(data_dir, "output/IKEA_NSA_abs_er_", YEAR, "_prof3_vF.xlsx"))
     print(paste0("Output ", YEAR, " absolute emissions reduction - profile 3"))
   }
-
+  
   # check column names
   # NOT INCLUDED FOR NOW, AS THIS INCLUDES SCOPE_1 and SCOPE_2
   # --> make choice for one scope, and thus also one scope
@@ -295,9 +327,9 @@ for (YEAR in years)
   abs_colnames_year <- cbind(abs_reporting, abs_names, abs_profile)
   colnames(abs_colnames_year) <- c('reporting year', 'column_name', 'profile')
   abs_colnames <- rbind(abs_colnames, abs_colnames_year)
-
+  
   # profile 2 has multiple profiles for which column names end with '_1', '_2' etc.
-  # profile 1, 3, and 4 are streamlined by using '_1' for these column names
+  # streamline profile 1, 3, and 4 by using '_1' for these column names
   multiple_col_name <- abs_colnames %>% filter(grepl("\\_1$", column_name)) %>%
     select(-`reporting year`, -profile) %>%
     unique() %>%
@@ -312,8 +344,11 @@ for (YEAR in years)
                   mutate(reporting_year = YEAR)
   abs_er_prof3_col_names <- colnames(abs_er_prof3)
   check_prof_3 <- abs_er_prof3_col_names[abs_er_prof3_col_names %in% multiple_col_name]
-  abs_er_prof3 <- rename_with(abs_er_prof3, .fn = ~paste0(., '_1'), .cols = all_of(check_prof_3) ) %>%
-    mutate(reporting_year = YEAR)
+  if (is.null(dim(abs_er_prof3)[1])) 
+  { print("empty profile 3")} else 
+  {abs_er_prof3 <- rename_with(abs_er_prof3, .fn = ~paste0(., '_1'), .cols = all_of(check_prof_3) ) %>%
+                                    mutate(reporting_year = YEAR)
+  }
   abs_er_prof4_col_names <- colnames(abs_er_prof4)
   check_prof_4 <- abs_er_prof4_col_names[abs_er_prof4_col_names %in% multiple_col_name]
   abs_er_prof4 <- rename_with(abs_er_prof4, .fn = ~paste0(., '_1'), .cols = all_of(check_prof_4) ) %>%
@@ -323,77 +358,45 @@ for (YEAR in years)
   assign(paste0("abs_er_prof_", YEAR), abs_er_prof_year)
   abs_er_prof <- bind_rows(abs_er_prof, abs_er_prof_year)
   
+  abs_er_prof <- select(abs_er_prof, reporting_year, target_profile, everything())
+  
   #Output profiles top priority score targets
   if(output)  {write.xlsx(abs_er_prof, paste0(data_dir, "output/IKEA_NSA_abs_er_", YEAR, "_prof_vF.xlsx"))
     print(paste0("Output ", YEAR, " absolute emissions reduction - all profiles"))
   }
   
+  # STATISTICS
+
+  statistics <- add_row(statistics, stage='stage1_processed', reporting_year=YEAR, item='targets', profile='total', value=nrow(abs_er))
+  statistics <- add_row(statistics, stage='stage1_processed', reporting_year=YEAR, item='companies', profile='total', value=length(unique(abs_er$`Account number`)))
+  statistics <- add_row(statistics, stage='stage2_selected', reporting_year=YEAR, item='targets', profile='total', value=nrow(abs_er_form))
+  statistics <- add_row(statistics, stage='stage2_selected', reporting_year=YEAR, item='companies', profile='total', value=length(unique(abs_er_form$`account_id`)))
+  statistics <- add_row(statistics, stage='stage3_profile', reporting_year=YEAR, item='targets', profile='1', value=nrow(abs_er_prof1))
+  statistics <- add_row(statistics, stage='stage3_read_in', reporting_year=YEAR, item='companies', profile='1', value=length(unique(abs_er_prof1$`account_id`)))
+  statistics <- add_row(statistics, stage='stage3_profile', reporting_year=YEAR, item='targets', profile='2', value=nrow(abs_er_prof2))
+  statistics <- add_row(statistics, stage='stage3_profile', reporting_year=YEAR, item='companies', profile='2', value=length(unique(abs_er_prof2$`account_id`)))
+  statistics <- add_row(statistics, stage='stage3_profile', reporting_year=YEAR, item='targets', profile='3', value=nrow(abs_er_prof3))
+  statistics <- add_row(statistics, stage='stage3_profile', reporting_year=YEAR, item='companies', profile='3', value=length(unique(abs_er_prof3$`account_id`)))
+  statistics <- add_row(statistics, stage='stage3_profile', reporting_year=YEAR, item='targets', profile='4', value=nrow(abs_er_prof4))
+  statistics <- add_row(statistics, stage='stage3_profile', reporting_year=YEAR, item='companies', profile='4', value=length(unique(abs_er_prof4$`account_id`)))
+  
+  # # target reference number (not empty)
+  nr_target_reference_numbers_empty_NA <- abs_er %>% filter(is.na(`Target reference number`)) %>% summarise(empty=n()) %>% as.numeric()
+  nr_target_reference_numbers_empty_QNA <- abs_er %>% filter(`Target reference number`=='Question not applicable') %>% summarise(empty=n()) %>% as.numeric()
+  nr_target_reference_numbers_empty = nr_target_reference_numbers_empty_NA + nr_target_reference_numbers_empty_QNA
+  statistics <- add_row(statistics, stage='stage1_processed', reporting_year=YEAR, item='target reference number', profile='total', value=nr_target_reference_numbers_empty)
+  
+  stat_selection_year_before <- read.table(paste0('Ambition_scripts/data/CDP_2023/output/stats/stats_before_', YEAR, '.csv'), sep=';', header=T)
+  stat_selection_before <- bind_rows(stat_selection_before, stat_selection_year_before)
+  stat_selection_year_after <- read.table(paste0('Ambition_scripts/data/CDP_2023/output/stats/stats_after_', YEAR, '.csv'), sep=';', header=T)
+  stat_selection_after <- bind_rows(stat_selection_after, stat_selection_year_after)
+
 } # end for YEARS in years
 
-abs_er_prof <- select(abs_er_prof, reporting_year, target_profile, everything())
 
-# STATISTICS
+stat_selection <- inner_join(stat_selection_before, stat_selection_after, by=c('reporting_year'))
+write.table(stat_selection_before, 'Ambition_scripts/data/CDP_2023/output/stats/stats_before.csv', sep=';', row.names=F)
+write.table(stat_selection_after, 'Ambition_scripts/data/CDP_2023/output/stats/stats_after.csv', sep=';', row.names=F)
+write.table(stat_selection, 'Ambition_scripts/data/CDP_2023/output/stats/stats.csv', sep=';', row.names=F)
 
-# Count unique numbers of companies in each dataset
-actid_uni_abs_2018 <- unique(abs_er_2018$`Account.number`)
-actid_uni_abs_2019 <- unique(abs_er_2019$`Account.number`)
-actid_uni_abs_2020 <- unique(abs_er_2020$`Account.number`)
-actid_uni_abs_2021 <- unique(abs_er_2021$`Account.number`)
-actid_uni_abs_2022 <- unique(abs_er_2022$`Account.number`)
-print(paste0("2018: ", length(actid_uni_abs_2018))); print(paste0("2019: ", length(actid_uni_abs_2019))); print(paste0("2020: ", length(actid_uni_abs_2020))); print(paste0("2021: ", length(actid_uni_abs_2021))); print(paste0("2022: ", length(actid_uni_abs_2022)))
-abs_act_overlap_log <- actid_uni_abs_2018 %in% actid_uni_abs_2021
-abs_overlap_count <- sum(abs_act_overlap_log == TRUE)
-
-prof_uni_abs_2018 <- unique(abs_er_prof_2018$`account_id`)
-prof_uni_abs_2019 <- unique(abs_er_prof_2019$`account_id`)
-prof_uni_abs_2020 <- unique(abs_er_prof_2020$`account_id`)
-prof_uni_abs_2021 <- unique(abs_er_prof_2021$`account_id`)
-prof_uni_abs_2022 <- unique(abs_er_prof_2022$`account_id`)
-print(paste0("2018: ", length(prof_uni_abs_2018))); print(paste0("2019: ", length(prof_uni_abs_2019))); print(paste0("2020: ", length(prof_uni_abs_2020))); print(paste0("2021: ", length(prof_uni_abs_2021))); print(paste0("2022: ", length(prof_uni_abs_2022)))
-# Statistics for companies included in the different profiles
-#remaining_tar_accids_2018 <- unique(abs_er_2018_prof4$account_id)
-#remaining_tar_accids_2019 <- unique(abs_er_2019_prof4$account_id)
-#remaining_tar_accids_2020 <- unique(abs_er_2020_prof4$account_id)
-#remaining_tar_accids_2021 <- unique(abs_er_2021_prof4$account_id)
-
-#companies_per_profile1_2018 <- single_tar_accids_2018 %>% as.data.frame() %>% mutate(profile_2018 = 1)
-#companies_per_profile2_2018 <- seq_tar_accids_2018 %>% as.data.frame() %>% mutate(profile_2018 = 2)
-#ompanies_per_profile3_2018 <- para_tar_accids_2018 %>% as.data.frame() %>% mutate(profile_2018 = 3)
-#companies_per_profile4_2018 <- remaining_tar_accids_2018 %>% as.data.frame() %>% mutate(profile_2018 = 4)
-#companies_per_profle_2018 <- rbind(companies_per_profile1_2018, companies_per_profile2_2018) %>% rbind(companies_per_profile3_2018) %>% rbind(companies_per_profile4_2018)
-#colnames(companies_per_profle_2018) <- c('account_id', 'profile_2018')
-##rm(companies_per_profile1_2018); rm(companies_per_profile2_2018); rm(companies_per_profile3_2018); rm(companies_per_profile4_2018)
-
-#companies_per_profile1_2019 <- single_tar_accids_2019 %>% as.data.frame() %>% mutate(profile_2019 = 1)
-#companies_per_profile2_2019 <- seq_tar_accids_2019 %>% as.data.frame() %>% mutate(profile_2019 = 2)
-#companies_per_profile3_2019 <- para_tar_accids_2019 %>% as.data.frame() %>% mutate(profile_2019 = 3)
-#companies_per_profile4_2019 <- remaining_tar_accids_2019 %>% as.data.frame() %>% mutate(profile_2019 = 4)
-#ompanies_per_profle_2019 <- rbind(companies_per_profile1_2019, companies_per_profile2_2019) %>% rbind(companies_per_profile3_2019) %>% rbind(companies_per_profile4_2019)
-#colnames(companies_per_profle_2019) <- c('account_id', 'profile_2019')
-##rm(companies_per_profile1_2019); rm(companies_per_profile2_2019); rm(companies_per_profile3_2019); rm(companies_per_profile4_2019)
-
-#companies_per_profile1_2020 <- single_tar_accids_2020 %>% as.data.frame() %>% mutate(profile_2020 = 1)
-#companies_per_profile2_2020 <- seq_tar_accids_2020 %>% as.data.frame() %>% mutate(profile_2020 = 2)
-#companies_per_profile3_2020 <- para_tar_accids_2020 %>% as.data.frame() %>% mutate(profile_2020 = 3)
-#companies_per_profile4_2020 <- remaining_tar_accids_2020 %>% as.data.frame() %>% mutate(profile_2020 = 4)
-#companies_per_profle_2020 <- rbind(companies_per_profile1_2020, companies_per_profile2_2020) %>% rbind(companies_per_profile3_2020) %>% rbind(companies_per_profile4_2020)
-#colnames(companies_per_profle_2020) <- c('account_id', 'profile_2020')
-#rm(companies_per_profile1_2020); rm(companies_per_profile2_2020); rm(companies_per_profile3_2020); rm(companies_per_profile4_2020)
-
-#companies_per_profile1_2021 <- single_tar_accids_2021 %>% as.data.frame() %>% mutate(profile_2021 = 1)
-#companies_per_profile2_2021 <- seq_tar_accids_2021 %>% as.data.frame() %>% mutate(profile_2021 = 2)
-#companies_per_profile3_2021 <- para_tar_accids_2021 %>% as.data.frame() %>% mutate(profile_2021 = 3)
-#companies_per_profile4_2021 <- remaining_tar_accids_2021 %>% as.data.frame() %>% mutate(profile_2021 = 4)
-#companies_per_profle_2021 <- rbind(companies_per_profile1_2021, companies_per_profile2_2021) %>% rbind(companies_per_profile3_2021) %>% rbind(companies_per_profile4_2021)
-#colnames(companies_per_profle_2021) <- c('account_id', 'profile_2021')
-##rm(companies_per_profile1_2021); rm(companies_per_profile2_2021); rm(companies_per_profile3_2021); rm(companies_per_profile4_2021)
-
-#companies_per_profile <- full_join(companies_per_profle_2018, companies_per_profle_2019, by=c('account_id')) %>% full_join(companies_per_profle_2020, by=c('account_id')) %>% full_join(companies_per_profle_2021, by=c('account_id')) %>%
-#                         mutate(profile=TRUE)
-#check1 <- left_join(companies_in_full_target_sets, companies_per_profile, by=c('account_id')) %>%
-#          mutate(profile=replace(profile, is.na(profile), FALSE))
-#check2 <- left_join(companies_full_target_set, check1, by=c('account_id')) %>% 
-#          distinct() %>%
-#          mutate(profile=replace(profile, is.na(profile), FALSE))
-
-
+source('Ambition_scripts/stats_summary.R')
