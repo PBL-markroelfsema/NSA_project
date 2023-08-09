@@ -49,7 +49,7 @@ raw_response_files <- data.frame(year = c(2018, 2019, 2020, 2021, 2022),
                                               'CDP_2021_Global_aggregation_raw_response.xlsx',
                                               '2023_NSA_report_CDP_2022_climate_raw_response.xlsx'))
 
-#YEAR = 2022
+YEAR = 2022
 years = c(2018, 2019, 2020, 2021, 2022)
 #years = c(2022)
 
@@ -128,7 +128,15 @@ for (YEAR in years)
   mry_s1_em <- CleanColumnNames_TargetMatching(mry_s1_em)
   mry_s2_em <- CleanColumnNames_TargetMatching(mry_s2_em)
 
- source('Ambition_scripts/stats.R')
+  # write to file
+  vars <- c("please_explain", "SBTi_status", "target_ambition",
+            "Plan for achieving target, and progress made to the end of the reporting year",
+            "List the emissions reduction initiatives which contributed most to achieving this target")
+  #abs_er_form_prepared <- abs_er_form_prepared %>% select(-any_of(vars))
+  abs_er <- select(abs_er, -any_of(vars), everything())
+  write.table(abs_er, paste0(data_dir, "processed/abs_er_", YEAR, ".csv"), row.names=FALSE, sep=";")
+  
+  source('Ambition_scripts/stats.R')
   
   # 5. Code =============================================================================
 
@@ -137,23 +145,55 @@ for (YEAR in years)
   scopes <- unique(abs_er$`Scope(s)`) %>% as.data.frame()
   assign(paste0("scopes_", YEAR), scopes)
   
-  ## Prepare abs targets dataframes 
-  ## Rename and select key columns, remove rows that do not contain target information, i.e. row = 0,  "Question not applicable", target_year = NA
+  # I. PREPARE
+  ## Prepare abs targets dataframes (rename columns, adjust datatypes)
   abs_er_form_prepared <- abs_er %>% mutate(id=row_number()) %>% select(id, everything()) %>% PrepareAbsTargets(YEAR) 
   assign(paste0("abs_er_form_prepared_", YEAR), abs_er_form_prepared)
   
+  # write to file
+  write.table(abs_er_form_prepared, paste0(data_dir, "processed/abs_er_form_prepared_", YEAR, ".csv"), row.names=FALSE, sep=";")
+  
+  # II. PROCESS
+  abs_er_form_processed <- abs_er_form_prepared
+  # Process data
   if (YEAR == 2018) {tss <- c(target_status_include, 'Expired')} else {tss <- target_status_include}
-  abs_er_form_processed <- ProcessSelect_CDPData(abs_er_form_prepared, tss, YEAR)
+  abs_er_form_processed <- ProcessSelect_CDPData(abs_er_form_processed, tss, YEAR)
   assign(paste0("abs_er_form_processed_", YEAR), abs_er_form_processed)
   
-  # show records that have not been included
-  abs_er_form_removed <- anti_join(abs_er_form_processed, abs_er_form_prepared, by=c('id'))
-  assign(paste0("abs_er_form_removed_", YEAR), abs_er_form_removed)
+  # only include targets that cover more than 75% of company emissions
+  abs_er_form_processed <- filter(abs_er_form_processed, emissions_base_year_percent >= 75)
   
-  # Determine priority score, order and Target Rank 
+  # Process scopes 
+  abs_er_form_processed <- ProcessScopes(abs_er_form_processed, YEAR)
+  
+  # filter scopes, exclude scope 3 and unidentifiable scopes
+  abs_er_form_processed <- filter(abs_er_form_processed, !(simple_scope %in% c("S3", "Other", "", "No scope", "Question not applicable", NA)))
+  
+  # determine simple scope and select scope 1/2 targets
+  #abs_er_form_processed <- AddSimpleScope(abs_er_form_processed) %>%
+  #                         filter(!(simple_scope %in% c("S3", "Other", "", "No scope", "Question not applicable", NA)))
+  
+  # correct emissions for scope 3 emissions (only scope 1+2)
+  # 1. determine scope 3 percentage
+  #abs_er_form_processed <- CalculatePercentagecope3(abs_er_form_processed)
+  # 2. apply to emissions_base_year, emissions_target_year, emissions_reporting_year
+  if (YEAR<2022)
+  { abs_er_form_processed <- mutate(abs_er_form_processed, emissions_base_year=(1-perc3)*emissions_base_year,
+                                    emissions_target_year=ifelse(is.na(emissions_target_year), NA, (1-perc3)*emissions_target_year),
+                                    emissions_reporting_year=ifelse(is.na(emissions_reporting_year), NA, (1-perc3)*emissions_reporting_year))
+  } else
+  {  #calculate scope 1 and 2 emissions for reporting years >= 2022
+    abs_er_form_processed <- mutate(abs_er_form_processed, emissions_base_year=emissions_base_year-emissions_base_year_s3,
+                                    emissions_reporting_year=emissions_reporting_year-emissions_reporting_year_s3,
+                                    emissions_target_year=(1-targeted_reduction/100)*emissions_base_year)
+  } # if
+  
+  # Determine priority score, order and target Rank 
   abs_er_form <- AddPriorityScore_Order(abs_er_form_processed) %>% group_by(account_id) %>% mutate(priority_order = dense_rank(desc(priority_score))) %>% as.data.frame
   assign(paste0("abs_er_form_", YEAR), abs_er_form)
-
+  write.table(abs_er_form_processed, paste0(data_dir, "processed/abs_er_form_processed_", YEAR, ".csv"), row.names=FALSE, sep=";") 
+  
+  # III. BY/MRY EMISSIONS
   base_year_em_form <- Process_BY(base_year_em, YEAR)
   #rm(base_year_em)
   if(output)  {write.xlsx(base_year_em_form, paste0(data_dir, "output/IKEA_NSA_BY_EM_", YEAR, ".xlsx"))
@@ -314,7 +354,7 @@ for (YEAR in years)
     mutate(target_profile = "prof4") %>%
     select(-row)
 
-  #Output profile 4 - top priority score targets
+  # Output profile 4 - top priority score targets
   if(output)  {write.xlsx(abs_er_prof4, paste0(data_dir, "output/IKEA_NSA_abs_er_", YEAR, "_prof4_vF.xlsx"))
     print(paste0("Output ", YEAR, " absolute emissions reduction - profile 4"))
   }
@@ -366,7 +406,6 @@ for (YEAR in years)
   }
   
   # STATISTICS
-
   statistics <- add_row(statistics, stage='stage1_processed', reporting_year=YEAR, item='targets', profile='total', value=nrow(abs_er))
   statistics <- add_row(statistics, stage='stage1_processed', reporting_year=YEAR, item='companies', profile='total', value=length(unique(abs_er$`Account number`)))
   statistics <- add_row(statistics, stage='stage2_selected', reporting_year=YEAR, item='targets', profile='total', value=nrow(abs_er_form))
@@ -393,10 +432,10 @@ for (YEAR in years)
 
 } # end for YEARS in years
 
-
 stat_selection <- inner_join(stat_selection_before, stat_selection_after, by=c('reporting_year'))
 write.table(stat_selection_before, 'Ambition_scripts/data/CDP_2023/output/stats/stats_before.csv', sep=';', row.names=F)
 write.table(stat_selection_after, 'Ambition_scripts/data/CDP_2023/output/stats/stats_after.csv', sep=';', row.names=F)
 write.table(stat_selection, 'Ambition_scripts/data/CDP_2023/output/stats/stats.csv', sep=';', row.names=F)
 
 source('Ambition_scripts/stats_summary.R')
+
