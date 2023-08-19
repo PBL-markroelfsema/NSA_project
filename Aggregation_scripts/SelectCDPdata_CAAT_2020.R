@@ -96,26 +96,8 @@ stats_exist_group <- group_by(data_select2, target_period) %>% summarise(avg_act
 
 
 #----------------------------
-
-# plot graph for SBTi paper
-g1 <- ggplot(data=data_select2, aes(x=`Target year`, fill=target_period)) +
-  geom_bar() + 
-  scale_x_continuous(limits=c(2020, 2052), breaks=seq(2020, 2051, 10)) +
-  scale_fill_discrete(name="Target period", labels=c("2020-2025", "2026-2030", "2030-")) +
-  ylab("Number of targets") +
-  theme_bw() +
-  theme(axis.text=element_text(size=12, face="bold"),
-        axis.title=element_text(size=14),
-        legend.text = element_text(size=12))
-g2 <- ggplot(data=data_select2, aes(`Year target was set`)) +
-      geom_histogram(bins=100, fill="firebrick3") + 
-      scale_x_continuous(limits=c(2000, 2021), breaks=seq(2000, 2020, 1)) +
-      ylab("Number of targets") +
-      theme_bw() +
-      theme(axis.text.x=element_text(angle = 90, hjust = 0, size=12, face="bold"),
-            axis.title=element_text(size=14))
-g <- g1 + g2 + ylab("")
-g
+# save intermediate results for DG CLIMA paper
+write.table(data_select2, "Aggregation_scripts/data/output/SBTi_targets_emissions.csv", sep=";", row.names=F, col.names=T)
 
 #----------------------------
 # PUT TWO TARGETS ON SAME ROW
@@ -132,7 +114,7 @@ max_nr_targets <- as.integer(max_nr_targets[1,2])
 cat(paste0("maximum number of targets per row is ", max_nr_targets, "\n"))
 write.table(data_select3, "Aggregation_scripts/data/CDP/output/data_select3.csv", sep=";", col.names = TRUE, row.names=FALSE)
 
-# 2. select necassary fields
+# 2. select necessary fields
 data_select4 <- select(data_select3, all_of(cols_id_row), `Base year`, `Target year`, `Most recent accounting year`, 
                        `BaseYearEmissions_excl_scope3`, `MRY_EM_excl_scope3`, `% reduction from base year`, target_nr, Scope, perc_scope1, 
                        `Is this a science-based target?`, `% of target achieved [auto-calculated]`)
