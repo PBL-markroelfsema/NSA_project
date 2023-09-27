@@ -23,7 +23,6 @@ scope3_cat_categories <- c("Purchased goods and services",
                            "Upstream & downstream")
 scope_priority_order <- c("Scope 1| Scope 2", "Scope 1| Scope 2| Scope 3", "Scope 1", "Scope 2", "Scope 2| Scope 3", "Scope 1| Scope 3")
 
-
 capFirst <- function(s) {
   paste(toupper(substring(s, 1, 1)), substring(s, 2), sep = "")
 }
@@ -31,7 +30,15 @@ capFirst <- function(s) {
 CleanColumnNames_TargetMatching <- function(abs_er)
 { abs_er_clean <- abs_er
   names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "Provide\\.details\\.of\\.your\\.absolute\\.emissions\\.target\\(s\\)\\.and\\.progress\\.made\\.against\\.those\\.targets\\.\\.", "")
+  names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "Provide\\.details\\.of\\.your\\.emissions\\.intensity\\.target\\(s\\)\\.and\\.progress\\.made\\.against\\.those\\.target\\(s\\)\\.\\.", "")
+  names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "Provide\\.details\\.of\\.your\\.net\\-zero\\.target\\(s\\)\\.\\.", "")
   names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "C4\\.1a_C", "")
+  names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "C4\\.1b_C", "")
+  names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "C4\\.2c_C", "")
+  names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "C4\\.3d_", "") 
+  names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "C4\\.1_", "")  
+  names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "C4\\.3_", "") 
+  names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "C4\\.5_", "") 
   names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "C5\\.1\\_C1", "")
   names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "C5\\.1\\_C2", "")
   names(abs_er_clean) <- str_replace_all(names(abs_er_clean), "C5\\.1\\_C3", "")
@@ -64,6 +71,11 @@ CleanColumnNames_TargetMatching <- function(abs_er)
   return(abs_er_clean)
 }
 
+PrepareTargets <- function(targets, year)
+{ targets_prepared <- rename(targets, account_id=`Account number`, 
+                             Target_types=`Did you have an emissions target that was active in the reporting year?`,
+                             primary_industry=`Primary industry`)
+}
 PrepareAbsTargets <- function(abs_er, year)
 { #2018 abs emission reduction targets
   if (year == 2018)
@@ -71,6 +83,7 @@ PrepareAbsTargets <- function(abs_er, year)
     rename(account_id = `Account number`,
            organization = `Organization`,
            country = `Country`,
+           primary_industry = `Primary industry`,
            access = `Public`,
            row = `Row`,
            target_id = `Target reference number`, 
@@ -86,7 +99,7 @@ PrepareAbsTargets <- function(abs_er, year)
            SBTi_status = `Is this a science-based target?`,
            please_explain = `Please explain`) %>%
     mutate(#scope_accounting_method = str_to_title(str_replace_all(str_extract(scope, "\\([^()]+\\)"), "[()]", "")),
-           target_coverage = NA,
+           target_coverage = "Unknown",
            emissions_target_year = ifelse(is.numeric(targeted_reduction), emissions_base_year*(1-targeted_reduction/100), NA), 
            emissions_reporting_year = ifelse(is.numeric(emissions_target_year), (emissions_base_year-emissions_target_year)*(percent_achieved/100), NA),
            target_ambition = NA)
@@ -98,6 +111,7 @@ PrepareAbsTargets <- function(abs_er, year)
     rename(account_id = `Account number`,
            organization = `Organization`,
            country = `Country`,
+           primary_industry = `Primary industry`,
            access = `Public`,
            row = `Row`,
            target_id = `Target reference number`, 
@@ -113,7 +127,7 @@ PrepareAbsTargets <- function(abs_er, year)
            SBTi_status = `Is this a science-based target?`,
            please_explain = `Please explain`) %>%
     mutate(#scope_accounting_method = str_to_title(str_replace_all(str_extract(scope, "\\([^()]+\\)"), "[()]", "")),
-           target_coverage = NA,
+           target_coverage = "Unknown",
            emissions_target_year = ifelse(is.numeric(targeted_reduction), emissions_base_year*(1-targeted_reduction/100), NA), 
            emissions_reporting_year = ifelse(is.numeric(emissions_target_year), (emissions_base_year-emissions_target_year)*(percent_achieved/100), NA),
            target_ambition = NA,
@@ -127,6 +141,7 @@ PrepareAbsTargets <- function(abs_er, year)
     rename(account_id = `Account number`,
            organization = `Organization`,
            country = `Country`,
+           primary_industry = `Primary industry`,
            access = `Public`,
            row = `Row`,
            target_id = `Target reference number`, 
@@ -144,8 +159,7 @@ PrepareAbsTargets <- function(abs_er, year)
            target_status = `Target status in reporting year`,
            SBTi_status = `Is this a science-based target?`,
            please_explain = `Please explain (including target coverage)`) %>%
-    mutate(#scope_accounting_method = str_to_title(str_replace_all(str_extract(scope, "\\([^()]+\\)"), "[()]", "")),
-           target_ambition = NA)
+    mutate(target_ambition = NA)
   }
   
   #2021 abs emission reduction targets
@@ -154,6 +168,7 @@ PrepareAbsTargets <- function(abs_er, year)
     rename(account_id = `Account number`,
            organization = `Organization`,
            country = `Country`,
+           primary_industry = `Primary industry`,
            access = `Public`,
            row = `Row`,
            target_id = `Target reference number`, 
@@ -171,8 +186,7 @@ PrepareAbsTargets <- function(abs_er, year)
            target_status = `Target status in reporting year`,
            SBTi_status = `Is this a science-based target?`,
            target_ambition = `Target ambition`,
-           please_explain = `Please explain (including target coverage)`) #%>%
-    #mutate(scope_accounting_method = str_to_title(str_replace_all(str_extract(scope, "\\([^()]+\\)"), "[()]", "")))
+           please_explain = `Please explain (including target coverage)`) 
   }
   
   #2022 abs emission reduction targets
@@ -191,6 +205,7 @@ PrepareAbsTargets <- function(abs_er, year)
     rename(abs_er_form, account_id = `Account number`,
            organization = `Organization`,
            country = `Country/Areas`,
+           primary_industry = `Primary industry`,
            access = `Public`,
            row = `Row`,
            target_id = `Target reference number`, 
@@ -245,9 +260,78 @@ PrepareAbsTargets <- function(abs_er, year)
   return(abs_er_form)
 }
 
-ProcessSelect_CDPData <- function(abs_er, t_status_include, year)
+PrepareNZTargets <- function(abs_er, year)
+{ #2021 abs emission reduction targets
+  if (year == 2021)
+  { abs_er <- abs_er %>%
+    rename(account_id = `Account number`,
+           organization = `Organization`,
+           country = `Country`,
+           public =  Public,
+           response_received_data = `Response received date`,
+           primary_activity = `Primary activity`,
+           primary_sector = `Primary sector`,
+           primary_industry = `Primary industry`,
+           primary_questionnaire_sector = `Primary questionnaire sector`,
+           row = `Row`,
+           rowname = RowName,
+           target_id = `Target reference number`, 
+           target_coverage = `Target coverage`,
+           targets_linked = `Absolute/intensity emission target(s) linked to this net-zero target`,
+           target_year = `Target year for achieving net zero`,       
+           SBTi_status = `Is this a science-based target?`,
+           please_explain = `Please explain (including target coverage)`)
+  }
+  
+  #2022 abs emission reduction targets
+  if (year == 2022)
+    # possible scopes:   Scope 1, Scope 1| Scope 2, Scope 1| Scope 2| Scope 3, Scope 1| Scope 3, Scope 2, Scope 2| Scope 3, Scope 3, Question not applicable, NA
+  { abs_er <- abs_er %>%
+    rename(account_id = `Account number`,
+           organization = `Organization`,
+           country = `Country/Areas`,
+           public =  Public,
+           response_received_data = `Response received date`,
+           primary_activity = `Primary activity`,
+           primary_sector = `Primary sector`,
+           primary_industry = `Primary industry`,
+           primary_questionnaire_sector = `Primary questionnaire sector`,
+           row = Row,
+           rowname = RowName,
+           target_id = `Target reference number`, 
+           target_coverage = `Target coverage`,
+           targets_linked = `Absolute/intensity emission target(s) linked to this net-zero target`,
+           target_year = `Target year for achieving net zero`,       
+           SBTi_status = `Is this a science-based target?`,
+           please_explain = `Please explain target coverage and identify any exclusions`,
+           use_offsets = `Do you intend to neutralize any unabated emissions with permanent carbon removals at the target year?`) %>%
+    select(-`Planned milestones and/or near-term investments for neutralization at target year`,
+           -`Planned actions to mitigate emissions beyond your value chain (optional)`)
+  } # if
+  
+  abs_er <- mutate_all(abs_er, funs(str_replace_all(., ";", "|")))
+  abs_er <- mutate_all(abs_er, funs(str_replace_all(., ",", " ")))
+  abs_er <- mutate_all(abs_er, funs(str_replace_all(., "\\\\", " ")))
+  
+  return(abs_er)
+}
+
+PrepareCompanies <- function(companies, year)
+{ companies_prepared <- rename(companies, account_id=`Account number`)
+}
+
+PrepareTargets <- function(targets, year)
+{ targets_prepared <- rename(targets, account_id=`Account number`,
+                             active_targets=`Did you have an emissions target that was active in the reporting year?`,
+                             primary_industry=`Primary industry`) %>%
+                      select(account_id, active_targets, primary_industry)
+  
+  
+}
+
+ProcessSelect_CDPData <- function(abs_er, t_status_include, disclosure_year)
 { abs_er_processed <- abs_er %>%
-  select(account_id, organization, country, access, row, target_id, year_target_set, target_coverage, scope, 
+  select(account_id, organization, country, primary_industry, access, row, target_id, year_target_set, target_coverage, scope, 
          #scope_accounting_method, 
          any_of(c("Scope 3 category(ies)","Scope 2 accounting method")),
          any_of(c("emissions_base_year_s1", "emissions_base_year_s2", "emissions_base_year_s3", 
@@ -261,7 +345,8 @@ ProcessSelect_CDPData <- function(abs_er, t_status_include, year)
     abs_er_processed <- filter(abs_er_processed, !(row == 0), 
                                !(target_id%in%c("Question not applicable")), 
                                !is.na(target_year), 
-                               target_year>=YEAR, 
+                               target_year>=disclosure_year,
+                               target_year>base_year,
                                target_status %in% t_status_include, 
                                !is.na(targeted_reduction),
                                !is.na(emissions_base_year_percent), 
@@ -292,7 +377,7 @@ ProcessSelect_CDPData <- function(abs_er, t_status_include, year)
     print("+++++++++++++++++++ ProcessSelect_CDPData")
     cat("\n")
     
-    stats_process <- data.frame(year=year)
+    stats_process <- data.frame(year=disclosure_year)
     stats_process <- mutate(stats_process, total_data=abs_er %>% nrow())     
     stats_process <- mutate(stats_process, used_data=abs_er_processed %>% nrow())     
     stats_process <- mutate(stats_process, no_target=abs_er_removed_no_target %>% nrow())
@@ -322,7 +407,7 @@ ProcessScopes <- function(abs_er, year)
                                                   str_starts(scope, "Scope 3") & grepl(":", scope) ~ str_trim(str_split_i(scope, ":", 2)),
                                                   scope%in%c("Scope 3 (downstream)", "Scope 3 (upstream)", "Scope 3 (upstream & downstream)") ~ "Scope 3",
                                                   str_starts(scope, "Other, please specify") ~ "Other",
-                                                  grepl("Scope 3|\\+3", scope) ~ str_trim(str_split_i(scope, "\\+3", 2)),
+                                                  grepl("Scope 3|\\+3", scope) & !str_starts(scope, "Other") ~ str_trim(str_split_i(scope, "\\+3", 2)),
                                                   TRUE ~ ""))
     abs_er <- mutate(abs_er, across('scope3_categories', str_replace, "\\(", ""))
     abs_er <- mutate(abs_er, across('scope3_categories', str_replace, "\\)", ""))
@@ -340,12 +425,12 @@ ProcessScopes <- function(abs_er, year)
   }
   # 2. scope2_accounting_method
   if (year<2022)
-  { abs_er <- mutate(abs_er, scope_accounting_method=ifelse(str_starts(scope, "Other"), NA, str_to_title(str_replace_all(str_extract(scope, "\\([^()]+\\)"), "[()]", "")))) %>%
-              mutate(scope_accounting_method=ifelse(scope_accounting_method%in%c("Question not applicable", "Downstream","Upstream & Downstream","Upstream", "Not Included In Scopes 1 Or 2"), "", scope_accounting_method))
+  { abs_er <- mutate(abs_er, scope_accounting_method=ifelse(str_starts(scope, "Other"), NA, str_to_sentence(str_replace_all(str_extract(scope, "\\([^()]+\\)"), "[()]", "")))) %>%
+              mutate(scope_accounting_method=ifelse(scope_accounting_method%in%c("Question not applicable", "Downstream","Upstream & downstream","Upstream", "Not included in scopes 1 or 2"), NA, scope_accounting_method))
   } else { 
     abs_er <- rename(abs_er, scope_accounting_method=`Scope 2 accounting method`) %>%
-              mutate(scope_accounting_method=ifelse(grepl("scope 2", scope, ignore.case=TRUE) & is.na(scope_accounting_method), "Location-based", scope_accounting_method),
-                     scope_accounting_method=ifelse(scope_accounting_method=="scope_accounting_method", NA, scope_accounting_method))
+              mutate(scope_accounting_method=ifelse(grepl("scope 2", scope, ignore.case=TRUE) & is.na(scope_accounting_method), "Location-based", 
+                                               ifelse(scope_accounting_method=="Question not applicable", NA, scope_accounting_method)))
   }
   
   # 3. scope_def_2018
@@ -431,25 +516,29 @@ AddSimpleScope <- function(abs_er_scope)
 CalculatePercentagecope3 <- function(abs_er_scope3, year)
 { # calculate scope 3 emissions for scope 1+2+3 targets
   # 1. read scope 3 percentages
+  filename_scope3_perc = paste0("IKEA_NSA_", YEAR, "_BY_MRY_s3_perc.xlsx")
+  var_scope3_perc = paste0("scope3_perc_", YEAR)
+  if(exists(var_scope3_perc))
+  { print(paste0(var_scope3_perc, " already exists"))
+    scope3_perc = eval(parse(text = var_scope3_perc))
+  } else{ print(paste("reading in ", var_scope3_perc), sep="\n")
+    scope3_perc <- read.xlsx(paste0(data_dir, "output/", filename_scope3_perc), sheet = "Sheet 1")
+    scope3_perc <- select(scope3_perc, account_id, starts_with("perc"))
+    assign(paste0("scope3_perc_", YEAR), scope3_perc) }
+  
+  # 2. calculate scope 3 percentages
   if (year<2022)
-  { filename_scope3_perc = paste0("IKEA_NSA_", YEAR, "_BY_MRY_s3_perc.xlsx")
-    var_scope3_perc = paste0("scope3_perc_", YEAR)
-    if(exists(var_scope3_perc))
-    { print(paste0(var_scope3_perc, " already exists"))
-      scope3_perc = eval(parse(text = var_scope3_perc))
-    } else{ print(paste("reading in ", var_scope3_perc), sep="\n")
-      scope3_perc <- read.xlsx(paste0(data_dir, "output/", filename_scope3_perc), sheet = "Sheet 1")
-      scope3_perc <- select(scope3_perc, account_id, starts_with("perc"))
-      assign(paste0("scope3_perc_", YEAR), scope3_perc) }
-    # 2. calculate scope 3 percentages
+  { #"Scope 1| Scope 2", "Scope 1| Scope 2| Scope 3", "Scope 1", "Scope 2"
     abs_er_scope3 <- left_join(abs_er_scope3, scope3_perc, by=c("account_id")) %>%
-                     mutate(perc_s1s2=ifelse(!scope_def_2022%in%c("Scope 1| Scope 2| Scope 3"), 1, 
-                                     ifelse(scope_accounting_method=="Location-Based" & `scope3_categories`=="Downstream", perc_S1S2L_S1S2LS3D, 
-                                     ifelse(scope_accounting_method=="Location-Based" & `scope3_categories`=="Upstream", perc_S1S2L_S1S2LS3U, 
-                                     ifelse(scope_accounting_method=="Location-Based" & `scope3_categories`=="Upstream & downstream", perc_S1S2L_S1S2LS3, 
-                                     ifelse(scope_accounting_method=="Market-Based" & `scope3_categories`=="Downstream", perc_S1S2M_S1S2MS3D, 
-                                     ifelse(scope_accounting_method=="Market-Based" & `scope3_categories`=="Upstream", perc_S1S2M_S1S2MS3U, 
-                                     ifelse(scope_accounting_method=="Market-Based" & `scope3_categories`=="Upstream & downstream", perc_S1S2M_S1S2MS3, "X")))))))) %>%
+                     mutate(perc_s1s2=ifelse(scope_def_2022=="Scope 3", 0, 
+                                      #ifelse(scope_def_2022=="Scope 1| Scope 2", 1,        
+                                      ifelse(!scope_def_2022%in%c("Scope 1| Scope 2| Scope 3"), 1, 
+                                      ifelse(scope_accounting_method=="Location-based" & `scope3_categories`=="Downstream", perc_S1S2L_S1S2LS3D, 
+                                      ifelse(scope_accounting_method=="Location-based" & `scope3_categories`=="Upstream", perc_S1S2L_S1S2LS3U, 
+                                      ifelse(scope_accounting_method=="Location-based" & `scope3_categories`=="Upstream & downstream", perc_S1S2L_S1S2LS3, 
+                                      ifelse(scope_accounting_method=="Market-based" & `scope3_categories`=="Downstream", perc_S1S2M_S1S2MS3D, 
+                                      ifelse(scope_accounting_method=="Market-based" & `scope3_categories`=="Upstream", perc_S1S2M_S1S2MS3U, 
+                                      ifelse(scope_accounting_method=="Market-based" & `scope3_categories`=="Upstream & downstream", perc_S1S2M_S1S2MS3, "X"))))))))) %>%
                      select(-perc_S1S2L_S1S2LS3D, -perc_S1S2L_S1S2LS3U, -perc_S1S2L_S1S2LS3, -perc_S1S2M_S1S2MS3D, -perc_S1S2M_S1S2MS3U, -perc_S1S2M_S1S2MS3)
   } else
   { abs_er_scope3 <- mutate(abs_er_scope3, perc_s1s2=0)
@@ -469,13 +558,6 @@ ImproveScope3Categories <- function(abs_er_scope3)
 return(abs_er_scope3)
 }
 
-ImproveScope3Categories_ <- function(abs_er_scope3)
-{ #abs_er_scope3 <- mutate(abs_er_scope3, across(`Scope 3 categories`, str_replace, "Purchased goods & services", "Purchased goods and services"))
-  #abs_er_scope3 <- mutate(abs_er_scope3, across(`Scope 3 categories`, str_replace, "Upstream transportation & distribution", "Upstream transportation and distribution"))
-  #abs_er_scope3 <- mutate(abs_er_scope3, across(`Scope 3 categories`, str_replace, "Fuel and energy-related activities not included in Scopes 1 or 2", "Fuel-and-energy-related activities (not included in Scopes 1 or 2)"))
-  
-  return(abs_er_scope3)
-}
 AddPriorityScore_Order <- function(abs_er)
 { last_score <- mutate(abs_er, scope_score=case_when(
                                                  scope_def_2022 == "Scope 1| Scope 2" ~ 1,
@@ -578,12 +660,29 @@ Process_MRY_s2 <- function(mry_s2_em, col1, col2, col3, change_row = FALSE)
   return(mry_s2_em_form)
 }
 
+Process_MRY_s3 <- function(mry_s3_em, col1, col2, change_row = FALSE)
+{ mry_s3_em_form <- mry_s3_em %>%
+  rename(account_id = `Account number`,
+         access = `Public`,
+         row = `RowName`,
+         mry_emissions = colnames(mry_s3_em)[col2]) %>%
+  mutate(mry_scope = "Scope 3") %>%
+  select(c(account_id, access, row, mry_scope, mry_emissions)) %>%
+  filter(!(mry_emissions == "Question not applicable")) %>%
+  pivot_wider(names_from = row, values_from = c(mry_emissions), names_vary = "slowest")
+
+  print(colnames(mry_s3_em)[col2])
+
+  return(mry_s3_em_form)
+
+}
+
 PivotDatasetByRoot_id_prof2 <- function(abs_er_form_alt_post1)
 { abs_er_prof2 <- abs_er_form_alt_post1 %>%
   group_by(root_id) %>%
   arrange(target_year) %>%
   mutate(group_count = 1:n()) %>%
-  pivot_wider(id_cols = c(account_id, organization, country, access, target_coverage, simple_scope, scope, base_year,
+  pivot_wider(id_cols = c(disclosure_year, account_id, organization, country, primary_industry, access, target_coverage, simple_scope, scope, base_year,
                           emissions_base_year, emissions_base_year_percent), 
               names_from = group_count, 
               names_vary = "slowest",
@@ -633,20 +732,134 @@ CheckEmissions2022 <- function(abs_er_check)
    write.table(check_emissions_2022, paste0(data_dir, 'processed/check_emissions_2022.csv'), sep=";", row.names = F)
 }
 
-ListValues <- function(abs_er_form, y)
-{ tmp1 <- unique(abs_er_form$target_coverage)
-  tmp2 <- unique(abs_er_form$scope)
-  tmp3 <- unique(abs_er_form$target_status)
-  tmp4 <- unique(abs_er_form$scope3_categories)
-  tmp5 <- unique(abs_er_form$scope_accounting_method)
-  tmp6 <- unique(abs_er_form$scope_def_2018)
-  tmp7 <- unique(abs_er_form$scope_def_2022)
+SaveFactors <- function(abs_er_form, name, y)
+{ if ("target_coverage" %in% names(abs_er_form)) 
+  { tmp1 <- unique(abs_er_form$target_coverage)
+    write.table(tmp1, paste0(data_dir, "processed/factors/", name, "_target_coverage_",  y, ".csv"), sep=";", row.names = F)
+  }
+  if ("scope" %in% names(abs_er_form)) 
+  { tmp2 <- unique(abs_er_form$scope)
+    write.table(tmp2, paste0(data_dir, "processed/factors/", name, "_scope_", y, ".csv"), sep=";", row.names = F)
+  }
+  if ("target_status" %in% names(abs_er_form)) 
+  { tmp3 <- unique(abs_er_form$target_status)
+    write.table(tmp3, paste0(data_dir, "processed/factors/", name, "_target_status_", y, ".csv"), sep=";", row.names = F)
+  }
+  if ("scope3_categories" %in% names(abs_er_form)) 
+  { tmp4 <- unique(abs_er_form$scope3_categories)
+    write.table(tmp4, paste0(data_dir, "processed/factors/", name, "_scope3_categories_", y, ".csv"), sep=";", row.names = F)
+  }
+  if ("scope_accounting_method" %in% names(abs_er_form)) 
+  { tmp5 <- unique(abs_er_form$scope_accounting_method)
+    write.table(tmp5, paste0(data_dir, "processed/factors/", name, "_scope_accounting_method_", y, ".csv"), sep=";", row.names = F)
+  }
+  if ("scope_def_2018" %in% names(abs_er_form)) 
+  { tmp6 <- unique(abs_er_form$scope_def_2018)
+    write.table(tmp6, paste0(data_dir, "processed/factors/", name, "_scope_def_2018_", y, ".csv"), sep=";", row.names = F)
+    }
+  if ("scope_def_2022" %in% names(abs_er_form)) 
+  { tmp7 <- unique(abs_er_form$scope_def_2022)
+    write.table(tmp7, paste0(data_dir, "processed/factors/", name, "_scope_def_2022_", y, ".csv"), sep=";", row.names = F)
+  }
+}
+
+# TO DO --> MOVE TO Stats.R or separate stats file
+CalculateStatsCDPData <- function(companies, targets, abs_er, int, nz, base_year_em, mry_s1_em, mry_s2_em, mry_s3_em, year)
+{ if (year<2020)
+  { mry_s3_em_total <- rename(mry_s3_em, mry_s3=`Account for your organization’s Scope 3 emissions, disclosing and explaining any exclusions - Metric tonnes CO2e`)
+  } else if (year<2022) {
+    mry_s3_em_total <- rename(mry_s3_em, mry_s3=`Account for your organization’s gross global Scope 3 emissions, disclosing and explaining any exclusions - Metric tonnes CO2e`)
+  } else {
+    mry_s3_em_total <- rename(mry_s3_em, mry_s3=`Account for your organization’s gross global Scope 3 emissions, disclosing and explaining any exclusions - Emissions in reporting year (metric tons CO2e)`)
+  }
+
+  mry_s3_em_total$mry_s3 <- as.numeric(mry_s3_em_total$mry_s3)                   
+  mry_s3_em_total <- group_by(mry_s3_em_total, `Account number`) %>%
+                     summarise(mry_s3=sum(mry_s3, na.rm=TRUE))
+  mry_s1_em_reporting_year <- filter(mry_s1_em, RowName=='Reporting year')
+  mry_s2_em_reporting_year <- filter(mry_s2_em, RowName=='Reporting year')
+
   
-  write.table(tmp1, paste0(data_dir, "processed/factors/target_coverage_", y, ".csv"), sep=";", row.names = F)
-  write.table(tmp2, paste0(data_dir, "processed/factors/scope_", y, ".csv"), sep=";", row.names = F)
-  write.table(tmp3, paste0(data_dir, "processed/factors/target_status_", y, ".csv"), sep=";", row.names = F)
-  write.table(tmp4, paste0(data_dir, "processed/factors/scope3_categories_", y, ".csv"), sep=";", row.names = F)
-  write.table(tmp5, paste0(data_dir, "processed/factors/scope_accounting_method_", y, ".csv"), sep=";", row.names = F)
-  write.table(tmp6, paste0(data_dir, "processed/factors/scope_def_2018_", y, ".csv"), sep=";", row.names = F)
-  write.table(tmp7, paste0(data_dir, "processed/factors/scope_def_2022_", y, ".csv"), sep=";", row.names = F)
+  output <- left_join(companies, mry_s1_em_reporting_year, by=c("Account number")) %>% 
+            left_join(mry_s2_em_reporting_year, by=c("Account number")) %>%
+            left_join(mry_s3_em_total, by=c("Account number")) %>%
+            rename(account_id=`Account number`,
+                   primary_industry=`Primary industry.x`,
+                   mry_s1=`What were your organization’s gross global Scope 1 emissions in metric tons CO2e? - Gross global Scope 1 emissions (metric tons CO2e)`,
+                   mry_s2l=`What were your organization’s gross global Scope 2 emissions in metric tons CO2e? - Scope 2, location-based`,
+                   mry_s2m=`What were your organization’s gross global Scope 2 emissions in metric tons CO2e? - Scope 2, market-based (if applicable)`)
+  
+  check <- group_by(output, account_id) %>% summarise(count=n()) %>% filter(count>1)                
+  output$mry_s1 <- as.numeric(output$mry_s1)
+  output$mry_s2l <- as.numeric(output$mry_s2l)
+  output$mry_s2m <- as.numeric(output$mry_s2m)
+
+  output <- mutate(output, mry_s2=ifelse(is.na(mry_s2l), ifelse(is.na(mry_s2m), 0, mry_s2m), mry_s2l), 
+                   mry=ifelse(is.na(mry_s1), 0, mry_s1) + mry_s2 + ifelse(is.na(mry_s3), 0, mry_s3)) %>%
+            select(account_id, Organization, primary_industry, mry, mry_s1, mry_s2l, mry_s2m)
+  
+  return(output)
+}
+
+AddEmptyTargets <- function(abs_er_prof)
+{ `%!in%` <- Negate(`%in%`)
+
+  data <- abs_er_prof
+  if ("target_year_4" %!in% colnames(data))
+  { data <- mutate(data, target_year_4="")
+  }
+  if ("target_id_4" %!in% colnames(data))
+  { data <- mutate(data, target_id_4="")
+  }
+  if ("target_status_4" %!in% colnames(data))
+  { data <- mutate(data, target_status_4="")
+  }
+  if ("targeted_reduction_4" %!in% colnames(data))
+  { data <- mutate(data, targeted_reduction_4="")
+  }
+  if ("emissions_target_year_4" %!in% colnames(data))
+  { data <- mutate(data, emissions_target_year_4="")
+  }
+  if ("emissions_reporting_year_4" %!in% colnames(data))
+  { data <- mutate(data, emissions_reporting_year_4="")
+  }
+  if ("percent_achieved_4" %!in% colnames(data))
+  { data <- mutate(data, percent_achieved_4="")
+  }
+  if ("SBTi_status_4" %!in% colnames(data))
+  { data <- mutate(data, SBTi_status_4="")
+  }
+  if ("target_ambition_4" %!in% colnames(data))
+  { data <- mutate(data, target_ambition_4="")
+  }
+
+  if ("target_year_5" %!in% colnames(data))
+  { data <- mutate(data, target_year_5="")
+  }
+  if ("target_id_5" %!in% colnames(data))
+  { data <- mutate(data, target_id_5="")
+  }
+  if ("target_status_5" %!in% colnames(data))
+  { data <- mutate(data, target_status_5="")
+  }
+  if ("targeted_reduction_5" %!in% colnames(data))
+  { data <- mutate(data, targeted_reduction_5="")
+  }
+  if ("emissions_target_year_5" %!in% colnames(data))
+  { data <- mutate(data, emissions_target_year_5="")
+  }
+  if ("emissions_reporting_year_5" %!in% colnames(data))
+  { data <- mutate(data, emissions_reporting_year_5="")
+  }
+  if ("percent_achieved_5" %!in% colnames(data))
+  { data <- mutate(data, percent_achieved_5="")
+  }
+  if ("SBTi_status_5" %!in% colnames(data))
+  { data <- mutate(data, SBTi_status_5="")
+  }
+  if ("target_ambition_5" %!in% colnames(data))
+  { data <- mutate(data, target_ambition_5="")
+  }
+  
+  return(data)
 }

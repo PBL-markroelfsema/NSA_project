@@ -43,7 +43,7 @@ raw_response_files <- data.frame(year = c(2018, 2019, 2020, 2021, 2022),
                                               'CDP_2021_Global_aggregation_raw_response.xlsx',
                                               '2023_NSA_report_CDP_2022_climate_raw_response.xlsx'))
 
-YEAR = 2020
+YEAR = 2022
 years = c(2018, 2019, 2020, 2021, 2022)
 #years = c(2018)
 
@@ -68,27 +68,27 @@ statistics$value <- as.numeric(statistics$value)
 stat_selection_before <- NULL
 stat_selection_after <- NULL
 
-scope3_categories <- c("Scope 3", "Scope1; Scope 2; Scope 3")
-scope3_cat_categories <- c("Purchased goods and services",
-                          "Capital goods",
-                          "Fuel-and-energy-related activities (not included in Scopes 1 or 2)",
-                          "Upstream transportation and distribution",
-                          "Waste generated in operations",
-                          "Business travel",
-                          "Employee commuting",
-                          "Upstream leased assets",
-                          "Downstream transportation and distribution",
-                          "Processing of sold products",
-                          "Use of sold products",
-                          "End-of-life treatment of sold products",
-                          "Downstream leased assets",
-                          "Franchises",
-                          "Investments",
-                          "Other",
-                          "Upstream",
-                          "Downstream",
-                          "Upstream & downstream")
-scope_accounting_methods <- c("Location-Based", "Market-Based", "", NA)
+scope3_categories_order <- c("Scope 3", "Scope1| Scope 2| Scope 3")
+# scope3_cat_categories <- c("Purchased goods and services",
+#                           "Capital goods",
+#                           "Fuel-and-energy-related activities (not included in Scopes 1 or 2)",
+#                           "Upstream transportation and distribution",
+#                           "Waste generated in operations",
+#                           "Business travel",
+#                           "Employee commuting",
+#                           "Upstream leased assets",
+#                           "Downstream transportation and distribution",
+#                           "Processing of sold products",
+#                           "Use of sold products",
+#                           "End-of-life treatment of sold products",
+#                           "Downstream leased assets",
+#                           "Franchises",
+#                           "Investments",
+#                           "Other",
+#                           "Upstream",
+#                           "Downstream",
+#                           "Upstream & downstream")
+#scope_accounting_methods <- c("Location-Based", "Market-Based", "", NA)
 
 
 #-------------------------------------
@@ -147,7 +147,7 @@ for (YEAR in years)
   abs_er_scope3_tmp = abs_er_scope3
   # factorize variables
   abs_er_scope3$target_coverage <- factor(abs_er_scope3$target_coverage, level=target_coverage_order) 
-  abs_er_scope3$scope_accounting_method <- factor(abs_er_scope3$scope_accounting_method, level=scope_accounting_methods) 
+  abs_er_scope3$scope_accounting_method <- factor(abs_er_scope3$scope_accounting_method, level=scope_accounting_method_order) 
   abs_er_scope3$target_status <- factor(abs_er_scope3$target_status, level=target_status_order)
   # check
   check_factors_1 <- select(abs_er_scope3_tmp, account_id, scope, target_coverage, scope_accounting_method, target_status)
@@ -241,7 +241,7 @@ for (YEAR in years)
 check_2018_duplicates <- abs_er_scope3_processed_2018$account_id[duplicated(abs_er_scope3_processed_2018$account_id)] %>% as.data.frame() 
 colnames(check_2018_duplicates) <- c("account_id")
 check_2018_duplicates <- left_join(check_2018_duplicates, abs_er_scope3, by=c("account_id"))
-check_2018_duplicates$scope <- factor(check_2018_duplicates$scope, level=scope3_categories)
+check_2018_duplicates$scope <- factor(check_2018_duplicates$scope, level=scope3_categories_order)
 select_2018_duplicates <- group_by(check_2018_duplicates, account_id) %>% 
                           top_n(n=1, wt=abs(target_year-2030)) %>%
                           top_n(n=1, wt=scope)
@@ -264,14 +264,14 @@ abs_er_scope3_processed_2020 <- filter(abs_er_scope3_processed_2020, account_id 
 # Create separate pie charts for each reporting year
 y = 2018
 for (y in years)
-{ scopes <- c("Scope 3", "Scope 1; Scope 2; Scope 3", "Scope 2; Scope 3", "Scope 1; Scope 3", "Other")
+{ scopes <- c("Scope 3", "Scope 1| Scope 2| Scope 3", "Scope 2| Scope 3", "Scope 1| Scope 3", "Other")
   data_scope3 = eval(parse(text = paste0("abs_er_scope3_processed_", y)))
-  if (y>=2022) {data_scope3=mutate(data_scope3, scope=ifelse(scope%in%c("Scope 2; Scope 3", "Scope 1; Scope 3"), "Other", scope))}
+  if (y>=2022) {data_scope3=mutate(data_scope3, scope=ifelse(scope%in%c("Scope 2| Scope 3", "Scope 1| Scope 3"), "Other", scope))}
   data_scope3$scope <- factor(data_scope3$scope, levels=scopes)
   g_data <- group_by(data_scope3, scope) %>% summarise(nr_targets = n())
   g <- ggplot(data=g_data) +
         geom_bar(aes(x="", y=nr_targets, fill=scope), stat="identity", width=1, color="white") +
-        scale_fill_manual(values=c("Scope 3"="blue", "Scope 1; Scope 2; Scope 3"="grey", "Scope 2; Scope 3"="darkgreen", "Scope 1; Scope 3"="darkgoldenrod")) + 
+        scale_fill_manual(values=c("Scope 3"="blue", "Scope 1| Scope 2| Scope 3"="grey", "Scope 2| Scope 3"="darkgreen", "Scope 1| Scope 3"="darkgoldenrod")) + 
         coord_polar("y", start=0) +
         theme_void()
   assign(paste0("g_scope3_", y), g)
@@ -285,23 +285,23 @@ g
 
 # Create one figure with pie charts for each reporting year
 # 1. create dataset with number of targets, companies and number of targets per scope type    
-g_scopes <- c("Scope 3", "Scope 1; Scope 2; Scope 3","Other")
+g_scopes <- c("Scope 3", "Scope 1| Scope 2| Scope 3","Other")
 # Number of targets and companies data
 data_scope3_years_targets_companies <- mutate(abs_er_scope3_processed_2018, X=1) %>%
                                        group_by(scope, source_year) %>%
                                        summarise(nr_scope_targets=n()) %>%
                                        spread(key=scope, value=nr_scope_targets) %>%
-                                       mutate(nr_targets=`Scope 3`+`Scope 1; Scope 2; Scope 3`,
+                                       mutate(nr_targets=`Scope 3`+`Scope 1| Scope 2| Scope 3`,
                                               nr_companies=length(unique(abs_er_scope3_processed_2018$account_id)),
                                               Other=0)
 for (y in years[2:length(years)])
 { data_scope3_processed = eval(parse(text = paste0("abs_er_scope3_processed_", y)))
-  if (y>=2022) {data_scope3_processed=mutate(data_scope3_processed, scope=ifelse(scope%in%c("Scope 2; Scope 3", "Scope 1; Scope 3"), "Other", scope))}
+  if (y>=2022) {data_scope3_processed=mutate(data_scope3_processed, scope=ifelse(scope%in%c("Scope 2| Scope 3", "Scope 1| Scope 3"), "Other", scope))}
   tmp <- mutate(data_scope3_processed, X=1) %>%
          group_by(scope, source_year) %>%
          summarise(nr_scope_targets=n()) %>%
          spread(key=scope, value=nr_scope_targets) %>%
-         mutate(nr_targets=`Scope 3`+`Scope 1; Scope 2; Scope 3`,
+         mutate(nr_targets=`Scope 3`+`Scope 1| Scope 2| Scope 3`,
                 nr_companies=length(unique(data_scope3_processed$account_id)))
   if (y<2022) {tmp=mutate(tmp, Other=0)}
   print(y)
@@ -310,34 +310,27 @@ for (y in years[2:length(years)])
   data_scope3_years_targets_companies <- rbind(data_scope3_years_targets_companies, tmp)
 }
 
-# Emissions data
-# FIRST make sure emissions are not double counted (one company can have multiple targets)
-# check_duplicates$scope <- factor(check_duplicates$scope, level=scope3_categories)
-#top_n(n=1, wt=abs(target_year-2030)) %>%
-#top_n(n=1, wt=scope) %>%
-  
-  
 data_scope3_processed = abs_er_scope3_processed_2018
 data_scope3_processed$emissions_reporting_year_interpolated_scope3 <- 10^-6*data_scope3_processed$emissions_reporting_year_interpolated_scope3
 data_scope3_years_emissions <- group_by(data_scope3_processed, scope, source_year) %>%
                                summarise(emissions_reporting_year_interpolated_scope3=sum(emissions_reporting_year_interpolated_scope3)) %>%
                                spread(key=scope, value=emissions_reporting_year_interpolated_scope3) %>%
-                               mutate(emissions_reporting_year_interpolated_scope3=`Scope 3`+`Scope 1; Scope 2; Scope 3`,
+                               mutate(emissions_reporting_year_interpolated_scope3=`Scope 3`+`Scope 1| Scope 2| Scope 3`,
                                Other=0)
 y=2018
 for (y in years[2:length(years)]) 
 { data_scope3_processed = eval(parse(text = paste0("abs_er_scope3_processed_", y)))
   data_scope3_processed$emissions_reporting_year_interpolated_scope3 <- 10^-6*data_scope3_processed$emissions_reporting_year_interpolated_scope3
-  if (y>=2022) {data_scope3_processed=mutate(data_scope3_processed, scope=ifelse(scope%in%c("Scope 2; Scope 3", "Scope 1; Scope 3"), "Other", scope))}
+  if (y>=2022) {data_scope3_processed=mutate(data_scope3_processed, scope=ifelse(scope%in%c("Scope 2| Scope 3", "Scope 1| Scope 3"), "Other", scope))}
   tmp <- group_by(data_scope3_processed, scope, source_year) %>%
          summarise(emissions_reporting_year_interpolated_scope3=sum(emissions_reporting_year_interpolated_scope3)) %>%
          spread(key=scope, value=emissions_reporting_year_interpolated_scope3) %>%
-         mutate(emissions_reporting_year_interpolated_scope3=`Scope 3`+`Scope 1; Scope 2; Scope 3`)
+         mutate(emissions_reporting_year_interpolated_scope3=`Scope 3`+`Scope 1| Scope 2| Scope 3`)
   if (y<2022) {tmp=mutate(tmp, Other=0)}
   data_scope3_years_emissions <- rbind(data_scope3_years_emissions, tmp)
 }
-data_scope3_years_targets_companies <- select(data_scope3_years_targets_companies, source_year, nr_targets, nr_companies, `Scope 3`, `Scope 1; Scope 2; Scope 3`,`Other`)
-data_scope3_years_emissions <- select(data_scope3_years_emissions, source_year, emissions_reporting_year_interpolated_scope3, `Scope 3`, `Scope 1; Scope 2; Scope 3`,`Other`)
+data_scope3_years_targets_companies <- select(data_scope3_years_targets_companies, source_year, nr_targets, nr_companies, `Scope 3`, `Scope 1| Scope 2| Scope 3`,`Other`)
+data_scope3_years_emissions <- select(data_scope3_years_emissions, source_year, emissions_reporting_year_interpolated_scope3, `Scope 3`, `Scope 1| Scope 2| Scope 3`,`Other`)
 write.table(data_scope3_years_targets_companies, paste0("Ambition_scripts/data/CDP_2023/processed/data_scope3_years_targets_companies.csv"), row.names=FALSE, sep=";") 
 write.table(data_scope3_years_emissions, paste0("Ambition_scripts/data/CDP_2023/processed/data_scope3_years_emissions.csv"), row.names=FALSE, sep=";") 
 
@@ -349,7 +342,7 @@ d_fig$source_year <- scale_fig*d_fig$source_year %>% as.integer()
 trans_x <- function(x)(x/scale_fig)
 g_scope3_targets_companies<-ggplot() + 
                      geom_scatterpie(aes(x=source_year, y=nr_targets), data=d_fig,
-                                     cols=c("Scope 1; Scope 2; Scope 3", "Scope 3"), pie_scale = 2.5) +
+                                     cols=c("Scope 1 Scope 2| Scope 3", "Scope 3"), pie_scale = 2.5) +
                      geom_point(data=d_fig, aes(x=source_year, y=nr_companies, shape=Companies), size=5) +
                      
                      scale_y_continuous(name="Number of targets/companies", limits=c(0, NA)) +
